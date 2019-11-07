@@ -1,0 +1,71 @@
+15726414005236
+Open_Telemetry
+3DInvenSense_QFN-24_3x3mm_P0.4mm
+24-Lead Plastic QFN (3mm x 3mm); Pitch 0.4mm; EP 1.7x1.54mm; for InvenSense motion sensors; keepout area marked (Package see: https://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf; See also https://www.invensense.com/wp-content/uploads/2015/02/InvenSense-MEMS-Handling.pdf)
+QFN 0.4
+0
+24
+24
+Open_Telemetry
+AVAGO_PLCC4
+Avago_PLCC4
+Integrated Circuit
+0
+4
+4
+Open_Telemetry
+Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering
+LGA-8, https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001-18.pdf
+lga land grid array
+0
+8
+8
+Open_Telemetry
+CAPC1005X55N
+C0402(BB)
+Capacitor
+0
+2
+2
+Open_Telemetry
+CAPPM3528X210N
+T491B106K016AT
+Capacitor Polarised
+0
+2
+2
+Open_Telemetry
+L80-M39
+L80-M39
+Integrated Circuit
+0
+12
+12
+Open_Telemetry
+PinHeader_1x12_P2.54mm_Vertical_Down
+Through hole straight pin header, 1x12, 2.54mm pitch, single row
+Through hole pin header THT 1x12 2.54mm single row
+0
+12
+12
+Open_Telemetry
+PinHeader_1x16_P2.54mm_Vertical_Down
+Through hole straight pin header, 1x16, 2.54mm pitch, single row
+Through hole pin header THT 1x16 2.54mm single row
+0
+16
+16
+Open_Telemetry
+RESC0603X26N
+RC0201
+Resistor
+0
+2
+2
+Open_Telemetry
+U.FL_Molex_MCRF_73412-0110_Vertical
+Molex Microcoaxial RF Connectors (MCRF), mates Hirose U.FL, (http://www.molex.com/pdm_docs/sd/734120110_sd.pdf)
+mcrf hirose ufl u.fl microcoaxial
+0
+4
+2

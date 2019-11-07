@@ -1,0 +1,68 @@
+(Japanese_coding: sjis)
+(function "ECS_237813"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2015-11-02-01:55:29)
+    (utime 2019-07-01-10:17:27)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "RC0201JR-0710KL")
+)
+
+
+(pinAssign "ECS_237813"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2015-11-02-01:55:29)
+    (utime 2019-07-01-10:17:27)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_237813")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "RC0201JR-0710KL")
+)
+
+
+(part "RC0201JR-0710KL"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2015-11-02-01:55:29)
+    (utime 2019-07-01-10:17:27)
+    (packageRef "RC0201JR-0710KL")
+    (pinAssignRef "ECS_237813")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "R")
+    (property "description" "THICK FILM CHIP RESISTORS")
+    (property "Manufacturer_Name" "YAGEO (PHYCOMP)")
+    (property "Manufacturer_Part_Number" "RC0201JR-0710KL")
+    (property "Mouser_Part_Number" "603-RC0201JR-0710KL")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-0710KL")
+    (property "RS_Part_Number" "")
+    (property "RS_Price/Stock" "")
+    (property "Datasheet_Link" "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf")
+    (property "compAreaTopHeight" 0.26)
+)
+
+

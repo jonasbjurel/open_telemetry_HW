@@ -1,0 +1,9 @@
+Manufacturer=YAGEO (PHYCOMP)
+PartNumber=RC0201JR-071KL
+PartCategory=Resistor
+PackageCategory=Resistor Chip
+PinCount=2
+Version=1.2
+Released=2016-09-17 08:17:31
+Downloaded=2019-10-31 18:42:22
+3D=Y

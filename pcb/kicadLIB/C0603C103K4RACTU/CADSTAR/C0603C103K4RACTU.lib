@@ -1,0 +1,20 @@
+.C0603C103K4RACTU :1 ;KEMET - C0603C103K4RACTU - CAP, 0.01F, 16V, 10%, X7R, 0603
+CAPC1608X87N
+*STM C
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN C0603C103K4RACTU
+~!Manufacturer_Name (Kemet)
+~!Manufacturer_Part_Number (C0603C103K4RACTU)
+~!Mouser Part Number (80-C0603C103K4R)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=80-C0603C103K4R)
+~!RS Part Number (1464174)
+~!Link RS Price/Stock (http://uk.rs-online.com/web/p/products/1464174)
+~!Allied_Number (70097263)
+~!Link Allied Price/Stock (https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/)
+~!Link Datasheet (https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf)
+~!Height (0.87mm)
+~!3D_Model (C0603C103K4RACTU)
+C0603C103K4RACTU
+1.1!U 2.1!U 

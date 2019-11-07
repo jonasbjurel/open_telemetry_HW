@@ -1,0 +1,105 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "ASMB-MTB1-0A3A2"
+   (description "Broadcom ASMB-MTB1-0A3A2 3 RGB LED, 470 / 530 / 625 nm PLCC 4, Round Lens SMD package")
+   (family "ANA")
+   (package "AVAGO_PLCC4")
+   (attribute "Datasheet Link" "https://docs.broadcom.com/docs/AV02-4194EN")
+   (attribute "Manufacturer_Name" "Avago Technologies")
+   (attribute "Manufacturer_Part_Number" "ASMB-MTB1-0A3A2")
+   (attribute "Mouser Part Number" "630-ASMB-MTB1-0A3A2")
+   (attribute "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=630-ASMB-MTB1-0A3A2")
+   (attribute "RS Part Number" "8305079P")
+   (attribute "RS Price/Stock" "http://uk.rs-online.com/web/p/products/8305079P")
+   (gate
+    (symbol "ASMB-MTB1-0A3A2")
+    (pin "CATHODE_(RED)" 1 IP)
+    (pin "CATHODE_(GREEN)" 2 IP)
+    (pin "CATHODE_(BLUE)" 3 IP)
+    (pin "COMMON_(ANODE)" 4 PP)
+   )
+  )
+  (symbol "ASMB-MTB1-0A3A2"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 2000 100) (pt 2000 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 2200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 2200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "AVAGO_PLCC4"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -1.45 1.6)
+      (pt 1.45 1.6)
+      (pt 1.45 -1.6)
+      (pt -1.45 -1.6)
+      (pt -1.45 1.6))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.45 1.6)
+      (pt -1.45 -1.6))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 1.45 -1.6)
+      (pt 1.45 1.6))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (circle
+      (pt -0.822 -2.638) (pt -0.754 -2.638)
+     )
+    )
+   )
+   (leg 1 (pt -0.75 -1.5) (padstack 0))
+   (leg 2 (pt -0.75 1.5) (padstack 0))
+   (leg 3 (pt 0.75 1.5) (padstack 0))
+   (leg 4 (pt 0.75 -1.5) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1.1 1.5 0 0 90))
+   )
+  )
+ )
+)

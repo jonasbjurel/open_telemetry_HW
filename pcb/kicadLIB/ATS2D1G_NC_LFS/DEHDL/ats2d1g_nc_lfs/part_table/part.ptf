@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'ATS2D1G_NC_LFS'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "C & K COMPONENTS", "ATS2D1G NC LFS" (!) = "", "ATS2D1G", "Other", "611-ATS2D1GNCLFS", "https://www.mouser.com/Search/Refine.aspx?Keyword=611-ATS2D1GNCLFS", "", "", "Tactile Switches 1VA 32VDC 50mA On-(On) Sldr IP54", "http://www.mouser.com/ds/2/60/ats-1100738.pdf"
+END_PART
+
+END.

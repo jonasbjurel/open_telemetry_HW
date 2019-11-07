@@ -1,0 +1,100 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "C0603C103K4RACTU"
+   (description "KEMET - C0603C103K4RACTU - CAP, 0.01F, 16V, 10%, X7R, 0603")
+   (family "CAP")
+   (package "CAPC1608X87N")
+   (attribute "Datasheet Link" "https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf")
+   (attribute "Geometry.Height" "0.87mm")
+   (attribute "Manufacturer_Name" "Kemet")
+   (attribute "Manufacturer_Part_Number" "C0603C103K4RACTU")
+   (attribute "Mouser Part Number" "80-C0603C103K4R")
+   (attribute "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=80-C0603C103K4R")
+   (attribute "RS Part Number" "1464174")
+   (attribute "RS Price/Stock" "http://uk.rs-online.com/web/p/products/1464174")
+   (attribute "Allied_Number" "70097263")
+   (attribute "Allied Price/Stock" "https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/")
+   (gate
+    (symbol "C0603C103K4RACTU")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "C0603C103K4RACTU"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 220 100) (pt 220 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 100) (pt 280 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 200 0) (pt 220 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 280 0) (pt 300 0))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 0) (rot 0) (mir X) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "CAPC1608X87N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -1.24 0.64)
+      (pt 1.24 0.64)
+      (pt 1.24 -0.64)
+      (pt -1.24 -0.64)
+      (pt -1.24 0.64))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -0.8 0.4)
+      (pt 0.8 0.4)
+      (pt 0.8 -0.4)
+      (pt -0.8 -0.4)
+      (pt -0.8 0.4))))
+   (leg 1 (pt -0.7 0) (padstack 0))
+   (leg 2 (pt 0.7 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.78 0.98 0 0 90))
+   )
+   (model "C0603C103K4RACTU.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

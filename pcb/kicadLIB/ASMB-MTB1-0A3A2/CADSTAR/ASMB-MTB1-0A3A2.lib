@@ -1,0 +1,17 @@
+.ASMB-MTB1-0A3A2 :1 ;Broadcom ASMB-MTB1-0A3A2 3 RGB LED, 470 / 530 / 625 nm PLCC 4, Round Lens SMD package
+AVAGO_PLCC4
+*STM IC
+*NGS
+*PLB 1="CATHODE (RED)" 2="CATHODE (GREEN)" 3="CATHODE (BLUE)" 4="COMMON (ANODE)"
+*MXP 4
+*DFN ASMB-MTB1-0A3A2
+~!Manufacturer_Name (Avago Technologies)
+~!Manufacturer_Part_Number (ASMB-MTB1-0A3A2)
+~!Mouser Part Number (630-ASMB-MTB1-0A3A2)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=630-ASMB-MTB1-0A3A2)
+~!RS Part Number (8305079P)
+~!Link RS Price/Stock (http://uk.rs-online.com/web/p/products/8305079P)
+~!Link Datasheet (https://docs.broadcom.com/docs/AV02-4194EN)
+~!Height (-)
+ASMB-MTB1-0A3A2
+1.1!I 2.1!I 3.1!I 4.1!P 

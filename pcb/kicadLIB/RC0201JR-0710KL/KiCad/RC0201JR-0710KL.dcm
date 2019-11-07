@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RC0201JR-0710KL
+D THICK FILM CHIP RESISTORS
+K
+F http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'T491A106M016AT'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "ALLIED_NUMBER", "ALLIED_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Kemet", "T491A106M016AT" (!) = "", "CAPPM3216X160N", "Capacitor Moulded Polarised", "80-T491A106M016", "https://www.mouser.com/Search/Refine.aspx?Keyword=80-T491A106M016", "8685839", "https://uk.rs-online.com/web/p/products/8685839", "70096233", "https://www.alliedelec.com/kemet-t491a106m016at/70096233/", "KEMET - T491A106M016AT - CAP, TANT, 10UF, 16V, CASE A", "https://componentsearchengine.com/Datasheets/2/T491A106M016AT.pdf", "1.6 mm"
+END_PART
+
+END.

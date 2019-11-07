@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "L80-M39"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "L80-M39")
+        (spec "default")
+    )
+)

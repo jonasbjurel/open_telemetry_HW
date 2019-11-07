@@ -1,0 +1,127 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "T491B106K016AT7280"
+   (description "Tantalum Capacitors - Solid SMD 16V 10uF 1311 10% ESR=2ohms")
+   (family "CAP")
+   (package "CAPPM3528X210N")
+   (attribute "Datasheet Link" "https://api.kemet.com/component-edge/download/datasheet/T491B106K016AT7280.pdf")
+   (attribute "Geometry.Height" "2.1mm")
+   (attribute "Manufacturer_Name" "Kemet")
+   (attribute "Manufacturer_Part_Number" "T491B106K016AT7280")
+   (attribute "Mouser Part Number" "80-T491B106K16AT7280")
+   (attribute "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=80-T491B106K16AT7280")
+   (attribute "RS Part Number" "")
+   (attribute "RS Price/Stock" "")
+   (gate
+    (symbol "T491B106K016AT7280")
+    (pin "+" 1 PS)
+    (pin "-" 2 PS)
+   )
+  )
+  (symbol "T491B106K016AT7280"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 200 -100) (pt 230 -100) (pt 230 100) (pt 200 100) (closed))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 180 50) (pt 140 50))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 160 70) (pt 160 30))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 100 0) (pt 200 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 0) (pt 400 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (closed true) (pt 300 100) (pt 300 -100) (pt 270 -100) (pt 270 100) (pt 300 100))
+   )
+   (terminal
+    (body (symbol "PINSHORT") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 500 0) (rot 0) (mir X) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "CAPPM3528X210N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -2.6 1.75)
+      (pt 2.6 1.75)
+      (pt 2.6 -1.75)
+      (pt -2.6 -1.75)
+      (pt -2.6 1.75))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -1.75 1.4)
+      (pt 1.75 1.4)
+      (pt 1.75 -1.4)
+      (pt -1.75 -1.4)
+      (pt -1.75 1.4))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -1.75 0.55)
+      (pt -0.9 1.4))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 1.75 1.4)
+      (pt -2.35 1.4))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.75 -1.4)
+      (pt 1.75 -1.4))))
+   (leg 1 (pt -1.5 0) (padstack 0))
+   (leg 2 (pt 1.5 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1.7 2.25 0 0 90))
+   )
+   (model "T491B106K016AT7280.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'RC0201JR_070RL'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "YAGEO (PHYCOMP)", "RC0201JR-070RL" (!) = "", "RESC0603X26N", "Resistor Chip", "603-RC0201JR-070RL", "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-070RL", "", "", "YAGEO (PHYCOMP) - RC0201JR-070RL - RES, THICK FILM, 0R, 5%, 0.05W, 0201", "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf", "0.26 mm"
+END_PART
+
+END.

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP C0603C103K4RACTU
+D KEMET - C0603C103K4RACTU - CAP, 0.01F, 16V, 10%, X7R, 0603
+K
+F https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,9 @@
+Manufacturer=ON Semiconductor
+PartNumber=MMBF4393LT1G
+PartCategory=Transistor
+PackageCategory=SOT23 (3-Pin)
+PinCount=3
+Version=1.1
+Released=2015-08-13 08:16:25
+Downloaded=2019-10-30 18:39:26
+3D=Y

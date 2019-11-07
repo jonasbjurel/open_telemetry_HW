@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATS2D1G_NC_LFS
+D Tactile Switches 1VA 32VDC 50mA On-(On) Sldr IP54
+K
+F http://www.mouser.com/ds/2/60/ats-1100738.pdf
+$ENDCMP
+#
+#End Doc Library

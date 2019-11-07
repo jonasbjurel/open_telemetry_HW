@@ -1,0 +1,17 @@
+.MPXV7002DP :1 ;Pressure Sensor 7kPa Differential 2-Port
+MPXV7002DP
+*STM IC
+*NGS
+*PLB 1="N/C_1" 2="VS" 3="GND" 4="VOUT" 5="N/C_2" 6="N/C_3" 7="N/C_4" 8="N/C_5"
+*MXP 8
+*DFN MPXV7002DP
+~!Manufacturer_Name (Nexperia)
+~!Manufacturer_Part_Number (MPXV7002DP)
+~!Mouser Part Number (841-MPXV7002DP)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=841-MPXV7002DP)
+~!RS Part Number (7191197P)
+~!Link RS Price/Stock (http://uk.rs-online.com/web/p/products/7191197P)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/2/MPXV7002DP.pdf)
+~!Height (9.906mm)
+MPXV7002DP
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 

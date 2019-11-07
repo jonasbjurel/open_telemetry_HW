@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MPXV7002DP
+D Pressure Sensor 7kPa Differential 2-Port
+K
+F https://componentsearchengine.com/Datasheets/2/MPXV7002DP.pdf
+$ENDCMP
+#
+#End Doc Library

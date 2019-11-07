@@ -1,0 +1,9 @@
+Manufacturer=Quectel
+PartNumber=L80-M39
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=12
+Version=1.1
+Released=2017-01-22 17:42:20
+Downloaded=2019-10-28 17:23:01
+3D=N

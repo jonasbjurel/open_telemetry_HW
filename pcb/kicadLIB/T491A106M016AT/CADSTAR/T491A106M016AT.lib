@@ -1,0 +1,20 @@
+.T491A106M016AT :1 ;KEMET - T491A106M016AT - CAP, TANT, 10UF, 16V, CASE A
+CAPPM3216X160N
+*STM C
+*NGS
+*PLB 1="+" 2="-"
+*MXP 2
+*DFN T491A106M016AT
+~!Manufacturer_Name (Kemet)
+~!Manufacturer_Part_Number (T491A106M016AT)
+~!Mouser Part Number (80-T491A106M016)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=80-T491A106M016)
+~!RS Part Number (8685839)
+~!Link RS Price/Stock (https://uk.rs-online.com/web/p/products/8685839)
+~!Allied_Number (70096233)
+~!Link Allied Price/Stock (https://www.alliedelec.com/kemet-t491a106m016at/70096233/)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/2/T491A106M016AT.pdf)
+~!Height (1.6mm)
+~!3D_Model (T491A106M016AT)
+T491A106M016AT
+1.1!U 2.1!U 

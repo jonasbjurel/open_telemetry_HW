@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 73412-0110
+#/893954/190061/2.44/4/4/Connector
+DEF 73412-0110 J 0 30 Y Y 1 F N
+F0 "J" 1150 300 50 H V L CNN
+F1 "73412-0110" 1150 200 50 H V L CNN
+F2 "73412-0110" 1150 100 50 H I L CNN
+F3 "http://www.molex.com/pdm_docs/sd/734120110_sd.pdf" 1150 0 50 H I L CNN
+F4 "50 Ohms, MCRF, PCB Vertical Jack Receptacle, SMT, 1.25mm Mounted Height" 1150 -100 50 H I L CNN "Description"
+F5 "" 1150 -200 50 H I L CNN "Height"
+F6 "Molex" 1150 -300 50 H I L CNN "Manufacturer_Name"
+F7 "73412-0110" 1150 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "538-73412-0110" 1150 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-73412-0110" 1150 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "7025425P" 1150 -700 50 H I L CNN "RS Part Number"
+F11 "http://uk.rs-online.com/web/p/products/7025425P" 1150 -800 50 H I L CNN "RS Price/Stock"
+F12 "70357960" 1150 -900 50 H I L CNN "Allied_Number"
+F13 "https://www.alliedelec.com/molex-incorporated-73412-0110/70357960/" 1150 -1000 50 H I L CNN "Allied Price/Stock"
+DRAW
+X SIGNAL 1 0 0 200 R 50 50 0 0 U
+X GND_2 3 0 -100 200 R 50 50 0 0 U
+X GND_1 2 1300 0 200 L 50 50 0 0 U
+X GND_3 4 1300 -100 200 L 50 50 0 0 U
+P 5 0 1 6 200 100 1100 100 1100 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

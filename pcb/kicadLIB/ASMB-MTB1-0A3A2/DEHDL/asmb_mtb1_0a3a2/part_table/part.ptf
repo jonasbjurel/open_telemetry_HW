@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'ASMB_MTB1_0A3A2'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "Avago Technologies", "ASMB-MTB1-0A3A2" (!) = "", "AVAGO_PLCC4", "Other", "630-ASMB-MTB1-0A3A2", "https://www.mouser.com/Search/Refine.aspx?Keyword=630-ASMB-MTB1-0A3A2", "8305079P", "http://uk.rs-online.com/web/p/products/8305079P", "Broadcom ASMB-MTB1-0A3A2 3 RGB LED, 470 / 530 / 625 nm PLCC 4, Round Lens SMD package", "https://docs.broadcom.com/docs/AV02-4194EN"
+END_PART
+
+END.

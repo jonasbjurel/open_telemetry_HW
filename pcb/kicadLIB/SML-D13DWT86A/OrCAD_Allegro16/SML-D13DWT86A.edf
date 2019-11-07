@@ -1,0 +1,183 @@
+
+(EDIF
+  (rename &SML_D13DWT86A "SML_D13DWT86A")
+  (EDIFVersion 2 0 0)
+  (EDIFLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2019 10 31 22 18 51)
+      (dataOrigin "939263/190061/2.44/2/4/LED")
+      (program "SamacSys ECAD Model SML_D13DWT86A"
+        (version "1.1"))))
+  (library
+  (rename &SML_D13DWT86A "SML_D13DWT86A")
+    (EDIFLevel 0)
+    (technology
+      (numberDefinition (scale 1 (e 254 -6) (unit DISTANCE)))
+      (userData GRIDRESOLUTION (integer 50 50))
+      (figureGroup DEFAULT (pathWidth 10) (textHeight 100))
+      (figureGroup PROPERTY (pathWidth 10) (textHeight 90))
+      (figureGroup PINNUMBER (pathWidth 10) (textHeight 90))
+      (figureGroup PINNAME (pathWidth 10) (textHeight 90))
+      (figureGroup COMMENT (pathWidth 10) (textHeight 90))
+      (figureGroup PIN (pathWidth 10) (textHeight 90))
+      (figureGroup GRAPHIC (pathWidth 10) (textHeight 100))
+    )
+    (cell
+      (rename &SML_D13DWT86A "SML_D13DWT86A")
+      (cellType GENERIC)
+      (view
+        (rename NORMAL "Normal")
+        (viewType SCHEMATIC)
+        (interface
+          (designator "LED")
+          (property (rename PACKAGENAME "PackageName") (string "SML_D13DWT86A"))
+          (property (rename ISHETEROGENEOUS "IsHeterogeneous") (string "False"))
+          (property (rename DEVICESINVIEW "DevicesInView") (string "1"))
+          (property (rename DEVICESINPACKAGE "DevicesInPackage") (string "1"))
+          (property (rename DEVICEDESIGNATOR "DeviceDesignator") (string "A"))
+          (property (rename DEVICENUMBERING "DeviceNumbering") (string "Alpha"))
+          (property (rename PCB_32_FOOTPRINT "PCB Footprint") (string "LEDC1608X65N"))
+          (property (rename &Manufacturer_Name "Manufacturer_Name") (string "ROHM Semiconductor"))
+          (property (rename &Manufacturer_Part_Number "Manufacturer_Part_Number") (string "SML-D13DWT86A"))
+          (property (rename &Mouser_Part_Number "Mouser Part Number") (string "755-SML-D13DWT86A"))
+          (property (rename &Mouser_Price_Stock "Mouser Price/Stock") (string "https://www.mouser.com/Search/Refine.aspx?Keyword=755-SML-D13DWT86A"))
+          (property (rename &RS_Part_Number "RS Part Number") (string "1332873P"))
+          (property (rename &RS_Price_Stock "RS Price/Stock") (string "http://uk.rs-online.com/web/p/products/1332873P"))
+          (property (rename &Description "Description") (string "ROHM SML-D13DWT86A, SML 608 nm Orange LED, 1608 (0603) Milky White SMD package"))
+          (property (rename &Datasheet_Link "Datasheet Link") (string "https://docs-emea.rs-online.com/webdocs/156b/0900766b8156b2c9.pdf"))
+          (property (rename &Height "Height") (string "0.65 mm"))
+          (property (rename &_60__32_VALUE_32__62_ "Value") (string "SML_D13DWT86A"))
+          (property (rename VALUE "Value") (string "Value"))
+          (port
+            (rename &K "K")
+            (designator "1")
+            (property (rename ORDER "Order") (string "0") (owner "OrCAD"))
+          )
+          (port
+            (rename &A "A")
+            (designator "2")
+            (property (rename ORDER "Order") (string "1") (owner "OrCAD"))
+          )
+          (symbol
+            (portImplementation
+              (name &K (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt -100 -200) (pt 0 -200))))
+              (connectLocation (figure GRAPHIC (dot (pt -100 -200))))
+            )
+            (portImplementation
+              (name &A (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt 400 -200) (pt 500 -200))))
+              (connectLocation (figure GRAPHIC (dot (pt 500 -200))))
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 100 -200)
+                  (pt 300 -100)
+                  (pt 300 -300)
+                  (pt 100 -200)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 100 -100)
+                  (pt 100 -300)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 150 -100)
+                  (pt 50 0)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 250 -100)
+                  (pt 150 0)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 0 -200)
+                  (pt 100 -200)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 300 -200)
+                  (pt 400 -200)
+                )
+              )
+            )
+              (figure GRAPHIC
+                (figureGroupOverride GRAPHIC
+	              (fillPattern 1 1
+                    (boolean
+                      (boolean
+                        (true)
+                      )
+                    )
+                  )
+                )
+              (polygon
+                (pointList
+                  (pt 110 -30)
+                  (pt 80 -60)
+                  (pt 50 0)
+                  (pt 110 -30)
+                )
+              )
+            )
+              (figure GRAPHIC
+                (figureGroupOverride GRAPHIC
+	              (fillPattern 1 1
+                    (boolean
+                      (boolean
+                        (true)
+                      )
+                    )
+                  )
+                )
+              (polygon
+                (pointList
+                  (pt 210 -30)
+                  (pt 180 -60)
+                  (pt 150 0)
+                  (pt 210 -30)
+                )
+              )
+            )
+            (keywordDisplay DESIGNATOR (display PROPERTY (justify LOWERLEFT) (orientation R0) (origin (pt 400 80))))
+            (propertyDisplay &_60__32_VALUE_32__62_ (display PROPERTY (justify LOWERLEFT) (orientation R0) (origin (pt 400 -20))))
+          )
+        )
+      )
+    )
+  )
+)

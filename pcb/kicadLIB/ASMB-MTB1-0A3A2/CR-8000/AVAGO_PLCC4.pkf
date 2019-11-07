@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "AVAGO_PLCC4"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "AVAGO_PLCC4")
+        (spec "default")
+    )
+)

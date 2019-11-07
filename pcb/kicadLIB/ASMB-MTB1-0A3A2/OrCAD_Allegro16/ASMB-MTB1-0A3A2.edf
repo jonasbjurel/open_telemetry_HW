@@ -1,0 +1,117 @@
+
+(EDIF
+  (rename &ASMB_MTB1_0A3A2 "ASMB_MTB1_0A3A2")
+  (EDIFVersion 2 0 0)
+  (EDIFLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2019 11 01 17 13 04)
+      (dataOrigin "533801/190061/2.44/4/4/Integrated Circuit")
+      (program "SamacSys ECAD Model ASMB_MTB1_0A3A2"
+        (version "3.1"))))
+  (library
+  (rename &ASMB_MTB1_0A3A2 "ASMB_MTB1_0A3A2")
+    (EDIFLevel 0)
+    (technology
+      (numberDefinition (scale 1 (e 254 -6) (unit DISTANCE)))
+      (userData GRIDRESOLUTION (integer 50 50))
+      (figureGroup DEFAULT (pathWidth 10) (textHeight 100))
+      (figureGroup PROPERTY (pathWidth 10) (textHeight 90))
+      (figureGroup PINNUMBER (pathWidth 10) (textHeight 90))
+      (figureGroup PINNAME (pathWidth 10) (textHeight 90))
+      (figureGroup COMMENT (pathWidth 10) (textHeight 90))
+      (figureGroup PIN (pathWidth 10) (textHeight 90))
+      (figureGroup GRAPHIC (pathWidth 10) (textHeight 100))
+    )
+    (cell
+      (rename &ASMB_MTB1_0A3A2 "ASMB_MTB1_0A3A2")
+      (cellType GENERIC)
+      (view
+        (rename NORMAL "Normal")
+        (viewType SCHEMATIC)
+        (interface
+          (designator "IC")
+          (property (rename PACKAGENAME "PackageName") (string "ASMB_MTB1_0A3A2"))
+          (property (rename ISHETEROGENEOUS "IsHeterogeneous") (string "False"))
+          (property (rename DEVICESINVIEW "DevicesInView") (string "1"))
+          (property (rename DEVICESINPACKAGE "DevicesInPackage") (string "1"))
+          (property (rename DEVICEDESIGNATOR "DeviceDesignator") (string "A"))
+          (property (rename DEVICENUMBERING "DeviceNumbering") (string "Alpha"))
+          (property (rename PCB_32_FOOTPRINT "PCB Footprint") (string "AVAGO_PLCC4"))
+          (property (rename &Manufacturer_Name "Manufacturer_Name") (string "Avago Technologies"))
+          (property (rename &Manufacturer_Part_Number "Manufacturer_Part_Number") (string "ASMB-MTB1-0A3A2"))
+          (property (rename &Mouser_Part_Number "Mouser Part Number") (string "630-ASMB-MTB1-0A3A2"))
+          (property (rename &Mouser_Price_Stock "Mouser Price/Stock") (string "https://www.mouser.com/Search/Refine.aspx?Keyword=630-ASMB-MTB1-0A3A2"))
+          (property (rename &RS_Part_Number "RS Part Number") (string "8305079P"))
+          (property (rename &RS_Price_Stock "RS Price/Stock") (string "http://uk.rs-online.com/web/p/products/8305079P"))
+          (property (rename &Description "Description") (string "Broadcom ASMB-MTB1-0A3A2 3 RGB LED, 470 / 530 / 625 nm PLCC 4, Round Lens SMD package"))
+          (property (rename &Datasheet_Link "Datasheet Link") (string "https://docs.broadcom.com/docs/AV02-4194EN"))
+          (property (rename &_60__32_VALUE_32__62_ "Value") (string "ASMB_MTB1_0A3A2"))
+          (property (rename VALUE "Value") (string "Value"))
+          (port
+            (rename &CATHODE__RED_ "CATHODE__RED_")
+            (designator "1")
+            (property (rename ORDER "Order") (string "0") (owner "OrCAD"))
+          )
+          (port
+            (rename &CATHODE__GREEN_ "CATHODE__GREEN_")
+            (designator "2")
+            (property (rename ORDER "Order") (string "1") (owner "OrCAD"))
+          )
+          (port
+            (rename &CATHODE__BLUE_ "CATHODE__BLUE_")
+            (designator "3")
+            (property (rename ORDER "Order") (string "2") (owner "OrCAD"))
+          )
+          (port
+            (rename &COMMON__ANODE_ "COMMON__ANODE_")
+            (designator "4")
+            (property (rename ORDER "Order") (string "3") (owner "OrCAD"))
+          )
+          (symbol
+            (portImplementation
+              (name &CATHODE__RED_ (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt -200 -100) (pt 0 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt -200 -100))))
+            )
+            (portImplementation
+              (name &CATHODE__GREEN_ (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt -200 -200) (pt 0 -200))))
+              (connectLocation (figure GRAPHIC (dot (pt -200 -200))))
+            )
+            (portImplementation
+              (name &CATHODE__BLUE_ (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt 1800 -100) (pt 2000 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt 2000 -100))))
+            )
+            (portImplementation
+              (name &COMMON__ANODE_ (display PINNAME))
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt 1800 -200) (pt 2000 -200))))
+              (connectLocation (figure GRAPHIC (dot (pt 2000 -200))))
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 0 0)
+                  (pt 1800 0)
+                  (pt 1800 -300)
+                  (pt 0 -300)
+                  (pt 0 0)
+                )
+              )
+            )
+            (keywordDisplay DESIGNATOR (display PROPERTY (justify LOWERLEFT) (orientation R0) (origin (pt 1850 130))))
+            (propertyDisplay &_60__32_VALUE_32__62_ (display PROPERTY (justify LOWERLEFT) (orientation R0) (origin (pt 1850 30))))
+          )
+        )
+      )
+    )
+  )
+)

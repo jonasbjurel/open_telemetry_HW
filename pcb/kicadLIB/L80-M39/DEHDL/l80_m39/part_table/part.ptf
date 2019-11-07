@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'L80_M39'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "Quectel", "L80-M39" (!) = "", "L80-M39", "Other", "", "", "9084088", "http://uk.rs-online.com/web/p/products/9084088", "L80 GPS Module", "http://docs-emea.rs-online.com/webdocs/147d/0900766b8147dbf2.pdf"
+END_PART
+
+END.

@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "ATS2D1G"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "ATS2D1G")
+        (spec "default")
+    )
+)

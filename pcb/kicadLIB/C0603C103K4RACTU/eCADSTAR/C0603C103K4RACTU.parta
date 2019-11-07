@@ -1,0 +1,70 @@
+(Japanese_coding: sjis)
+(function "ECS_790530"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-11-13-09:48:08)
+    (utime 2019-05-13-09:49:00)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "C0603C103K4RACTU")
+)
+
+
+(pinAssign "ECS_790530"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-11-13-09:48:08)
+    (utime 2019-05-13-09:49:00)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_790530")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "C0603C103K4RACTU")
+)
+
+
+(part "C0603C103K4RACTU"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-11-13-09:48:08)
+    (utime 2019-05-13-09:49:00)
+    (packageRef "C0603C103K4RACTU")
+    (pinAssignRef "ECS_790530")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "C")
+    (property "description" "KEMET - C0603C103K4RACTU - CAP, 0.01F, 16V, 10%, X7R, 0603")
+    (property "Manufacturer_Name" "Kemet")
+    (property "Manufacturer_Part_Number" "C0603C103K4RACTU")
+    (property "Mouser_Part_Number" "80-C0603C103K4R")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=80-C0603C103K4R")
+    (property "RS_Part_Number" "1464174")
+    (property "RS_Price/Stock" "http://uk.rs-online.com/web/p/products/1464174")
+    (property "Allied_Number" "70097263")
+    (property "Allied_Price/Stock" "https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/")
+    (property "Datasheet_Link" "https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf")
+    (property "compAreaTopHeight" 0.87)
+)
+
+

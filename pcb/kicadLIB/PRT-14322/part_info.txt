@@ -1,0 +1,9 @@
+Manufacturer=SparkFun
+PartNumber=PRT-14322
+PartCategory=Connector
+PackageCategory=Header, Shrouded
+PinCount=12
+Version=1.1
+Released=2018-02-04 23:15:08
+Downloaded=2019-10-31 11:59:47
+3D=N

@@ -1,0 +1,70 @@
+(Japanese_coding: sjis)
+(function "ECS_327257"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-04-05-06:18:18)
+    (utime 2018-09-26-07:41:04)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "T491A106M016AT")
+)
+
+
+(pinAssign "ECS_327257"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-04-05-06:18:18)
+    (utime 2018-09-26-07:41:04)
+    (interface
+        (port "1" (symbPinId 1) (portName "+") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "-") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_327257")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "T491A106M016AT")
+)
+
+
+(part "T491A106M016AT"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-04-05-06:18:18)
+    (utime 2018-09-26-07:41:04)
+    (packageRef "T491A106M016AT")
+    (pinAssignRef "ECS_327257")
+    (interface
+        (port "1" (symbPinId 1) (portName "+") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "-") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "C")
+    (property "description" "KEMET - T491A106M016AT - CAP, TANT, 10UF, 16V, CASE A")
+    (property "Manufacturer_Name" "Kemet")
+    (property "Manufacturer_Part_Number" "T491A106M016AT")
+    (property "Mouser_Part_Number" "80-T491A106M016")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=80-T491A106M016")
+    (property "RS_Part_Number" "8685839")
+    (property "RS_Price/Stock" "https://uk.rs-online.com/web/p/products/8685839")
+    (property "Allied_Number" "70096233")
+    (property "Allied_Price/Stock" "https://www.alliedelec.com/kemet-t491a106m016at/70096233/")
+    (property "Datasheet_Link" "https://componentsearchengine.com/Datasheets/2/T491A106M016AT.pdf")
+    (property "compAreaTopHeight" 1.6)
+)
+
+

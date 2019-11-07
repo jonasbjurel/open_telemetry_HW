@@ -1,0 +1,67 @@
+(Japanese_coding: sjis)
+(function "ECS_878276"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2017-10-01-11:57:14)
+    (utime 2018-06-06-11:10:46)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "ATS2D1G_NC_LFS")
+)
+
+
+(pinAssign "ECS_878276"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2017-10-01-11:57:14)
+    (utime 2018-06-06-11:10:46)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_878276")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "ATS2D1G_NC_LFS")
+)
+
+
+(part "ATS2D1G_NC_LFS"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2017-10-01-11:57:14)
+    (utime 2018-06-06-11:10:46)
+    (packageRef "ATS2D1G_NC_LFS")
+    (pinAssignRef "ECS_878276")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "S")
+    (property "description" "Tactile Switches 1VA 32VDC 50mA On-(On) Sldr IP54")
+    (property "Manufacturer_Name" "C & K COMPONENTS")
+    (property "Manufacturer_Part_Number" "ATS2D1G NC LFS")
+    (property "Mouser_Part_Number" "611-ATS2D1GNCLFS")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=611-ATS2D1GNCLFS")
+    (property "RS_Part_Number" "")
+    (property "RS_Price/Stock" "")
+    (property "Datasheet_Link" "http://www.mouser.com/ds/2/60/ats-1100738.pdf")
+)
+
+

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "L80-M39"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2018-06-06-11:10:45)
+    (mountForm default
+        (footprintRef "L80-M39")
+        (spec "System")
+    )
+)

@@ -1,0 +1,9 @@
+Manufacturer=ROHM Semiconductor
+PartNumber=SML-D13FWT86
+PartCategory=LED
+PackageCategory=Other
+PinCount=2
+Version=1.2
+Released=2018-04-21 09:58:54
+Downloaded=2019-10-31 21:53:06
+3D=N

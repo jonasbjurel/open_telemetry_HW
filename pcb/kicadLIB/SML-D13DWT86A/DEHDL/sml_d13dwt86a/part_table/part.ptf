@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SML_D13DWT86A'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "ROHM Semiconductor", "SML-D13DWT86A" (!) = "", "LEDC1608X65N", "LEDs Chip", "755-SML-D13DWT86A", "https://www.mouser.com/Search/Refine.aspx?Keyword=755-SML-D13DWT86A", "1332873P", "http://uk.rs-online.com/web/p/products/1332873P", "ROHM SML-D13DWT86A, SML 608 nm Orange LED, 1608 (0603) Milky White SMD package", "https://docs-emea.rs-online.com/webdocs/156b/0900766b8156b2c9.pdf", "0.65 mm"
+END_PART
+
+END.

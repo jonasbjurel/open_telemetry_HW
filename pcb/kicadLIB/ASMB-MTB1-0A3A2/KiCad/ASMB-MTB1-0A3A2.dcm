@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ASMB-MTB1-0A3A2
+D Broadcom ASMB-MTB1-0A3A2 3 RGB LED, 470 / 530 / 625 nm PLCC 4, Round Lens SMD package
+K
+F https://docs.broadcom.com/docs/AV02-4194EN
+$ENDCMP
+#
+#End Doc Library

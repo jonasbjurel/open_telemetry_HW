@@ -1,0 +1,9 @@
+Manufacturer=Kemet
+PartNumber=C0603C103K4RACTU
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=2.1
+Released=2018-11-13 09:48:08
+Downloaded=2019-10-31 18:13:51
+3D=Y

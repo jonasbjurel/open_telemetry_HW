@@ -1,0 +1,17 @@
+.SML-D13DWT86A :1 ;ROHM SML-D13DWT86A, SML 608 nm Orange LED, 1608 (0603) Milky White SMD package
+LEDC1608X65N
+*STM LED
+*NGS
+*PLB 1="K" 2="A"
+*MXP 2
+*DFN SML-D13DWT86A
+~!Manufacturer_Name (ROHM Semiconductor)
+~!Manufacturer_Part_Number (SML-D13DWT86A)
+~!Mouser Part Number (755-SML-D13DWT86A)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=755-SML-D13DWT86A)
+~!RS Part Number (1332873P)
+~!Link RS Price/Stock (http://uk.rs-online.com/web/p/products/1332873P)
+~!Link Datasheet (https://docs-emea.rs-online.com/webdocs/156b/0900766b8156b2c9.pdf)
+~!Height (0.65mm)
+SML-D13DWT86A
+1.1!U 2.1!U 

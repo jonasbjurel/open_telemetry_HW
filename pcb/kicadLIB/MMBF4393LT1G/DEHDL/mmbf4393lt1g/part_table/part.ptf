@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'MMBF4393LT1G'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "ALLIED_NUMBER", "ALLIED_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "ON Semiconductor", "MMBF4393LT1G" (!) = "", "SOT96P237X111-3N", "SOT23 (3-Pin)", "863-MMBF4393LT1G", "https://www.mouser.com/Search/Refine.aspx?Keyword=863-MMBF4393LT1G", "8647846P", "http://uk.rs-online.com/web/p/products/8647846P", "70100163", "http://www.alliedelec.com/on-semiconductor-mmbf4393lt1g/70100163/", "", "http://www.onsemi.com/pub/Collateral/MMBF4391LT1-D.PDF", "1.11 mm"
+END_PART
+
+END.

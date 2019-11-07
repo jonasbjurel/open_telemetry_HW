@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP T491B106K016AT7280
+D Tantalum Capacitors - Solid SMD 16V 10uF 1311 10% ESR=2ohms
+K
+F https://api.kemet.com/component-edge/download/datasheet/T491B106K016AT7280.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'C0603C103K4RACTU'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "ALLIED_NUMBER", "ALLIED_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Kemet", "C0603C103K4RACTU" (!) = "", "CAPC1608X87N", "Capacitor Chip Non-polarised", "80-C0603C103K4R", "https://www.mouser.com/Search/Refine.aspx?Keyword=80-C0603C103K4R", "1464174", "http://uk.rs-online.com/web/p/products/1464174", "70097263", "https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/", "KEMET - C0603C103K4RACTU - CAP, 0.01F, 16V, 10%, X7R, 0603", "https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf", "0.87 mm"
+END_PART
+
+END.

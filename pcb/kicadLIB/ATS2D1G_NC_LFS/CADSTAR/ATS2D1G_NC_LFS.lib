@@ -1,0 +1,17 @@
+.ATS2D1G_NC_LFS :1 ;Tactile Switches 1VA 32VDC 50mA On-(On) Sldr IP54
+ATS2D1G
+*STM S
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN ATS2D1G_NC_LFS
+~!Manufacturer_Name (C & K COMPONENTS)
+~!Manufacturer_Part_Number (ATS2D1G NC LFS)
+~!Mouser Part Number (611-ATS2D1GNCLFS)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=611-ATS2D1GNCLFS)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Link Datasheet (http://www.mouser.com/ds/2/60/ats-1100738.pdf)
+~!Height (-)
+ATS2D1G_NC_LFS
+1.1!U 2.1!U 

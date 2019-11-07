@@ -1,0 +1,125 @@
+
+(EDIF
+  (rename &C0603C103K4RACTU "C0603C103K4RACTU")
+  (EDIFVersion 2 0 0)
+  (EDIFLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2019 10 31 18 13 51)
+      (dataOrigin "790530/190061/2.44/2/3/Capacitor")
+      (program "SamacSys ECAD Model C0603C103K4RACTU"
+        (version "2.1"))))
+  (library
+  (rename &C0603C103K4RACTU "C0603C103K4RACTU")
+    (EDIFLevel 0)
+    (technology
+      (numberDefinition (scale 1 (e 254 -6) (unit DISTANCE)))
+      (userData GRIDRESOLUTION (integer 50 50))
+      (figureGroup DEFAULT (pathWidth 10) (textHeight 100))
+      (figureGroup PROPERTY (pathWidth 10) (textHeight 90))
+      (figureGroup PINNUMBER (pathWidth 10) (textHeight 90))
+      (figureGroup PINNAME (pathWidth 10) (textHeight 90))
+      (figureGroup COMMENT (pathWidth 10) (textHeight 90))
+      (figureGroup PIN (pathWidth 10) (textHeight 90))
+      (figureGroup GRAPHIC (pathWidth 10) (textHeight 100))
+    )
+    (cell
+      (rename &C0603C103K4RACTU "C0603C103K4RACTU")
+      (cellType GENERIC)
+      (view
+        (rename NORMAL "Normal")
+        (viewType SCHEMATIC)
+        (interface
+          (designator "C")
+          (property (rename PACKAGENAME "PackageName") (string "C0603C103K4RACTU"))
+          (property (rename ISHETEROGENEOUS "IsHeterogeneous") (string "False"))
+          (property (rename DEVICESINVIEW "DevicesInView") (string "1"))
+          (property (rename DEVICESINPACKAGE "DevicesInPackage") (string "1"))
+          (property (rename DEVICEDESIGNATOR "DeviceDesignator") (string "A"))
+          (property (rename DEVICENUMBERING "DeviceNumbering") (string "Alpha"))
+          (property (rename PCB_32_FOOTPRINT "PCB Footprint") (string "CAPC1608X87N"))
+          (property (rename &Manufacturer_Name "Manufacturer_Name") (string "Kemet"))
+          (property (rename &Manufacturer_Part_Number "Manufacturer_Part_Number") (string "C0603C103K4RACTU"))
+          (property (rename &Mouser_Part_Number "Mouser Part Number") (string "80-C0603C103K4R"))
+          (property (rename &Mouser_Price_Stock "Mouser Price/Stock") (string "https://www.mouser.com/Search/Refine.aspx?Keyword=80-C0603C103K4R"))
+          (property (rename &RS_Part_Number "RS Part Number") (string "1464174"))
+          (property (rename &RS_Price_Stock "RS Price/Stock") (string "http://uk.rs-online.com/web/p/products/1464174"))
+          (property (rename &Allied_Number "Allied_Number") (string "70097263"))
+          (property (rename &Allied_Price_Stock "Allied Price/Stock") (string "https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/"))
+          (property (rename &Description "Description") (string "KEMET - C0603C103K4RACTU - CAP, 0.01F, 16V, 10percent, X7R, 0603"))
+          (property (rename &Datasheet_Link "Datasheet Link") (string "https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf"))
+          (property (rename &Height "Height") (string "0.87 mm"))
+          (property (rename &_60__32_VALUE_32__62_ "Value") (string "C0603C103K4RACTU"))
+          (property (rename VALUE "Value") (string "Value"))
+          (port
+            (rename &1 "1")
+            (designator "1")
+            (property (rename ORDER "Order") (string "0") (owner "OrCAD"))
+          )
+          (port
+            (rename &2 "2")
+            (designator "2")
+            (property (rename ORDER "Order") (string "1") (owner "OrCAD"))
+          )
+          (symbol
+            (portImplementation
+              (name &1)
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt -200 -100) (pt 0 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt -200 -100))))
+            )
+            (portImplementation
+              (name &2)
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt 100 -100) (pt 300 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt 300 -100))))
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 20 0)
+                  (pt 20 -200)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 80 0)
+                  (pt 80 -200)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 0 -100)
+                  (pt 20 -100)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 80 -100)
+                  (pt 100 -100)
+                )
+              )
+            )
+            (keywordDisplay DESIGNATOR (display PROPERTY (justify 24) (orientation R0) (origin (pt 150 80))))
+            (propertyDisplay &_60__32_VALUE_32__62_ (display PROPERTY (justify 24) (orientation R0) (origin (pt 150 -20))))
+          )
+        )
+      )
+    )
+  )
+)

@@ -1,0 +1,223 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "L80-M39"
+   (description "L80 GPS Module")
+   (family "ANA")
+   (package "L80-M39")
+   (attribute "Datasheet Link" "http://docs-emea.rs-online.com/webdocs/147d/0900766b8147dbf2.pdf")
+   (attribute "Manufacturer_Name" "Quectel")
+   (attribute "Manufacturer_Part_Number" "L80-M39")
+   (attribute "Mouser Part Number" "")
+   (attribute "Mouser Price/Stock" "")
+   (attribute "RS Part Number" "9084088")
+   (attribute "RS Price/Stock" "http://uk.rs-online.com/web/p/products/9084088")
+   (gate
+    (symbol "L80-M39")
+    (pin "RXD1" 1 PS)
+    (pin "TXD1" 2 PS)
+    (pin "GND_1" 3 PS)
+    (pin "VCC" 4 PS)
+    (pin "V_BCKP" 5 PS)
+    (pin "1PPS" 6 PS)
+    (pin "TIMER" 7 PS)
+    (pin "AADET_N" 8 PS)
+    (pin "NC" 9 NC)
+    (pin "RESET" 10 PS)
+    (pin "EX_ANT" 11 PS)
+    (pin "GND_2" 12 PS)
+   )
+  )
+  (symbol "L80-M39"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1200 100) (pt 1200 -600) (pt 200 -600) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -400) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -500) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -300) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -400) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1400 -500) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "L80-M39"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -0.25 2.92)
+      (pt 15.75 2.92)
+      (pt 15.75 -13.08)
+      (pt -0.25 -13.08)
+      (pt -0.25 2.92))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.25 2.92)
+      (pt 15.75 2.92))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.25 -13.08)
+      (pt 15.75 -13.08))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.25 0.43)
+      (pt -0.25 -0.43))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.25 -2.11)
+      (pt -0.25 -2.97))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.25 -4.65)
+      (pt -0.25 -5.51))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.25 -7.19)
+      (pt -0.25 -8.05))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.25 -9.73)
+      (pt -0.25 -10.59))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 15.75 0.43)
+      (pt 15.75 -0.43))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 15.75 -2.11)
+      (pt 15.75 -2.97))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 15.75 -4.65)
+      (pt 15.75 -5.51))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 15.75 -7.19)
+      (pt 15.75 -8.05))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 15.75 -9.73)
+      (pt 15.75 -10.59))))
+   (layer TSLK
+    (graphic
+     (stroke 0.3)
+     (circle
+      (pt 17.3687 -12.465) (pt 17.6533 -12.465)
+     )
+    )
+   )
+   (leg 1 (pt 15.5 -11.43) (padstack 0))
+   (leg 2 (pt 15.5 -8.89) (padstack 0))
+   (leg 3 (pt 15.5 -6.35) (padstack 0))
+   (leg 4 (pt 15.5 -3.81) (padstack 0))
+   (leg 5 (pt 15.5 -1.27) (padstack 0))
+   (leg 6 (pt 15.5 1.27) (padstack 0))
+   (leg 7 (pt 0 1.27) (padstack 0))
+   (leg 8 (pt 0 -1.27) (padstack 0))
+   (leg 9 (pt 0 -3.81) (padstack 0))
+   (leg 10 (pt 0 -6.35) (padstack 0))
+   (leg 11 (pt 0 -8.89) (padstack 0))
+   (leg 12 (pt 0 -11.43) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1 2.5 0 0 0))
+   )
+  )
+ )
+)

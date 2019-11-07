@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '73412_0110'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "ALLIED_NUMBER", "ALLIED_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "Molex", "73412-0110" (!) = "", "73412-0110", "Other", "538-73412-0110", "https://www.mouser.com/Search/Refine.aspx?Keyword=538-73412-0110", "7025425P", "http://uk.rs-online.com/web/p/products/7025425P", "70357960", "https://www.alliedelec.com/molex-incorporated-73412-0110/70357960/", "50 Ohms, MCRF, PCB Vertical Jack Receptacle, SMT, 1.25mm Mounted Height", "http://www.molex.com/pdm_docs/sd/734120110_sd.pdf"
+END_PART
+
+END.

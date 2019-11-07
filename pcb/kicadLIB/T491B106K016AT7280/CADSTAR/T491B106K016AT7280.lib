@@ -1,0 +1,18 @@
+.T491B106K016AT7280 :1 ;Tantalum Capacitors - Solid SMD 16V 10uF 1311 10% ESR=2ohms
+CAPPM3528X210N
+*STM C
+*NGS
+*PLB 1="+" 2="-"
+*MXP 2
+*DFN T491B106K016AT7280
+~!Manufacturer_Name (Kemet)
+~!Manufacturer_Part_Number (T491B106K016AT7280)
+~!Mouser Part Number (80-T491B106K16AT7280)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=80-T491B106K16AT7280)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Link Datasheet (https://api.kemet.com/component-edge/download/datasheet/T491B106K016AT7280.pdf)
+~!Height (2.1mm)
+~!3D_Model (T491B106K016AT7280)
+T491B106K016AT7280
+1.1!U 2.1!U 

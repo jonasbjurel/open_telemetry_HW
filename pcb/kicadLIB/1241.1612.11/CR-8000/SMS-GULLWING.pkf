@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "SMS-GULLWING"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "SMS-GULLWING")
+        (spec "default")
+    )
+)

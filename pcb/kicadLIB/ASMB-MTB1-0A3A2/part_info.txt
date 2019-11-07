@@ -1,0 +1,9 @@
+Manufacturer=Avago Technologies
+PartNumber=ASMB-MTB1-0A3A2
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=4
+Version=3.1
+Released=2017-09-13 20:20:23
+Downloaded=2019-11-01 17:13:04
+3D=N

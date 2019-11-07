@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '1241.1612.11'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "SCHURTER", "1241.1612.11" (!) = "", "SMS-GULLWING", "Other", "693-1241.1612.11", "https://www.mouser.com/Search/Refine.aspx?Keyword=693-1241.1612.11", "", "", "SCHURTER - 1241.1612.11 - SWITCH, SPST-NO, 0.05A, 42VDC/30VAC, SMD", "http://docs-emea.rs-online.com/webdocs/1441/0900766b81441fba.pdf"
+END_PART
+
+END.

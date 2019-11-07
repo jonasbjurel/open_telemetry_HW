@@ -1,0 +1,9 @@
+Manufacturer=C & K COMPONENTS
+PartNumber=ATS2D1G NC LFS
+PartCategory=Switch
+PackageCategory=Other
+PinCount=2
+Version=1.1
+Released=2017-10-01 11:57:14
+Downloaded=2019-11-01 18:43:57
+3D=N

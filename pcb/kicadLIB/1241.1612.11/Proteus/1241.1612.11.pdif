@@ -1,0 +1,111 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "1241.1612.11"
+   (description "SCHURTER - 1241.1612.11 - SWITCH, SPST-NO, 0.05A, 42VDC/30VAC, SMD")
+   (family "SWI")
+   (package "SMS-GULLWING")
+   (attribute "Datasheet Link" "http://docs-emea.rs-online.com/webdocs/1441/0900766b81441fba.pdf")
+   (attribute "Manufacturer_Name" "SCHURTER")
+   (attribute "Manufacturer_Part_Number" "1241.1612.11")
+   (attribute "Mouser Part Number" "693-1241.1612.11")
+   (attribute "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=693-1241.1612.11")
+   (attribute "RS Part Number" "")
+   (attribute "RS Price/Stock" "")
+   (gate
+    (symbol "1241.1612.11")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "3" 3 PS)
+    (pin "4" 4 PS)
+   )
+  )
+  (symbol "1241.1612.11"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 600 100) (pt 600 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "SMS-GULLWING"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.254)
+     (path
+      (closed true)
+      (pt -5.7 5.7)
+      (pt 5.7 5.7)
+      (pt 5.7 -5.7)
+      (pt -5.7 -5.7)
+      (pt -5.7 5.7))))
+   (layer TSLK
+    (graphic
+     (stroke 0.254)
+     (path
+      (closed false)
+      (pt -5.7 -5.7)
+      (pt 5.7 -5.7))))
+   (layer TSLK
+    (graphic
+     (stroke 0.254)
+     (path
+      (closed false)
+      (pt -5.7 5.7)
+      (pt 5.7 5.7))))
+   (layer TSLK
+    (graphic
+     (stroke 0.254)
+     (path
+      (closed false)
+      (pt -5.7 2.4)
+      (pt -5.7 -2.4))))
+   (layer TSLK
+    (graphic
+     (stroke 0.254)
+     (path
+      (closed false)
+      (pt 5.7 2.4)
+      (pt 5.7 -2.4))))
+   (leg 1 (pt -7 -3.75) (padstack 0))
+   (leg 2 (pt 7 -3.75) (padstack 0))
+   (leg 3 (pt 7 3.75) (padstack 0))
+   (leg 4 (pt -7 3.75) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 2 3 0 0 0))
+   )
+  )
+ )
+)

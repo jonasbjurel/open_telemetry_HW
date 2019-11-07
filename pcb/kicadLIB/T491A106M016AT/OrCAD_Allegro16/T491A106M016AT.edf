@@ -1,0 +1,158 @@
+
+(EDIF
+  (rename &T491A106M016AT "T491A106M016AT")
+  (EDIFVersion 2 0 0)
+  (EDIFLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2019 11 01 11 42 57)
+      (dataOrigin "327257/190061/2.44/2/3/Capacitor Polarised")
+      (program "SamacSys ECAD Model T491A106M016AT"
+        (version "2.1"))))
+  (library
+  (rename &T491A106M016AT "T491A106M016AT")
+    (EDIFLevel 0)
+    (technology
+      (numberDefinition (scale 1 (e 254 -6) (unit DISTANCE)))
+      (userData GRIDRESOLUTION (integer 50 50))
+      (figureGroup DEFAULT (pathWidth 10) (textHeight 100))
+      (figureGroup PROPERTY (pathWidth 10) (textHeight 90))
+      (figureGroup PINNUMBER (pathWidth 10) (textHeight 90))
+      (figureGroup PINNAME (pathWidth 10) (textHeight 90))
+      (figureGroup COMMENT (pathWidth 10) (textHeight 90))
+      (figureGroup PIN (pathWidth 10) (textHeight 90))
+      (figureGroup GRAPHIC (pathWidth 10) (textHeight 100))
+    )
+    (cell
+      (rename &T491A106M016AT "T491A106M016AT")
+      (cellType GENERIC)
+      (view
+        (rename NORMAL "Normal")
+        (viewType SCHEMATIC)
+        (interface
+          (designator "C")
+          (property (rename PACKAGENAME "PackageName") (string "T491A106M016AT"))
+          (property (rename ISHETEROGENEOUS "IsHeterogeneous") (string "False"))
+          (property (rename DEVICESINVIEW "DevicesInView") (string "1"))
+          (property (rename DEVICESINPACKAGE "DevicesInPackage") (string "1"))
+          (property (rename DEVICEDESIGNATOR "DeviceDesignator") (string "A"))
+          (property (rename DEVICENUMBERING "DeviceNumbering") (string "Alpha"))
+          (property (rename PCB_32_FOOTPRINT "PCB Footprint") (string "CAPPM3216X160N"))
+          (property (rename &Manufacturer_Name "Manufacturer_Name") (string "Kemet"))
+          (property (rename &Manufacturer_Part_Number "Manufacturer_Part_Number") (string "T491A106M016AT"))
+          (property (rename &Mouser_Part_Number "Mouser Part Number") (string "80-T491A106M016"))
+          (property (rename &Mouser_Price_Stock "Mouser Price/Stock") (string "https://www.mouser.com/Search/Refine.aspx?Keyword=80-T491A106M016"))
+          (property (rename &RS_Part_Number "RS Part Number") (string "8685839"))
+          (property (rename &RS_Price_Stock "RS Price/Stock") (string "https://uk.rs-online.com/web/p/products/8685839"))
+          (property (rename &Allied_Number "Allied_Number") (string "70096233"))
+          (property (rename &Allied_Price_Stock "Allied Price/Stock") (string "https://www.alliedelec.com/kemet-t491a106m016at/70096233/"))
+          (property (rename &Description "Description") (string "KEMET - T491A106M016AT - CAP, TANT, 10UF, 16V, CASE A"))
+          (property (rename &Datasheet_Link "Datasheet Link") (string "https://componentsearchengine.com/Datasheets/2/T491A106M016AT.pdf"))
+          (property (rename &Height "Height") (string "1.6 mm"))
+          (property (rename &_60__32_VALUE_32__62_ "Value") (string "T491A106M016AT"))
+          (property (rename VALUE "Value") (string "Value"))
+          (port
+            (rename &P "P")
+            (designator "1")
+            (property (rename ORDER "Order") (string "0") (owner "OrCAD"))
+          )
+          (port
+            (rename &M "M")
+            (designator "2")
+            (property (rename ORDER "Order") (string "1") (owner "OrCAD"))
+          )
+          (symbol
+            (portImplementation
+              (name &P)
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt -100 -100) (pt 0 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt -100 -100))))
+            )
+            (portImplementation
+              (name &M)
+              (keywordDisplay DESIGNATOR (display PINNUMBER))
+              (figure PIN (path (pointList (pt 300 -100) (pt 400 -100))))
+              (connectLocation (figure GRAPHIC (dot (pt 400 -100))))
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 100 0)
+                  (pt 100 -200)
+                  (pt 130 -200)
+                  (pt 130 0)
+                  (pt 100 0)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 80 -50)
+                  (pt 40 -50)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 60 -30)
+                  (pt 60 -70)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 0 -100)
+                  (pt 100 -100)
+                )
+              )
+            )
+            (figure GRAPHIC
+              (figureGroupOverride GRAPHIC
+                (pathWidth 10))
+              (path
+                (pointList
+                  (pt 200 -100)
+                  (pt 300 -100)
+                )
+              )
+            )
+              (figure GRAPHIC
+                (figureGroupOverride GRAPHIC
+	              (fillPattern 1 1
+                    (boolean
+                      (boolean
+                        (true)
+                      )
+                    )
+                  )
+                )
+              (polygon
+                (pointList
+                  (pt 200 0)
+                  (pt 200 -200)
+                  (pt 170 -200)
+                  (pt 170 0)
+                  (pt 200 0)
+                )
+              )
+            )
+            (keywordDisplay DESIGNATOR (display PROPERTY (justify 24) (orientation R0) (origin (pt 250 80))))
+            (propertyDisplay &_60__32_VALUE_32__62_ (display PROPERTY (justify 24) (orientation R0) (origin (pt 250 -20))))
+          )
+        )
+      )
+    )
+  )
+)

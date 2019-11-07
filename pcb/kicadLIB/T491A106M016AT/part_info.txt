@@ -1,0 +1,9 @@
+Manufacturer=Kemet
+PartNumber=T491A106M016AT
+PartCategory=Capacitor Polarised
+PackageCategory=Capacitor Moulded Polarised
+PinCount=2
+Version=2.1
+Released=2018-04-05 06:18:18
+Downloaded=2019-11-01 11:42:57
+3D=Y

@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name L80-M39)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/L80-M39/KiCad/L80-M39.lib)(options "")(descr ""))
+  (lib (name 73412-0110)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/73412-0110/KiCad/73412-0110.lib)(options "")(descr ""))
+  (lib (name MPXV7002DP)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/MPXV7002DP/KiCad/MPXV7002DP.lib)(options "")(descr ""))
+  (lib (name MMBF4393LT1G)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/MMBF4393LT1G/KiCad/MMBF4393LT1G.lib)(options "")(descr ""))
+  (lib (name PRT-14322)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/PRT-14322/KiCad/PRT-14322.lib)(options "")(descr ""))
+)

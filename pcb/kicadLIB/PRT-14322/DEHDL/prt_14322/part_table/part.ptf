@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'PRT_14322'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "SparkFun", "PRT-14322" (!) = "", "SHDR12W87P0X254_1X12_3103X250X865P", "Header, Shrouded", "474-PRT-14322", "https://www.mouser.com/Search/Refine.aspx?Keyword=474-PRT-14322", "", "", "SparkFun Accessories Photon Stackable Header- 12 Pin", "https://cdn.sparkfun.com/datasheets/Prototyping/SP-140520-XX-001.pdf", "8.65 mm"
+END_PART
+
+END.
