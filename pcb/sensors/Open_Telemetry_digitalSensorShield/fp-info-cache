@@ -1,4 +1,4 @@
-26736819614954
+31457156846509
 Open_Telemetry
 3DInvenSense_QFN-24_3x3mm_P0.4mm
 24-Lead Plastic QFN (3mm x 3mm); Pitch 0.4mm; EP 1.7x1.54mm; for InvenSense motion sensors; keepout area marked (Package see: https://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf; See also https://www.invensense.com/wp-content/uploads/2015/02/InvenSense-MEMS-Handling.pdf)
@@ -37,6 +37,13 @@ lga land grid array
 Open_Telemetry
 CAPC1005X55N
 C0402(BB)
+Capacitor
+0
+2
+2
+Open_Telemetry
+CAPC1608X87N
+C0603C103K4RACTU
 Capacitor
 0
 2
@@ -91,8 +98,22 @@ Through hole pin header THT 1x16 2.54mm single row
 16
 16
 Open_Telemetry
+RESC0402X15N
+
+
+0
+2
+2
+Open_Telemetry
 RESC0603X26N
 RC0201
+Resistor
+0
+2
+2
+Open_Telemetry
+RESC1005X40N
+RC0402
 Resistor
 0
 2

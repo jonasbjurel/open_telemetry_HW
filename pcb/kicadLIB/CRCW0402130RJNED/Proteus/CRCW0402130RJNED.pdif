@@ -1,0 +1,88 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "CRCW0402130RJNED"
+   (description "RESISTOR, 0402 130 Ohms +/-5% 0.063 W")
+   (family "RES")
+   (package "RESC1005X40N")
+   (attribute "Datasheet Link" "http://www.vishay.com/docs/20035/dcrcwe3.pdf")
+   (attribute "Geometry.Height" "0.4mm")
+   (attribute "Manufacturer_Name" "Vishay")
+   (attribute "Manufacturer_Part_Number" "CRCW0402130RJNED")
+   (attribute "Mouser Part Number" "71-CRCW0402130RJNED")
+   (attribute "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=71-CRCW0402130RJNED")
+   (attribute "RS Part Number" "")
+   (attribute "RS Price/Stock" "")
+   (attribute "Allied_Number" "70202210")
+   (attribute "Allied Price/Stock" "https://www.alliedelec.com/vishay-dale-crcw0402130rjned/70202210/")
+   (gate
+    (symbol "CRCW0402130RJNED")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "CRCW0402130RJNED"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 50) (pt 500 50) (pt 500 -50) (pt 200 -50) (pt 200 50) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 700 0) (rot 0) (mir X) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "RESC1005X40N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -1.175 0.55)
+      (pt 1.175 0.55)
+      (pt 1.175 -0.55)
+      (pt -1.175 -0.55)
+      (pt -1.175 0.55))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -0.5 0.25)
+      (pt 0.5 0.25)
+      (pt 0.5 -0.25)
+      (pt -0.5 -0.25)
+      (pt -0.5 0.25))))
+   (leg 1 (pt -0.55 0) (padstack 0))
+   (leg 2 (pt 0.55 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.6 0.75 0 0 0))
+   )
+   (model "CRCW0402130RJNED.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

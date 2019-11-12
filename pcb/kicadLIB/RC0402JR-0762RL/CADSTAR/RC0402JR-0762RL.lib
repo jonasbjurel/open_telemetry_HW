@@ -1,0 +1,18 @@
+.RC0402JR-0762RL :1 ;Thick Film Resistors - SMD 62 OHM 5%
+RESC1005X40N
+*STM R
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN RC0402JR-0762RL
+~!Manufacturer_Name (YAGEO (PHYCOMP))
+~!Manufacturer_Part_Number (RC0402JR-0762RL)
+~!Mouser Part Number (603-RC0402JR-0762RL)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0402JR-0762RL)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Link Datasheet (http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf)
+~!Height (0.4mm)
+~!3D_Model (RC0402JR-0762RL)
+RC0402JR-0762RL
+1.1!U 2.1!U 

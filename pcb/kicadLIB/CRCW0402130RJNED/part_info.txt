@@ -1,0 +1,9 @@
+Manufacturer=Vishay
+PartNumber=CRCW0402130RJNED
+PartCategory=Resistor
+PackageCategory=Resistor Chip
+PinCount=2
+Version=1.5
+Released=2017-01-12 11:27:15
+Downloaded=2019-11-12 19:13:33
+3D=Y

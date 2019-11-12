@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CRCW0402130RJNED
+D RESISTOR, 0402 130 Ohms +/-5% 0.063 W
+K
+F http://www.vishay.com/docs/20035/dcrcwe3.pdf
+$ENDCMP
+#
+#End Doc Library

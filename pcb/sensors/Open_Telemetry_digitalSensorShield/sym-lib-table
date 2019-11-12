@@ -4,4 +4,6 @@
   (lib (name MPXV7002DP)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/MPXV7002DP/KiCad/MPXV7002DP.lib)(options "")(descr ""))
   (lib (name MMBF4393LT1G)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/MMBF4393LT1G/KiCad/MMBF4393LT1G.lib)(options "")(descr ""))
   (lib (name PRT-14322)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/PRT-14322/KiCad/PRT-14322.lib)(options "")(descr ""))
+  (lib (name RC0402JR-0762RL)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/RC0402JR-0762RL/KiCad/RC0402JR-0762RL.lib)(options "")(descr ""))
+  (lib (name RC0100JR-07130RL)(type Legacy)(uri C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/RC0100JR-07130RL/RC0100JR-07130RL.lib)(options "")(descr ""))
 )

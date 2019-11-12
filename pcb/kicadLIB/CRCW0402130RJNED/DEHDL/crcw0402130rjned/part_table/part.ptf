@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'CRCW0402130RJNED'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "ALLIED_NUMBER", "ALLIED_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Vishay", "CRCW0402130RJNED" (!) = "", "RESC1005X40N", "Resistor Chip", "71-CRCW0402130RJNED", "https://www.mouser.com/Search/Refine.aspx?Keyword=71-CRCW0402130RJNED", "", "", "70202210", "https://www.alliedelec.com/vishay-dale-crcw0402130rjned/70202210/", "RESISTOR, 0402 130 Ohms +/-5% 0.063 W", "http://www.vishay.com/docs/20035/dcrcwe3.pdf", "0.4 mm"
+END_PART
+
+END.

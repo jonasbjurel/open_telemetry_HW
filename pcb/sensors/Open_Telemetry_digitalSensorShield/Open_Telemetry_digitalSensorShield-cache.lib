@@ -95,6 +95,28 @@ X ~ 2 500 0 200 L 50 50 0 0 P
 ENDDRAW
 ENDDEF
 #
+# CRCW0402130RJNED_CRCW0402130RJNED
+#
+DEF CRCW0402130RJNED_CRCW0402130RJNED R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "CRCW0402130RJNED_CRCW0402130RJNED" 550 150 50 H V L CNN
+F2 "RESC1005X40N" 550 50 50 H I L CNN
+F3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" 550 -50 50 H I L CNN
+F4 "RESISTOR, 0402 130 Ohms +/-5% 0.063 W" 550 -150 50 H I L CNN "Description"
+F5 "0.4" 550 -250 50 H I L CNN "Height"
+F6 "Vishay" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "CRCW0402130RJNED" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "71-CRCW0402130RJNED" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=71-CRCW0402130RJNED" 550 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "70202210" 550 -950 50 H I L CNN "Allied_Number"
+F11 "https://www.alliedelec.com/vishay-dale-crcw0402130rjned/70202210/" 550 -1050 50 H I L CNN "Allied Price/Stock"
+DRAW
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Conn_01x12_Female
 #
 DEF Connector_Conn_01x12_Female J 0 40 Y N 1 F N
@@ -349,6 +371,26 @@ F6 "YAGEO (PHYCOMP)" 550 -350 50 H I L CNN "Manufacturer_Name"
 F7 "RC0201JR-071KL" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
 F8 "603-RC0201JR-071KL" 550 -550 50 H I L CNN "Mouser Part Number"
 F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-071KL" 550 -650 50 H I L CNN "Mouser Price/Stock"
+DRAW
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# RC0402JR-0762RL_RC0402JR-0762RL
+#
+DEF RC0402JR-0762RL_RC0402JR-0762RL R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "RC0402JR-0762RL_RC0402JR-0762RL" 550 150 50 H V L CNN
+F2 "RESC1005X40N" 550 50 50 H I L CNN
+F3 "http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf" 550 -50 50 H I L CNN
+F4 "Thick Film Resistors - SMD 62 OHM 5%" 550 -150 50 H I L CNN "Description"
+F5 "0.4" 550 -250 50 H I L CNN "Height"
+F6 "YAGEO (PHYCOMP)" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "RC0402JR-0762RL" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "603-RC0402JR-0762RL" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0402JR-0762RL" 550 -650 50 H I L CNN "Mouser Price/Stock"
 DRAW
 P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
 X ~ 1 0 0 200 R 50 50 0 0 P

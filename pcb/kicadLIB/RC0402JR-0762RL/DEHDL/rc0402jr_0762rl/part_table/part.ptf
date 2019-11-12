@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'RC0402JR_0762RL'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "YAGEO (PHYCOMP)", "RC0402JR-0762RL" (!) = "", "RESC1005X40N", "Resistor Chip", "603-RC0402JR-0762RL", "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0402JR-0762RL", "", "", "Thick Film Resistors - SMD 62 OHM 5%", "http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf", "0.4 mm"
+END_PART
+
+END.

@@ -1,0 +1,70 @@
+(Japanese_coding: sjis)
+(function "ECS_601636"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2017-01-12-11:27:15)
+    (utime 2019-07-01-10:14:48)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "CRCW0402130RJNED")
+)
+
+
+(pinAssign "ECS_601636"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2017-01-12-11:27:15)
+    (utime 2019-07-01-10:14:48)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_601636")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "CRCW0402130RJNED")
+)
+
+
+(part "CRCW0402130RJNED"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2017-01-12-11:27:15)
+    (utime 2019-07-01-10:14:48)
+    (packageRef "CRCW0402130RJNED")
+    (pinAssignRef "ECS_601636")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "R")
+    (property "description" "RESISTOR, 0402 130 Ohms +/-5% 0.063 W")
+    (property "Manufacturer_Name" "Vishay")
+    (property "Manufacturer_Part_Number" "CRCW0402130RJNED")
+    (property "Mouser_Part_Number" "71-CRCW0402130RJNED")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=71-CRCW0402130RJNED")
+    (property "RS_Part_Number" "")
+    (property "RS_Price/Stock" "")
+    (property "Allied_Number" "70202210")
+    (property "Allied_Price/Stock" "https://www.alliedelec.com/vishay-dale-crcw0402130rjned/70202210/")
+    (property "Datasheet_Link" "http://www.vishay.com/docs/20035/dcrcwe3.pdf")
+    (property "compAreaTopHeight" 0.4)
+)
+
+

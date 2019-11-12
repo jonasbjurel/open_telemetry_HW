@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 1386)
+    (start_pass_no 2109)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -76,22 +76,39 @@
     (rule
       (width 160.0)
     )
+    (layer_rule InF.GND.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (layer_rule InB.VDD.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
     (circuit 
       (use_layer F.Cu B.Cu)
     )
   )
   (class "kicad_default"
     GND +3V3 RESET "UART_1_CLIENT_TXD" "UART_1_CLIENT_RXD" CALIB "I2C_1_SCL_3V" "I2C_1_SDA_3V"
-    "INT_0" "I2C_0_SDA_3V" "I2C_0_SCL_3V" "Net-(J2-Pad10)" "Net-(J2-Pad9)" "Net-(J2-Pad8)" "Net-(J2-Pad7)" "GREEN_LED"
-    "BLUE_LED" "RED_LED" "Net-(J2-Pad3)" "Net-(J2-Pad2)" "Net-(J2-Pad1)" "Net-(C5-Pad1)" "Net-(D1-Pad3)" "Net-(D1-Pad2)"
-    "Net-(D1-Pad1)" "Net-(IC1-Pad11)" "Net-(IC1-Pad9)" "Net-(IC1-Pad8)" "Net-(IC1-Pad7)" "Net-(IC1-Pad6)" "Net-(J3-Pad14)" "Net-(J3-Pad12)"
-    "Net-(J3-Pad11)" "Net-(J3-Pad8)" "Net-(J3-Pad6)" "Net-(J3-Pad5)" "Net-(J3-Pad4)" "Net-(LED1-Pad2)" "Net-(LED2-Pad2)" "SAT_LOCK"
-    "EXT_ANT" "Net-(Q1-Pad5)" "Net-(Q1-Pad2)" "Net-(R1-Pad2)" "Net-(R2-Pad1)" "Net-(R8-Pad2)" "Net-(R16-Pad1)" "Net-(R17-Pad1)"
-    "Net-(U2-Pad21)" "Net-(U2-Pad7)"
+    "INT_0" "I2C_0_SDA_3V" "I2C_0_SCL_3V" "GREEN_LED" "BLUE_LED" "RED_LED" "Net-(C5-Pad1)" "Net-(IC1-Pad11)"
+    "Net-(IC1-Pad8)" "Net-(IC1-Pad6)" "Net-(LED1-Pad2)" "Net-(LED2-Pad2)" "SAT_LOCK" "EXT_ANT" "Net-(Q1-Pad5)" "Net-(Q1-Pad2)"
+    "Net-(R1-Pad2)" "Net-(LED3-Pad3)" "Net-(LED3-Pad2)" "Net-(LED3-Pad1)" "Net-(R7-Pad2)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
       (width 160.0)
+    )
+    (layer_rule InF.GND.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (layer_rule InB.VDD.Cu
+      (rule 
+        (width 0.0) 
+      )
     )
     (circuit 
       (use_layer F.Cu B.Cu)

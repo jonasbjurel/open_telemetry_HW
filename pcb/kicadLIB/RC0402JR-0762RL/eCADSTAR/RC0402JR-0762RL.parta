@@ -1,0 +1,68 @@
+(Japanese_coding: sjis)
+(function "ECS_1386360"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-08-18-09:21:34)
+    (utime 2019-07-01-10:17:44)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "RC0402JR-0762RL")
+)
+
+
+(pinAssign "ECS_1386360"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-08-18-09:21:34)
+    (utime 2019-07-01-10:17:44)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_1386360")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "RC0402JR-0762RL")
+)
+
+
+(part "RC0402JR-0762RL"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-08-18-09:21:34)
+    (utime 2019-07-01-10:17:44)
+    (packageRef "RC0402JR-0762RL")
+    (pinAssignRef "ECS_1386360")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "R")
+    (property "description" "Thick Film Resistors - SMD 62 OHM 5%")
+    (property "Manufacturer_Name" "YAGEO (PHYCOMP)")
+    (property "Manufacturer_Part_Number" "RC0402JR-0762RL")
+    (property "Mouser_Part_Number" "603-RC0402JR-0762RL")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0402JR-0762RL")
+    (property "RS_Part_Number" "")
+    (property "RS_Price/Stock" "")
+    (property "Datasheet_Link" "http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf")
+    (property "compAreaTopHeight" 0.4)
+)
+
+
