@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>C:\Users\jonas\OneDrive\Projects\open_telemetry_HW\pcb\sensors\Open_Telemetry_digitalSensorShield\Open_Telemetry_digitalSensorShield.sch</source>
-    <date>11/10/2019 11:47:06 PM</date>
+    <date>11/15/2019 8:37:57 PM</date>
     <tool>Eeschema (5.1.4)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>OFT001v1</title>
         <company>OpenFly Telemetry</company>
-        <rev>P0A.01</rev>
-        <date>2019-11-07</date>
+        <rev>P0A.03</rev>
+        <date>2019-11-12</date>
         <source>Open_Telemetry_digitalSensorShield.sch</source>
         <comment number="1" value="© 2019 - Jonas Bjurel"/>
         <comment number="2" value="License: Creative commons - CC BY 2.0"/>
@@ -19,14 +19,6 @@
     </sheet>
   </design>
   <components>
-    <comp ref="J3">
-      <value>PinHeader_01x16</value>
-      <footprint>Open_Telemetry:PinHeader_1x16_P2.54mm_Vertical_Down</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector" part="Conn_01x16_Female" description="Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5DB7F77A</tstamp>
-    </comp>
     <comp ref="J2">
       <value>PinHeader_01x12</value>
       <footprint>Open_Telemetry:PinHeader_1x12_P2.54mm_Vertical_Down</footprint>
@@ -64,7 +56,7 @@
     </comp>
     <comp ref="IC1">
       <value>L80-M39</value>
-      <footprint>L80-M39</footprint>
+      <footprint>Open_Telemetry:L80-M39</footprint>
       <datasheet>http://docs-emea.rs-online.com/webdocs/147d/0900766b8147dbf2.pdf</datasheet>
       <fields>
         <field name="Description">L80 GPS Module</field>
@@ -127,7 +119,7 @@
     </comp>
     <comp ref="C3">
       <value>10nF</value>
-      <footprint>CAPC1608X87N</footprint>
+      <footprint>Open_Telemetry:CAPC1608X87N</footprint>
       <datasheet>https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf</datasheet>
       <fields>
         <field name="Allied Price/Stock">https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/</field>
@@ -145,9 +137,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E34E85C</tstamp>
     </comp>
-    <comp ref="R3">
+    <comp ref="R2">
       <value>1k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>https://www.digikey.se/en/datasheets/yageo/yageo-pyu-r_marking_2</datasheet>
       <fields>
         <field name="Description">YAGEO - RC0201JR-071KL - RES, THICK FILM, 1K, 5%, 0.5W, 0201, REEL</field>
@@ -161,9 +153,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E4B2E6B</tstamp>
     </comp>
-    <comp ref="R7">
+    <comp ref="R6">
       <value>1k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>https://www.digikey.se/en/datasheets/yageo/yageo-pyu-r_marking_2</datasheet>
       <fields>
         <field name="Description">YAGEO - RC0201JR-071KL - RES, THICK FILM, 1K, 5%, 0.5W, 0201, REEL</field>
@@ -177,9 +169,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E50BE0C</tstamp>
     </comp>
-    <comp ref="R4">
+    <comp ref="R3">
       <value>100k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Description">YAGEO - RC0201JR-07100KL - RES, THICK FILM, 100K, 5%, 0.5W, 0201</field>
@@ -193,9 +185,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E93D9F6</tstamp>
     </comp>
-    <comp ref="R6">
+    <comp ref="R5">
       <value>100k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Description">YAGEO - RC0201JR-07100KL - RES, THICK FILM, 100K, 5%, 0.5W, 0201</field>
@@ -209,7 +201,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E948864</tstamp>
     </comp>
-    <comp ref="R9">
+    <comp ref="R8">
       <value>10k</value>
       <footprint>RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
@@ -225,9 +217,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E9100D9</tstamp>
     </comp>
-    <comp ref="R10">
+    <comp ref="R9">
       <value>10k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Description">THICK FILM CHIP RESISTORS</field>
@@ -244,26 +236,10 @@
     <comp ref="U2">
       <value>MPU-9250</value>
       <footprint>Open_Telemetry:3DInvenSense_QFN-24_3x3mm_P0.4mm</footprint>
-      <datasheet>https://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf</datasheet>
+      <datasheet>http://43zrtwysvxb2gf29r5o0athu-wpengine.netdna-ssl.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf</datasheet>
       <libsource lib="Sensor_Motion" part="MPU-9250" description="InvenSense 9-Axis Motion Sensor, Accelerometer, Gyroscope, Compass, I2C/SPI"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DB5EC31</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>10k</value>
-      <footprint>RESC0603X26N</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
-      <fields>
-        <field name="Description">THICK FILM CHIP RESISTORS</field>
-        <field name="Height">0.26</field>
-        <field name="Manufacturer_Name">YAGEO (PHYCOMP)</field>
-        <field name="Manufacturer_Part_Number">RC0201JR-0710KL</field>
-        <field name="Mouser Part Number">603-RC0201JR-0710KL</field>
-        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-0710KL</field>
-      </fields>
-      <libsource lib="RC0201JR-0710KL" part="RC0201JR-0710KL" description="THICK FILM CHIP RESISTORS"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E7BC949</tstamp>
     </comp>
     <comp ref="U1">
       <value>BME280</value>
@@ -275,7 +251,7 @@
     </comp>
     <comp ref="R1">
       <value>10k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Description">THICK FILM CHIP RESISTORS</field>
@@ -291,7 +267,7 @@
     </comp>
     <comp ref="C4">
       <value>10nF</value>
-      <footprint>CAPC1608X87N</footprint>
+      <footprint>Open_Telemetry:CAPC1608X87N</footprint>
       <datasheet>https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf</datasheet>
       <fields>
         <field name="Allied Price/Stock">https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/</field>
@@ -311,7 +287,7 @@
     </comp>
     <comp ref="C5">
       <value>100nF</value>
-      <footprint>CAPC1005X55N</footprint>
+      <footprint>Open_Telemetry:CAPC1005X55N</footprint>
       <datasheet>https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf</datasheet>
       <fields>
         <field name="Description">Multilayer Ceramic Capacitors MLCC - SMD/SMT 10volts 0.1uF X7R 20%</field>
@@ -326,7 +302,7 @@
       <tstamp>5E315798</tstamp>
     </comp>
     <comp ref="LED1">
-      <value>ExtAnt</value>
+      <value>EXT ANT</value>
       <footprint>Open_Telemetry:LEDC1608X65N</footprint>
       <datasheet>https://docs-emea.rs-online.com/webdocs/156b/0900766b8156b2c9.pdf</datasheet>
       <fields>
@@ -383,7 +359,7 @@
     </comp>
     <comp ref="C1">
       <value>10nF</value>
-      <footprint>CAPC1608X87N</footprint>
+      <footprint>Open_Telemetry:CAPC1608X87N</footprint>
       <datasheet>https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf</datasheet>
       <fields>
         <field name="Allied Price/Stock">https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/</field>
@@ -403,7 +379,7 @@
     </comp>
     <comp ref="C2">
       <value>10nF</value>
-      <footprint>CAPC1608X87N</footprint>
+      <footprint>Open_Telemetry:CAPC1608X87N</footprint>
       <datasheet>https://api.kemet.com/component-edge/download/datasheet/C0603C103K4RACTU.pdf</datasheet>
       <fields>
         <field name="Allied Price/Stock">https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/</field>
@@ -421,9 +397,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DCAC25D</tstamp>
     </comp>
-    <comp ref="R16">
+    <comp ref="R15">
       <value>10k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Description">THICK FILM CHIP RESISTORS</field>
@@ -437,9 +413,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DCB9204</tstamp>
     </comp>
-    <comp ref="R17">
+    <comp ref="R16">
       <value>10k</value>
-      <footprint>RESC0603X26N</footprint>
+      <footprint>Open_Telemetry:RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
       <fields>
         <field name="Description">THICK FILM CHIP RESISTORS</field>
@@ -453,7 +429,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DCD34B5</tstamp>
     </comp>
-    <comp ref="R11">
+    <comp ref="R10">
       <value>62</value>
       <footprint>Open_Telemetry:RESC1005X40N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf</datasheet>
@@ -469,9 +445,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DD2C24B</tstamp>
     </comp>
-    <comp ref="R12">
+    <comp ref="R11">
       <value>62</value>
-      <footprint>RESC1005X40N</footprint>
+      <footprint>Open_Telemetry:RESC1005X40N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf</datasheet>
       <fields>
         <field name="Description">Thick Film Resistors - SMD 62 OHM 5%</field>
@@ -485,25 +461,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DD351B9</tstamp>
     </comp>
-    <comp ref="R15">
-      <value>130</value>
-      <footprint>Open_Telemetry:RESC0402X15N</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf</datasheet>
-      <fields>
-        <field name="Description">RES SMD 130 OHM 5% 1/32W 01005</field>
-        <field name="Height">0.4</field>
-        <field name="Manufacturer_Name">YAGEO (PHYCOMP)</field>
-        <field name="Manufacturer_Part_Number">RC0402JR-0762RL</field>
-        <field name="Mouser Part Number">603-RC0402JR-0762RL</field>
-        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0402JR-0762RL</field>
-      </fields>
-      <libsource lib="RC0402JR-0762RL" part="RC0402JR-0762RL" description="Thick Film Resistors - SMD 62 OHM 5%"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5DD46770</tstamp>
-    </comp>
-    <comp ref="R13">
+    <comp ref="R12">
       <value>62</value>
-      <footprint>RESC1005X40N</footprint>
+      <footprint>Open_Telemetry:RESC1005X40N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf</datasheet>
       <fields>
         <field name="Description">Thick Film Resistors - SMD 62 OHM 5%</field>
@@ -517,9 +477,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DD482C1</tstamp>
     </comp>
-    <comp ref="R14">
+    <comp ref="R13">
       <value>62</value>
-      <footprint>RESC1005X40N</footprint>
+      <footprint>Open_Telemetry:RESC1005X40N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0402_51_RoHS_L_6_r.pdf</datasheet>
       <fields>
         <field name="Description">Thick Film Resistors - SMD 62 OHM 5%</field>
@@ -550,7 +510,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EADBF55</tstamp>
     </comp>
-    <comp ref="R5">
+    <comp ref="R4">
       <value>NULL</value>
       <footprint>RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
@@ -566,7 +526,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E950BB8</tstamp>
     </comp>
-    <comp ref="R8">
+    <comp ref="R7">
       <value>NULL</value>
       <footprint>RESC0603X26N</footprint>
       <datasheet>http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf</datasheet>
@@ -581,6 +541,32 @@
       <libsource lib="RC0201JR-070RL" part="RC0201JR-070RL" description="YAGEO (PHYCOMP) - RC0201JR-070RL - RES, THICK FILM, 0R, 5%, 0.05W, 0201"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E952D3B</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>130</value>
+      <footprint>Open_Telemetry:RESC1005X40N</footprint>
+      <datasheet>http://www.vishay.com/docs/20035/dcrcwe3.pdf</datasheet>
+      <fields>
+        <field name="Allied Price/Stock">https://www.alliedelec.com/vishay-dale-crcw0402130rjned/70202210/</field>
+        <field name="Allied_Number">70202210</field>
+        <field name="Description">RESISTOR, 0402 130 Ohms +/-5% 0.063 W</field>
+        <field name="Height">0.4</field>
+        <field name="Manufacturer_Name">Vishay</field>
+        <field name="Manufacturer_Part_Number">CRCW0402130RJNED</field>
+        <field name="Mouser Part Number">71-CRCW0402130RJNED</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=71-CRCW0402130RJNED</field>
+      </fields>
+      <libsource lib="CRCW0402130RJNED" part="CRCW0402130RJNED" description="RESISTOR, 0402 130 Ohms +/-5% 0.063 W"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E05D1C5</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>PinHeader_01x16</value>
+      <footprint>Open_Telemetry:PinHeader_1x16_P2.54mm_Vertical_Down</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x16_Female" description="Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DB7F77A</tstamp>
     </comp>
   </components>
   <libparts>
@@ -666,6 +652,28 @@
         <field name="RS Price/Stock">http://uk.rs-online.com/web/p/products/1464174</field>
         <field name="Allied_Number">70097263</field>
         <field name="Allied Price/Stock">https://www.alliedelec.com/kemet-c0603c103k4ractu/70097263/</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CRCW0402130RJNED" part="CRCW0402130RJNED">
+      <description>RESISTOR, 0402 130 Ohms +/-5% 0.063 W</description>
+      <docs>http://www.vishay.com/docs/20035/dcrcwe3.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW0402130RJNED</field>
+        <field name="Footprint">RESC1005X40N</field>
+        <field name="Datasheet">http://www.vishay.com/docs/20035/dcrcwe3.pdf</field>
+        <field name="Description">RESISTOR, 0402 130 Ohms +/-5% 0.063 W</field>
+        <field name="Height">0.4</field>
+        <field name="Manufacturer_Name">Vishay</field>
+        <field name="Manufacturer_Part_Number">CRCW0402130RJNED</field>
+        <field name="Mouser Part Number">71-CRCW0402130RJNED</field>
+        <field name="Mouser Price/Stock">https://www.mouser.com/Search/Refine.aspx?Keyword=71-CRCW0402130RJNED</field>
+        <field name="Allied_Number">70202210</field>
+        <field name="Allied Price/Stock">https://www.alliedelec.com/vishay-dale-crcw0402130rjned/70202210/</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
@@ -1030,6 +1038,9 @@
     <library logical="C0603C103K4RACTU">
       <uri>C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/C0603C103K4RACTU/KiCad/C0603C103K4RACTU.lib</uri>
     </library>
+    <library logical="CRCW0402130RJNED">
+      <uri>C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/CRCW0402130RJNED/KiCad/CRCW0402130RJNED.lib</uri>
+    </library>
     <library logical="Connector">
       <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
     </library>
@@ -1052,7 +1063,7 @@
       <uri>C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/RC0201JR-071KL/KiCad/RC0201JR-071KL.lib</uri>
     </library>
     <library logical="RC0402JR-0762RL">
-      <uri>C:\Users\jonas\OneDrive\Projects\open_telemetry_HW\pcb\kicadLIB\RC0402JR-0762RL\KiCad\RC0402JR-0762RL.lib</uri>
+      <uri>C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/RC0402JR-0762RL/KiCad/RC0402JR-0762RL.lib</uri>
     </library>
     <library logical="SML-D13DWT86A">
       <uri>C:/Users/jonas/OneDrive/Projects/open_telemetry_HW/pcb/kicadLIB/SML-D13DWT86A/KiCad/SML-D13DWT86A.lib</uri>
@@ -1074,235 +1085,231 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="I2C_1_SCL_3V">
-      <node ref="J3" pin="3"/>
-      <node ref="U2" pin="23"/>
+    <net code="1" name="RESET">
+      <node ref="IC1" pin="10"/>
+      <node ref="J3" pin="16"/>
+      <node ref="S1" pin="1"/>
+      <node ref="R15" pin="2"/>
     </net>
-    <net code="2" name="Net-(LED1-Pad2)">
-      <node ref="LED1" pin="2"/>
-      <node ref="R11" pin="2"/>
+    <net code="2" name="Net-(R1-Pad2)">
+      <node ref="U1" pin="5"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R4" pin="2"/>
     </net>
-    <net code="3" name="I2C_1_SDA_3V">
-      <node ref="U2" pin="24"/>
-      <node ref="J3" pin="2"/>
-    </net>
-    <net code="4" name="+3V3">
-      <node ref="C3" pin="1"/>
-      <node ref="R8" pin="1"/>
-      <node ref="J3" pin="15"/>
-      <node ref="R17" pin="1"/>
-      <node ref="R10" pin="1"/>
-      <node ref="Q1" pin="6"/>
-      <node ref="R6" pin="1"/>
-      <node ref="IC1" pin="5"/>
-      <node ref="IC1" pin="4"/>
-      <node ref="Q1" pin="4"/>
-      <node ref="U2" pin="22"/>
-      <node ref="U2" pin="13"/>
-      <node ref="R16" pin="1"/>
-      <node ref="U2" pin="8"/>
-      <node ref="U2" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="C7" pin="1"/>
-      <node ref="C1" pin="1"/>
-      <node ref="C8" pin="1"/>
-      <node ref="LED3" pin="4"/>
-      <node ref="C2" pin="1"/>
-      <node ref="C6" pin="1"/>
-      <node ref="R2" pin="2"/>
-      <node ref="R1" pin="1"/>
-      <node ref="U1" pin="8"/>
-      <node ref="U1" pin="6"/>
-    </net>
-    <net code="5" name="INT_0">
-      <node ref="R10" pin="2"/>
+    <net code="3" name="INT_0">
+      <node ref="R9" pin="2"/>
       <node ref="U2" pin="12"/>
       <node ref="J3" pin="1"/>
     </net>
-    <net code="6" name="CALIB">
-      <node ref="J3" pin="7"/>
-      <node ref="S2" pin="1"/>
-      <node ref="R17" pin="2"/>
-    </net>
-    <net code="7" name="RESET">
-      <node ref="J3" pin="16"/>
-      <node ref="IC1" pin="10"/>
-      <node ref="R16" pin="2"/>
-      <node ref="S1" pin="1"/>
-    </net>
-    <net code="8" name="Net-(R1-Pad2)">
-      <node ref="R1" pin="2"/>
-      <node ref="R5" pin="2"/>
-      <node ref="U1" pin="5"/>
-    </net>
-    <net code="9" name="I2C_0_SCL_3V">
-      <node ref="J2" pin="11"/>
-      <node ref="U1" pin="4"/>
-    </net>
-    <net code="10" name="I2C_0_SDA_3V">
-      <node ref="U1" pin="3"/>
-      <node ref="J2" pin="12"/>
-    </net>
-    <net code="11" name="Net-(R2-Pad1)">
-      <node ref="U1" pin="2"/>
-      <node ref="R2" pin="1"/>
-    </net>
-    <net code="12" name="Net-(C5-Pad1)">
+    <net code="4" name="Net-(C5-Pad1)">
       <node ref="U2" pin="10"/>
       <node ref="C5" pin="1"/>
     </net>
-    <net code="13" name="RED_LED">
-      <node ref="R15" pin="1"/>
-      <node ref="J2" pin="4"/>
+    <net code="5" name="I2C_1_SDA_3V">
+      <node ref="J3" pin="2"/>
+      <node ref="U2" pin="24"/>
     </net>
-    <net code="14" name="Net-(LED2-Pad2)">
-      <node ref="LED2" pin="2"/>
-      <node ref="R12" pin="2"/>
+    <net code="6" name="Net-(LED1-Pad2)">
+      <node ref="R10" pin="2"/>
+      <node ref="LED1" pin="2"/>
     </net>
-    <net code="15" name="Net-(LED3-Pad2)">
+    <net code="7" name="I2C_1_SCL_3V">
+      <node ref="J3" pin="3"/>
+      <node ref="U2" pin="23"/>
+    </net>
+    <net code="8" name="I2C_0_SCL_3V">
+      <node ref="U1" pin="4"/>
+      <node ref="J2" pin="11"/>
+    </net>
+    <net code="9" name="I2C_0_SDA_3V">
+      <node ref="J2" pin="12"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="10" name="Net-(LED3-Pad1)">
       <node ref="R14" pin="2"/>
-      <node ref="LED3" pin="2"/>
-    </net>
-    <net code="16" name="GREEN_LED">
-      <node ref="R14" pin="1"/>
-      <node ref="J2" pin="6"/>
-    </net>
-    <net code="17" name="Net-(LED3-Pad3)">
-      <node ref="R13" pin="2"/>
-      <node ref="LED3" pin="3"/>
-    </net>
-    <net code="18" name="BLUE_LED">
-      <node ref="R13" pin="1"/>
-      <node ref="J2" pin="5"/>
-    </net>
-    <net code="19" name="Net-(LED3-Pad1)">
       <node ref="LED3" pin="1"/>
-      <node ref="R15" pin="2"/>
     </net>
-    <net code="20" name="EXT_ANT">
-      <node ref="Q1" pin="3"/>
+    <net code="11" name="RED_LED">
+      <node ref="J2" pin="4"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="12" name="Net-(LED2-Pad2)">
+      <node ref="R11" pin="2"/>
+      <node ref="LED2" pin="2"/>
+    </net>
+    <net code="13" name="SAT_LOCK">
+      <node ref="Q1" pin="1"/>
       <node ref="R11" pin="1"/>
     </net>
-    <net code="21" name="SAT_LOCK">
+    <net code="14" name="Net-(J3-Pad6)">
+      <node ref="J3" pin="6"/>
+    </net>
+    <net code="15" name="Net-(J3-Pad5)">
+      <node ref="J3" pin="5"/>
+    </net>
+    <net code="16" name="Net-(J3-Pad4)">
+      <node ref="J3" pin="4"/>
+    </net>
+    <net code="17" name="Net-(J3-Pad14)">
+      <node ref="J3" pin="14"/>
+    </net>
+    <net code="18" name="Net-(J3-Pad12)">
+      <node ref="J3" pin="12"/>
+    </net>
+    <net code="19" name="Net-(J3-Pad11)">
+      <node ref="J3" pin="11"/>
+    </net>
+    <net code="20" name="Net-(J3-Pad10)">
+      <node ref="J3" pin="10"/>
+    </net>
+    <net code="21" name="CALIB">
+      <node ref="S2" pin="1"/>
+      <node ref="J3" pin="7"/>
+      <node ref="R16" pin="2"/>
+    </net>
+    <net code="22" name="Net-(LED3-Pad2)">
+      <node ref="R13" pin="2"/>
+      <node ref="LED3" pin="2"/>
+    </net>
+    <net code="23" name="GREEN_LED">
+      <node ref="R13" pin="1"/>
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="24" name="Net-(LED3-Pad3)">
+      <node ref="R12" pin="2"/>
+      <node ref="LED3" pin="3"/>
+    </net>
+    <net code="25" name="BLUE_LED">
+      <node ref="J2" pin="5"/>
       <node ref="R12" pin="1"/>
-      <node ref="Q1" pin="1"/>
     </net>
-    <net code="22" name="Net-(IC1-Pad11)">
-      <node ref="IC1" pin="11"/>
-      <node ref="J1" pin="1"/>
-    </net>
-    <net code="23" name="GND">
-      <node ref="J3" pin="13"/>
-      <node ref="U2" pin="11"/>
-      <node ref="IC1" pin="12"/>
-      <node ref="R9" pin="2"/>
-      <node ref="U2" pin="18"/>
-      <node ref="U2" pin="20"/>
-      <node ref="C8" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="C6" pin="2"/>
-      <node ref="R4" pin="1"/>
-      <node ref="U1" pin="7"/>
-      <node ref="R5" pin="1"/>
-      <node ref="C5" pin="2"/>
-      <node ref="LED2" pin="1"/>
-      <node ref="U1" pin="1"/>
-      <node ref="C4" pin="2"/>
-      <node ref="LED1" pin="1"/>
-      <node ref="IC1" pin="3"/>
-      <node ref="C2" pin="2"/>
-      <node ref="S1" pin="2"/>
-      <node ref="J1" pin="4"/>
-      <node ref="J1" pin="2"/>
-      <node ref="S2" pin="2"/>
-      <node ref="J1" pin="3"/>
-      <node ref="C1" pin="2"/>
-    </net>
-    <net code="24" name="Net-(IC1-Pad9)">
-      <node ref="IC1" pin="9"/>
-    </net>
-    <net code="25" name="Net-(IC1-Pad8)">
+    <net code="26" name="+3V3">
+      <node ref="Q1" pin="4"/>
       <node ref="R7" pin="1"/>
-      <node ref="IC1" pin="8"/>
+      <node ref="U1" pin="8"/>
+      <node ref="U2" pin="22"/>
+      <node ref="R5" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="R1" pin="1"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U1" pin="2"/>
+      <node ref="U2" pin="8"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="Q1" pin="6"/>
+      <node ref="C3" pin="1"/>
+      <node ref="IC1" pin="5"/>
+      <node ref="IC1" pin="4"/>
+      <node ref="U2" pin="13"/>
+      <node ref="U2" pin="1"/>
+      <node ref="J3" pin="15"/>
+      <node ref="LED3" pin="4"/>
+      <node ref="R16" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R15" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C4" pin="1"/>
     </net>
-    <net code="26" name="Net-(IC1-Pad7)">
-      <node ref="IC1" pin="7"/>
-    </net>
-    <net code="27" name="Net-(IC1-Pad6)">
-      <node ref="IC1" pin="6"/>
-      <node ref="R3" pin="1"/>
-    </net>
-    <net code="28" name="UART_1_CLIENT_RXD">
+    <net code="27" name="UART_1_CLIENT_RXD">
       <node ref="J3" pin="8"/>
       <node ref="IC1" pin="1"/>
     </net>
-    <net code="29" name="Net-(J3-Pad6)">
-      <node ref="J3" pin="6"/>
+    <net code="28" name="EXT_ANT">
+      <node ref="R10" pin="1"/>
+      <node ref="Q1" pin="3"/>
     </net>
-    <net code="30" name="Net-(J2-Pad3)">
-      <node ref="J2" pin="3"/>
+    <net code="29" name="Net-(Q1-Pad5)">
+      <node ref="R5" pin="2"/>
+      <node ref="Q1" pin="5"/>
+      <node ref="R6" pin="2"/>
     </net>
-    <net code="31" name="Net-(J2-Pad2)">
-      <node ref="J2" pin="2"/>
-    </net>
-    <net code="32" name="Net-(J2-Pad10)">
-      <node ref="J2" pin="10"/>
-    </net>
-    <net code="33" name="Net-(J2-Pad1)">
-      <node ref="J2" pin="1"/>
-    </net>
-    <net code="34" name="UART_1_CLIENT_TXD">
-      <node ref="J3" pin="9"/>
+    <net code="30" name="UART_1_CLIENT_TXD">
       <node ref="IC1" pin="2"/>
+      <node ref="J3" pin="9"/>
     </net>
-    <net code="35" name="Net-(J2-Pad7)">
-      <node ref="J2" pin="7"/>
+    <net code="31" name="Net-(IC1-Pad11)">
+      <node ref="IC1" pin="11"/>
+      <node ref="J1" pin="1"/>
     </net>
-    <net code="36" name="Net-(J3-Pad5)">
-      <node ref="J3" pin="5"/>
+    <net code="32" name="GND">
+      <node ref="R8" pin="2"/>
+      <node ref="U2" pin="11"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="R3" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="S2" pin="2"/>
+      <node ref="S1" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="U1" pin="7"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J1" pin="3"/>
+      <node ref="J1" pin="4"/>
+      <node ref="IC1" pin="12"/>
+      <node ref="U2" pin="18"/>
+      <node ref="IC1" pin="3"/>
+      <node ref="LED1" pin="1"/>
+      <node ref="R4" pin="1"/>
+      <node ref="LED2" pin="1"/>
+      <node ref="J3" pin="13"/>
+      <node ref="U2" pin="20"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C5" pin="2"/>
     </net>
-    <net code="37" name="Net-(J3-Pad4)">
-      <node ref="J3" pin="4"/>
+    <net code="33" name="Net-(IC1-Pad9)">
+      <node ref="IC1" pin="9"/>
     </net>
-    <net code="38" name="Net-(J3-Pad14)">
-      <node ref="J3" pin="14"/>
+    <net code="34" name="Net-(IC1-Pad8)">
+      <node ref="IC1" pin="8"/>
+      <node ref="R6" pin="1"/>
     </net>
-    <net code="39" name="Net-(J3-Pad12)">
-      <node ref="J3" pin="12"/>
+    <net code="35" name="Net-(IC1-Pad7)">
+      <node ref="IC1" pin="7"/>
     </net>
-    <net code="40" name="Net-(J3-Pad11)">
-      <node ref="J3" pin="11"/>
+    <net code="36" name="Net-(IC1-Pad6)">
+      <node ref="IC1" pin="6"/>
+      <node ref="R2" pin="1"/>
     </net>
-    <net code="41" name="Net-(J3-Pad10)">
-      <node ref="J3" pin="10"/>
-    </net>
-    <net code="42" name="Net-(J2-Pad9)">
+    <net code="37" name="Net-(J2-Pad9)">
       <node ref="J2" pin="9"/>
     </net>
-    <net code="43" name="Net-(J2-Pad8)">
+    <net code="38" name="Net-(J2-Pad8)">
       <node ref="J2" pin="8"/>
     </net>
-    <net code="44" name="Net-(Q1-Pad5)">
-      <node ref="R6" pin="2"/>
+    <net code="39" name="Net-(J2-Pad7)">
+      <node ref="J2" pin="7"/>
+    </net>
+    <net code="40" name="Net-(J2-Pad3)">
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="41" name="Net-(J2-Pad2)">
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="42" name="Net-(J2-Pad10)">
+      <node ref="J2" pin="10"/>
+    </net>
+    <net code="43" name="Net-(R7-Pad2)">
+      <node ref="U2" pin="9"/>
+      <node ref="R8" pin="1"/>
       <node ref="R7" pin="2"/>
-      <node ref="Q1" pin="5"/>
     </net>
-    <net code="45" name="Net-(Q1-Pad2)">
-      <node ref="Q1" pin="2"/>
-      <node ref="R4" pin="2"/>
-      <node ref="R3" pin="2"/>
-    </net>
-    <net code="46" name="Net-(U2-Pad7)">
-      <node ref="U2" pin="7"/>
-    </net>
-    <net code="47" name="Net-(U2-Pad21)">
+    <net code="44" name="Net-(U2-Pad21)">
       <node ref="U2" pin="21"/>
     </net>
-    <net code="48" name="Net-(R8-Pad2)">
-      <node ref="R9" pin="1"/>
-      <node ref="U2" pin="9"/>
-      <node ref="R8" pin="2"/>
+    <net code="45" name="Net-(U2-Pad7)">
+      <node ref="U2" pin="7"/>
+    </net>
+    <net code="46" name="Net-(Q1-Pad2)">
+      <node ref="R3" pin="2"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="47" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
     </net>
   </nets>
 </export>

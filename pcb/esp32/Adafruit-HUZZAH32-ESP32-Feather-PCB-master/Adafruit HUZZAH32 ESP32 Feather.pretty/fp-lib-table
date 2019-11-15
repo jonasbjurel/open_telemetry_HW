@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "Adafruit HUZZAH32 ESP32 Feather")(type KiCad)(uri "$(KIPRJMOD)/Adafruit HUZZAH32 ESP32 Feather.pretty")(options "")(descr ""))
+)

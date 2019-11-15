@@ -1,0 +1,40 @@
+### Module positions - created on 11/13/2019 10:31:05 PM ###
+### Printed by Pcbnew version kicad (5.1.4)-1
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                        Package                                                 PosX       PosY       Rot  Side
+C1        10nF                       CAPC1608X87N                                        248.4900  -151.1000  180.0000  top
+C2        10nF                       CAPC1608X87N                                        245.5000  -137.4000   90.0000  top
+C3        10nF                       CAPC1608X87N                                        240.0000  -141.2000  270.0000  top
+C4        10nF                       CAPC1608X87N                                        240.0000  -144.0000  270.0000  top
+C5        100nF                      CAPC1005X55N                                        245.5000  -140.0000  270.0000  top
+C6        10uF                       CAPPM3528X210N                                      241.5000  -149.0300  270.0000  top
+C7        10uF                       CAPPM3528X210N                                      242.6000  -137.3000  270.0000  top
+C8        10uF                       CAPPM3528X210N                                      216.9670  -140.6650  270.0000  top
+IC1       L80-M39                    L80-M39                                             221.5390  -138.3280    0.0000  top
+J1        Ext_GPS_antenna_connector  U.FL_Molex_MCRF_73412-0110_Vertical                 216.9160  -147.2180   90.0000  top
+LED1      EXT_ANT                    LEDC1608X65N                                        253.0600  -139.5480   90.0000  top
+LED2      GPS_LCK                    SMLD15YWT86                                         253.0860  -143.9420    0.0000  top
+LED3                                 AVAGO_PLCC4                                         252.3400  -148.3800  180.0000  top
+Q1        BC846BPN                   SOT-363_SC-70-6                                     248.5300  -144.3600    0.0000  top
+R1        10k                        RESC0603X26N                                        245.5000  -150.0000    0.0000  top
+R2        1k                         RESC0603X26N                                        245.5000  -143.8000    0.0000  top
+R3        100k                       RESC0603X26N                                        245.5000  -144.8000    0.0000  top
+R4        NULL                       RESC0603X26N                                        245.5000  -148.9500    0.0000  top
+R5        100k                       RESC0603X26N                                        245.5000  -146.8000    0.0000  top
+R6        1k                         RESC0603X26N                                        245.5000  -145.8000    0.0000  top
+R7        NULL                       RESC0603X26N                                        245.5000  -142.8000    0.0000  top
+R8        10k                        RESC0603X26N                                        245.5000  -141.8000  180.0000  top
+R9        10k                        RESC0603X26N                                        250.8300  -135.3700    0.0000  top
+R10       62                         RESC1005X40N                                        252.4500  -137.1500    0.0000  top
+R11       62                         RESC1005X40N                                        251.2500  -144.1000  270.0000  top
+R12       62                         RESC1005X40N                                        248.4200  -135.5600    0.0000  top
+R13       62                         RESC1005X40N                                        252.3200  -151.7000    0.0000  top
+R14       130                        RESC1005X40N                                        248.5974  -146.3904    0.0000  top
+R15       10k                        RESC0603X26N                                        257.8400  -143.5300   90.0000  top
+R16       10k                        RESC0603X26N                                        245.5000  -151.0500  180.0000  top
+S1        RST                        ATS2D1G                                             256.2860  -139.2940   90.0000  top
+S2        CALIB                      ATS2D1G                                             256.2860  -147.8790   90.0000  top
+U1        BME280                     Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering   248.5000  -148.7000    0.0000  top
+U2        MPU-9250                   3DInvenSense_QFN-24_3x3mm_P0.4mm                    249.2760  -139.8020  270.0000  top
+## End

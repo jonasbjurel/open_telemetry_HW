@@ -778,7 +778,7 @@ F 3 "" H 5400 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 750  7050 0    47   ~ 0
-I2C communication only. Listening to I2C_0 non real time bus,\nI2C address: 0x77 (default) or 0x76 if optioal R5 is mounted.
+I2C communication only. Listening to I2C_0 non real time bus,\nI2C address: 0x77 (default) or 0x76 if optioal R4 is mounted.
 $Comp
 L power:GND #PWR011
 U 1 1 5DB66F49
