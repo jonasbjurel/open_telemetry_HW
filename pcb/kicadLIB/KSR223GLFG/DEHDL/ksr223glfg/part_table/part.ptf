@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'KSR223GLFG'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "C & K COMPONENTS", "KSR223GLFG" (!) = "", "KSR", "Other", "611-KSR223GLFG", "https://www.mouser.com/Search/Refine.aspx?Keyword=611-KSR223GLFG", "", "", "Subminiature Tact Switch for SMT", "https://www.ckswitches.com/media/1466/ksr.pdf"
+END_PART
+
+END.

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP KSR223GLFG
+D Subminiature Tact Switch for SMT
+K
+F https://www.ckswitches.com/media/1466/ksr.pdf
+$ENDCMP
+#
+#End Doc Library

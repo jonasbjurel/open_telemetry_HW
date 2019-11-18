@@ -1,0 +1,26 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# KSR223GLFG
+#
+DEF KSR223GLFG S 0 30 Y Y 1 F N
+F0 "S" 450 150 50 H V L CNN
+F1 "KSR223GLFG" 300 -100 50 H V C CNN
+F2 "KSR" 300 -200 50 H I C CNN
+F3 "https://www.ckswitches.com/media/1466/ksr.pdf" 300 -300 50 H I C CNN
+F4 "Subminiature Tact Switch for SMT" 300 -400 50 H I C CNN "Description"
+F5 "C & K COMPONENTS" 300 -600 50 H I C CNN "Manufacturer_Name"
+F6 "KSR223GLFG" 300 -700 50 H I C CNN "Manufacturer_Part_Number"
+F7 "611-KSR223GLFG" 300 -800 50 H I C CNN "Mouser Part Number"
+F8 "https://www.mouser.com/Search/Refine.aspx?Keyword=611-KSR223GLFG" 300 -900 50 H I C CNN "Mouser Price/Stock"
+DRAW
+C 220 0 20 0 1 10 N
+C 380 0 20 0 1 10 N
+P 2 0 1 6 200 50 400 50 N
+P 2 0 1 6 300 50 300 100 N
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 600 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+#End Library

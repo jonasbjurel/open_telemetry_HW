@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OFT001v1"
-Date "2019-11-12"
-Rev "P0A.03"
+Date "2019-11-17"
+Rev "P1A_01 - Prototype manuf."
 Comp "OpenFly Telemetry"
 Comment1 "© 2019 - Jonas Bjurel"
 Comment2 "License: Creative commons - CC BY 2.0"
@@ -567,7 +567,7 @@ U 1 1 5E9100D9
 P 4300 5650
 F 0 "R8" H 4600 5750 50  0000 L CNN
 F 1 "10k" H 4575 5575 50  0000 L CNN
-F 2 "RESC0603X26N" H 4850 5700 50  0001 L CNN
+F 2 "Open_Telemetry:RESC0603X26N" H 4850 5700 50  0001 L CNN
 F 3 "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf" H 4850 5600 50  0001 L CNN
 F 4 "THICK FILM CHIP RESISTORS" H 4850 5500 50  0001 L CNN "Description"
 F 5 "0.26" H 4850 5400 50  0001 L CNN "Height"
@@ -778,7 +778,7 @@ F 3 "" H 5400 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 750  7050 0    47   ~ 0
-I2C communication only. Listening to I2C_0 non real time bus,\nI2C address: 0x77 (default) or 0x76 if optioal R5 is mounted.
+I2C communication only. Listening to I2C_0 non real time bus,\nI2C address: 0x77 (default) or 0x76 if optioal R4 is mounted.
 $Comp
 L power:GND #PWR011
 U 1 1 5DB66F49
@@ -889,8 +889,6 @@ F 11 "http://uk.rs-online.com/web/p/products/1332873P" H 8150 3300 50  0001 L BN
 $EndComp
 Text GLabel 10050 2400 1    50   BiDi ~ 0
 RESET
-Wire Wire Line
-	10750 4000 10750 4050
 $Comp
 L LED:ASMB-MTB1-0A3A2 LED3
 U 1 1 5DBE4DF6
@@ -900,44 +898,6 @@ F 1 "System Status" H 8775 4225 50  0000 L CNN
 F 2 "Open_Telemetry:AVAGO_PLCC4" H 9050 4350 50  0001 C CNN
 F 3 "https://docs.broadcom.com/docs/AV02-4194EN" H 9050 3300 50  0001 C CNN
 	1    9050 3750
-	0    1    1    0   
-$EndComp
-$Comp
-L ATS2D1G_NC_LFS:ATS2D1G_NC_LFS S1
-U 1 1 5DC11E0D
-P 10050 3200
-F 0 "S1" H 10400 3350 50  0000 L CNN
-F 1 "RST" H 10375 3075 50  0000 L CNN
-F 2 "Open_Telemetry:ATS2D1G" H 10700 3300 50  0001 L CNN
-F 3 "http://www.mouser.com/ds/2/60/ats-1100738.pdf" H 10700 3200 50  0001 L CNN
-F 4 "Tactile Switches 1VA 32VDC 50mA On-(On) Sldr IP54" H 10700 3100 50  0001 L CNN "Description"
-F 5 "" H 10700 3000 50  0001 L CNN "Height"
-F 6 "C & K COMPONENTS" H 10700 2900 50  0001 L CNN "Manufacturer_Name"
-F 7 "ATS2D1G NC LFS" H 10700 2800 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "611-ATS2D1GNCLFS" H 10700 2700 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=611-ATS2D1GNCLFS" H 10700 2600 50  0001 L CNN "Mouser Price/Stock"
-F 10 "" H 10700 2500 50  0001 L CNN "RS Part Number"
-F 11 "" H 10700 2400 50  0001 L CNN "RS Price/Stock"
-	1    10050 3200
-	0    1    1    0   
-$EndComp
-$Comp
-L ATS2D1G_NC_LFS:ATS2D1G_NC_LFS S2
-U 1 1 5DC296C0
-P 10750 3200
-F 0 "S2" H 11100 3350 50  0000 L CNN
-F 1 "CALIB" H 11050 3075 50  0000 L CNN
-F 2 "Open_Telemetry:ATS2D1G" H 11400 3300 50  0001 L CNN
-F 3 "http://www.mouser.com/ds/2/60/ats-1100738.pdf" H 11400 3200 50  0001 L CNN
-F 4 "Tactile Switches 1VA 32VDC 50mA On-(On) Sldr IP54" H 11400 3100 50  0001 L CNN "Description"
-F 5 "" H 11400 3000 50  0001 L CNN "Height"
-F 6 "C & K COMPONENTS" H 11400 2900 50  0001 L CNN "Manufacturer_Name"
-F 7 "ATS2D1G NC LFS" H 11400 2800 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "611-ATS2D1GNCLFS" H 11400 2700 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=611-ATS2D1GNCLFS" H 11400 2600 50  0001 L CNN "Mouser Price/Stock"
-F 10 "" H 11400 2500 50  0001 L CNN "RS Part Number"
-F 11 "" H 11400 2400 50  0001 L CNN "RS Price/Stock"
-	1    10750 3200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -18532,13 +18492,10 @@ Wire Wire Line
 	2750 6125 2225 6125
 Wire Wire Line
 	10450 3200 10750 3200
-Connection ~ 10750 3200
 Wire Wire Line
 	8250 2550 8250 2725
 Wire Wire Line
 	8250 3425 8250 3450
-Wire Wire Line
-	7650 2500 7650 2725
 Wire Wire Line
 	7650 3425 7650 3450
 Wire Wire Line
@@ -18572,13 +18529,8 @@ Wire Wire Line
 	9750 3100 9750 3175
 Wire Wire Line
 	9750 3175 10050 3175
-Connection ~ 10050 3175
-Wire Wire Line
-	10050 3175 10050 3200
 Wire Wire Line
 	9750 2400 9750 2325
-Wire Wire Line
-	10000 5950 9150 5950
 Wire Wire Line
 	9150 5950 9150 6200
 $Comp
@@ -18625,6 +18577,117 @@ F 3 "" H 10050 4075 50  0001 C CNN
 	1    10050 4075
 	1    0    0    -1  
 $EndComp
+NoConn ~ 10000 5050
+NoConn ~ 10000 5150
+NoConn ~ 10000 5250
+NoConn ~ 10000 5650
+NoConn ~ 10000 5750
+NoConn ~ 8150 5400
+NoConn ~ 8150 5500
+NoConn ~ 8150 5600
+NoConn ~ 8150 5700
+NoConn ~ 8150 5000
+NoConn ~ 8150 4900
+NoConn ~ 8150 4800
+NoConn ~ 6000 5350
+NoConn ~ 6000 5450
+NoConn ~ 4150 1350
+NoConn ~ 10000 6050
+NoConn ~ 10000 5850
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DD84330
+P 10650 5850
+F 0 "#FLG0101" H 10650 5925 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 6023 50  0000 C CNN
+F 2 "" H 10650 5850 50  0001 C CNN
+F 3 "~" H 10650 5850 50  0001 C CNN
+	1    10650 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5DD8DA9A
+P 10650 5850
+F 0 "#PWR0104" H 10650 5600 50  0001 C CNN
+F 1 "GND" H 10655 5677 50  0000 C CNN
+F 2 "" H 10650 5850 50  0001 C CNN
+F 3 "" H 10650 5850 50  0001 C CNN
+	1    10650 5850
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	10050 4000 10050 4075
+	9150 5950 10000 5950
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5DD98FE2
+P 10650 5275
+F 0 "#FLG0102" H 10650 5350 50  0001 C CNN
+F 1 "PWR_FLAG" H 10650 5448 50  0000 C CNN
+F 2 "" H 10650 5275 50  0001 C CNN
+F 3 "~" H 10650 5275 50  0001 C CNN
+	1    10650 5275
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5DD99E4C
+P 10650 5275
+F 0 "#PWR0105" H 10650 5125 50  0001 C CNN
+F 1 "+3.3V" H 10665 5448 50  0000 C CNN
+F 2 "" H 10650 5275 50  0001 C CNN
+F 3 "" H 10650 5275 50  0001 C CNN
+	1    10650 5275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2500 7650 2725
+$Comp
+L KSR223GLFG:KSR223GLFG S1
+U 1 1 5DE37D90
+P 10050 3300
+F 0 "S1" H 10300 3175 50  0000 L CNN
+F 1 "RST" H 10275 3475 50  0000 L CNN
+F 2 "Open_Telemetry:KSR" H 10350 3100 50  0001 C CNN
+F 3 "https://www.ckswitches.com/media/1466/ksr.pdf" H 10350 3000 50  0001 C CNN
+F 4 "Subminiature Tact Switch for SMT" H 10350 2900 50  0001 C CNN "Description"
+F 5 "" H 10350 2800 50  0001 C CNN "Height"
+F 6 "C & K COMPONENTS" H 10350 2700 50  0001 C CNN "Manufacturer_Name"
+F 7 "KSR223GLFG" H 10350 2600 50  0001 C CNN "Manufacturer_Part_Number"
+F 8 "611-KSR223GLFG" H 10350 2500 50  0001 C CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=611-KSR223GLFG" H 10350 2400 50  0001 C CNN "Mouser Price/Stock"
+F 10 "" H 10350 2300 50  0001 C CNN "RS Part Number"
+F 11 "" H 10350 2200 50  0001 C CNN "RS Price/Stock"
+	1    10050 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10050 3900 10050 4075
+Wire Wire Line
+	10050 3175 10050 3300
+Connection ~ 10050 3175
+$Comp
+L KSR223GLFG:KSR223GLFG S2
+U 1 1 5DE74ED7
+P 10750 3300
+F 0 "S2" H 11000 3175 50  0000 L CNN
+F 1 "CALIB" H 10975 3475 50  0000 L CNN
+F 2 "Open_Telemetry:KSR" H 11050 3100 50  0001 C CNN
+F 3 "https://www.ckswitches.com/media/1466/ksr.pdf" H 11050 3000 50  0001 C CNN
+F 4 "Subminiature Tact Switch for SMT" H 11050 2900 50  0001 C CNN "Description"
+F 5 "" H 11050 2800 50  0001 C CNN "Height"
+F 6 "C & K COMPONENTS" H 11050 2700 50  0001 C CNN "Manufacturer_Name"
+F 7 "KSR223GLFG" H 11050 2600 50  0001 C CNN "Manufacturer_Part_Number"
+F 8 "611-KSR223GLFG" H 11050 2500 50  0001 C CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=611-KSR223GLFG" H 11050 2400 50  0001 C CNN "Mouser Price/Stock"
+F 10 "" H 11050 2300 50  0001 C CNN "RS Part Number"
+F 11 "" H 11050 2200 50  0001 C CNN "RS Price/Stock"
+	1    10750 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10750 3900 10750 4050
+Wire Wire Line
+	10750 3300 10750 3200
+Connection ~ 10750 3200
 $EndSCHEMATC

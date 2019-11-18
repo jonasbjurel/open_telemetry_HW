@@ -1,0 +1,67 @@
+(Japanese_coding: sjis)
+(function "ECS_1141740"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-03-21-09:51:11)
+    (utime 2018-06-14-06:33:09)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "KSR223GLFG")
+)
+
+
+(pinAssign "ECS_1141740"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-03-21-09:51:11)
+    (utime 2018-06-14-06:33:09)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_1141740")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "KSR223GLFG")
+)
+
+
+(part "KSR223GLFG"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-03-21-09:51:11)
+    (utime 2018-06-14-06:33:09)
+    (packageRef "KSR223GLFG")
+    (pinAssignRef "ECS_1141740")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "S")
+    (property "description" "Subminiature Tact Switch for SMT")
+    (property "Manufacturer_Name" "C & K COMPONENTS")
+    (property "Manufacturer_Part_Number" "KSR223GLFG")
+    (property "Mouser_Part_Number" "611-KSR223GLFG")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=611-KSR223GLFG")
+    (property "RS_Part_Number" "")
+    (property "RS_Price/Stock" "")
+    (property "Datasheet_Link" "https://www.ckswitches.com/media/1466/ksr.pdf")
+)
+
+

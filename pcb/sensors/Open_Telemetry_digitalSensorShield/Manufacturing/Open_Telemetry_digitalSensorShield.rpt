@@ -1,20 +1,80 @@
-## Footprint report - date 11/13/2019 10:35:42 PM
+## Footprint report - date 11/17/2019 7:29:11 PM
 ## Created by Pcbnew version kicad (5.1.4)-1
 ## Unit = mm, Angle = deg.
 
 $BeginDESCRIPTION
 
 $BOARD
-upper_left_corner 134.067479 120.273500
-lower_right_corner 278.633144 165.451075
+upper_left_corner 178.114289 127.205160
+lower_right_corner 284.410003 159.713620
 $EndBOARD
+
+$MODULE "P4"
+reference "P4"
+value "MountingHole_2.2mm_M2"
+footprint "MountingHole:MountingHole_2.2mm_M2"
+attribut virtual
+position 262.234680 152.905460  orientation 0.00
+layer front
+$PAD ""
+Shape Circle Layer both
+position  0.000000  0.000000  size  2.200000  2.200000  orientation 0.00
+drill  2.200000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  P4
+
+$MODULE "P3"
+reference "P3"
+value "MountingHole_2.2mm_M2"
+footprint "MountingHole:MountingHole_2.2mm_M2"
+attribut virtual
+position 262.272780 133.870700  orientation 0.00
+layer front
+$PAD ""
+Shape Circle Layer both
+position  0.000000  0.000000  size  2.200000  2.200000  orientation 0.00
+drill  2.200000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  P3
+
+$MODULE "P2"
+reference "P2"
+value "MountingHole_2.5mm"
+footprint "MountingHole:MountingHole_2.5mm"
+attribut virtual
+position 216.535000 152.280620  orientation 0.00
+layer front
+$PAD ""
+Shape Circle Layer both
+position  0.000000  0.000000  size  2.500000  2.500000  orientation 0.00
+drill  2.500000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  P2
+
+$MODULE "P1"
+reference "P1"
+value "MountingHole_2.5mm"
+footprint "MountingHole:MountingHole_2.5mm"
+attribut virtual
+position 216.484200 134.528560  orientation 0.00
+layer front
+$PAD ""
+Shape Circle Layer both
+position  0.000000  0.000000  size  2.500000  2.500000  orientation 0.00
+drill  2.500000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  P1
 
 $MODULE "S2"
 reference "S2"
 value "CALIB"
-footprint "Open_Telemetry:ATS2D1G"
+footprint "Open_Telemetry:KSR"
 attribut smd
-position 256.286000 147.879000  orientation 90.00
+position 256.214880 147.769580  orientation 90.00
 layer front
 $PAD "1"
 Shape Rect Layer front
@@ -29,6 +89,48 @@ drill  0.000000
 shape_offset  0.000000  0.000000
 $EndPAD
 $EndMODULE  S2
+
+$MODULE "S1"
+reference "S1"
+value "RST"
+footprint "Open_Telemetry:KSR"
+attribut smd
+position 256.214880 138.907520  orientation 90.00
+layer front
+$PAD "1"
+Shape Rect Layer front
+position -3.500000  0.000000  size  1.000000  1.400000  orientation 0.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Rect Layer front
+position  3.500000  0.000000  size  1.000000  1.400000  orientation 0.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  S1
+
+$MODULE "R8"
+reference "R8"
+value "10k"
+footprint "Open_Telemetry:RESC0603X26N"
+attribut smd
+position 245.500000 141.800000  orientation 180.00
+layer front
+$PAD "1"
+Shape Rect Layer front
+position -0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Rect Layer front
+position  0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  R8
 
 $MODULE "U1"
 reference "U1"
@@ -852,48 +954,6 @@ shape_offset  0.000000  0.000000
 $EndPAD
 $EndMODULE  R7
 
-$MODULE "R8"
-reference "R8"
-value "10k"
-footprint "RESC0603X26N"
-attribut smd
-position 245.500000 141.800000  orientation 180.00
-layer front
-$PAD "1"
-Shape Rect Layer front
-position -0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
-drill  0.000000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "2"
-Shape Rect Layer front
-position  0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
-drill  0.000000
-shape_offset  0.000000  0.000000
-$EndPAD
-$EndMODULE  R8
-
-$MODULE "S1"
-reference "S1"
-value "RST"
-footprint "Open_Telemetry:ATS2D1G"
-attribut smd
-position 256.286000 139.294000  orientation 90.00
-layer front
-$PAD "2"
-Shape Rect Layer front
-position  3.500000  0.000000  size  1.000000  1.400000  orientation 0.00
-drill  0.000000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Rect Layer front
-position -3.500000  0.000000  size  1.000000  1.400000  orientation 0.00
-drill  0.000000
-shape_offset  0.000000  0.000000
-$EndPAD
-$EndMODULE  S1
-
 $MODULE "U2"
 reference "U2"
 value "MPU-9250"
@@ -1133,7 +1193,7 @@ $EndMODULE  C4
 
 $MODULE "LED3"
 reference "LED3"
-value ""
+value "Stat"
 footprint "Open_Telemetry:AVAGO_PLCC4"
 attribut smd
 position 252.340000 148.380000  orientation 180.00

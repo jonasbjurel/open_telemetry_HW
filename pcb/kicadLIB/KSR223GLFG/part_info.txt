@@ -1,0 +1,9 @@
+Manufacturer=C & K COMPONENTS
+PartNumber=KSR223GLFG
+PartCategory=Switch (2-Pin Push)
+PackageCategory=Other
+PinCount=2
+Version=1.1
+Released=2018-03-21 09:51:11
+Downloaded=2019-11-16 20:41:05
+3D=N

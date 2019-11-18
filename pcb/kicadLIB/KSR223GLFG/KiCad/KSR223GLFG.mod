@@ -1,0 +1,42 @@
+PCBNEW-LibModule-V1  2019-11-16 20:41:05
+# encoding utf-8
+Units mm
+$INDEX
+KSR
+$EndINDEX
+$MODULE KSR
+Po 0 0 0 15 5dd05ee1 00000000 ~~
+Li KSR
+Cd KSR
+Kw Switch (2-Pin Push)
+Sc 0
+At SMD
+AR 
+Op 0 0 0
+T0 -0.32481 -0.04467 1.27 1.27 0 0.254 N V 21 N "S**"
+T1 -0.32481 -0.04467 1.27 1.27 0 0.254 N I 21 N "KSR"
+DS -3 -1.9 3 -1.9 0.2 24
+DS 3 -1.9 3 1.9 0.2 24
+DS 3 1.9 -3 1.9 0.2 24
+DS -3 1.9 -3 -1.9 0.2 24
+DS -3 -1.9 3 -1.9 0.2 21
+DS 3 1.9 -3 1.9 0.2 21
+DS -3 -1.9 -3 -0.985 0.2 21
+DS -3 1.9 -3 0.985 0.2 21
+DS 3 -1.9 3 -0.985 0.2 21
+DS 3 1.9 3 0.985 0.2 21
+DC -4.429 -0.061 -4.501 -0.061 0.254 21
+$PAD
+Po -3.5 0
+Sh "1" R 1 1.4 0 0 0
+At SMD N 00888000
+Ne 0 ""
+$EndPAD
+$PAD
+Po 3.5 0
+Sh "2" R 1 1.4 0 0 0
+At SMD N 00888000
+Ne 0 ""
+$EndPAD
+$EndMODULE KSR
+$EndLIBRARY

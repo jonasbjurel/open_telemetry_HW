@@ -1,0 +1,17 @@
+.KSR223GLFG :1 ;Subminiature Tact Switch for SMT
+KSR
+*STM S
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN KSR223GLFG
+~!Manufacturer_Name (C & K COMPONENTS)
+~!Manufacturer_Part_Number (KSR223GLFG)
+~!Mouser Part Number (611-KSR223GLFG)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=611-KSR223GLFG)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Link Datasheet (https://www.ckswitches.com/media/1466/ksr.pdf)
+~!Height (-)
+KSR223GLFG
+1.1!U 2.1!U 

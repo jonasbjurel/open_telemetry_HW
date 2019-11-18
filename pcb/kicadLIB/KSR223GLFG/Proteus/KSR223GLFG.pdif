@@ -1,0 +1,133 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "KSR223GLFG"
+   (description "Subminiature Tact Switch for SMT")
+   (family "SWI")
+   (package "KSR")
+   (attribute "Datasheet Link" "https://www.ckswitches.com/media/1466/ksr.pdf")
+   (attribute "Manufacturer_Name" "C & K COMPONENTS")
+   (attribute "Manufacturer_Part_Number" "KSR223GLFG")
+   (attribute "Mouser Part Number" "611-KSR223GLFG")
+   (attribute "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=611-KSR223GLFG")
+   (attribute "RS Part Number" "")
+   (attribute "RS Price/Stock" "")
+   (gate
+    (symbol "KSR223GLFG")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "KSR223GLFG"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (circle (pt 240 0) (pt 200 0))
+   )
+   (graphic
+    (stroke 10)
+    (circle (pt 400 0) (pt 360 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 200 50) (pt 400 50))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 50) (pt 300 100))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible false))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 600 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible false))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "KSR"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -3 1.9)
+      (pt 3 1.9)
+      (pt 3 -1.9)
+      (pt -3 -1.9)
+      (pt -3 1.9))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3 1.9)
+      (pt 3 1.9))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 3 -1.9)
+      (pt -3 -1.9))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3 1.9)
+      (pt -3 0.985))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3 -1.9)
+      (pt -3 -0.985))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 3 1.9)
+      (pt 3 0.985))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 3 -1.9)
+      (pt 3 -0.985))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (circle
+      (pt -4.501 0.061) (pt -4.357 0.061)
+     )
+    )
+   )
+   (leg 1 (pt -3.5 0) (padstack 0))
+   (leg 2 (pt 3.5 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1 1.4 0 0 90))
+   )
+  )
+ )
+)
