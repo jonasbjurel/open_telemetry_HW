@@ -1,4 +1,4 @@
-### Module positions - created on 11/17/2019 7:28:23 PM ###
+### Module positions - created on 11/20/2019 7:38:34 PM ###
 ### Printed by Pcbnew version kicad (5.1.4)-1
 ## Unit = mm, Angle = deg.
 ## Side : top
@@ -15,7 +15,7 @@ IC1       L80-M39                    L80-M39                                    
 J1        Ext_GPS_antenna_connector  U.FL_Molex_MCRF_73412-0110_Vertical                 216.9160  -147.2180   90.0000  top
 LED1      EXT_ANT                    LEDC1608X65N                                        253.0600  -139.5480   90.0000  top
 LED2      GPS_LCK                    SMLD15YWT86                                         253.0860  -143.9420    0.0000  top
-LED3      Stat                       AVAGO_PLCC4                                         252.3400  -148.3800  180.0000  top
+LED3      System_Status              AVAGO_PLCC4                                         252.3400  -148.3800  180.0000  top
 Q1        BC846BPN                   SOT-363_SC-70-6                                     248.5300  -144.3600    0.0000  top
 R1        10k                        RESC0603X26N                                        245.5000  -150.0000    0.0000  top
 R2        1k                         RESC0603X26N                                        245.5000  -143.8000    0.0000  top
@@ -33,6 +33,10 @@ R13       62                         RESC1005X40N                               
 R14       130                        RESC1005X40N                                        248.5974  -146.3904    0.0000  top
 R15       10k                        RESC0603X26N                                        257.8400  -143.5300   90.0000  top
 R16       10k                        RESC0603X26N                                        245.5000  -151.0500  180.0000  top
+R17       10k                        RESC0603X26N                                        259.0292  -135.6284   90.0000  top
+R18       10k                        RESC0603X26N                                        259.0241  -137.2543   90.0000  top
+R19       1k                         RESC0603X26N                                        259.0063  -151.2468   90.0000  top
+R20       1k                         RESC0603X26N                                        259.0140  -149.6390   90.0000  top
 S1        RST                        KSR                                                 256.2149  -138.9075   90.0000  top
 S2        CALIB                      KSR                                                 256.2149  -147.7696   90.0000  top
 U1        BME280                     Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering   248.5000  -148.7000    0.0000  top

@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OFT001v1"
-Date "2019-11-17"
-Rev "P1A_01 Prot. manf."
+Date "2019-11-19"
+Rev "P1A_02 Prot. manf."
 Comp "OpenFly Telemetry"
 Comment1 "© 2019 - Jonas Bjurel"
 Comment2 "License: Creative commons - CC BY 2.0"
@@ -628,43 +628,39 @@ $EndComp
 Wire Wire Line
 	1725 6425 1525 6425
 Connection ~ 1725 6425
-Wire Wire Line
-	2225 5525 2225 4975
-Wire Wire Line
-	2225 4175 1725 4175
 Text Notes 1300 3900 0    79   ~ 16
 Barometic pressure, Humidity\n   & Temperature sensor
 $Comp
 L RC0201JR-0710KL:RC0201JR-0710KL R1
 U 1 1 5E51BC6B
-P 2225 4175
-F 0 "R1" H 2525 4275 50  0000 L CNN
-F 1 "10k" H 2500 4100 50  0000 L CNN
-F 2 "Open_Telemetry:RESC0603X26N" H 2775 4225 50  0001 L CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf" H 2775 4125 50  0001 L CNN
-F 4 "THICK FILM CHIP RESISTORS" H 2775 4025 50  0001 L CNN "Description"
-F 5 "0.26" H 2775 3925 50  0001 L CNN "Height"
-F 6 "YAGEO (PHYCOMP)" H 2775 3825 50  0001 L CNN "Manufacturer_Name"
-F 7 "RC0201JR-0710KL" H 2775 3725 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "603-RC0201JR-0710KL" H 2775 3625 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-0710KL" H 2775 3525 50  0001 L CNN "Mouser Price/Stock"
-F 10 "" H 2775 3425 50  0001 L CNN "RS Part Number"
-F 11 "" H 2775 3325 50  0001 L CNN "RS Price/Stock"
-	1    2225 4175
+P 1925 4175
+F 0 "R1" H 2225 4275 50  0000 L CNN
+F 1 "10k" H 2200 4100 50  0000 L CNN
+F 2 "Open_Telemetry:RESC0603X26N" H 2475 4225 50  0001 L CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf" H 2475 4125 50  0001 L CNN
+F 4 "THICK FILM CHIP RESISTORS" H 2475 4025 50  0001 L CNN "Description"
+F 5 "0.26" H 2475 3925 50  0001 L CNN "Height"
+F 6 "YAGEO (PHYCOMP)" H 2475 3825 50  0001 L CNN "Manufacturer_Name"
+F 7 "RC0201JR-0710KL" H 2475 3725 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "603-RC0201JR-0710KL" H 2475 3625 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-0710KL" H 2475 3525 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 2475 3425 50  0001 L CNN "RS Part Number"
+F 11 "" H 2475 3325 50  0001 L CNN "RS Price/Stock"
+	1    1925 4175
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5DB79DC6
-P 3025 4175
-F 0 "#PWR07" H 3025 3925 50  0001 C CNN
-F 1 "GND" H 3030 4002 50  0000 C CNN
-F 2 "" H 3025 4175 50  0001 C CNN
-F 3 "" H 3025 4175 50  0001 C CNN
-	1    3025 4175
+P 3050 4175
+F 0 "#PWR07" H 3050 3925 50  0001 C CNN
+F 1 "GND" H 3055 4002 50  0000 C CNN
+F 2 "" H 3050 4175 50  0001 C CNN
+F 3 "" H 3050 4175 50  0001 C CNN
+	1    3050 4175
 	1    0    0    -1  
 $EndComp
-Text Notes 2825 4450 1    31   ~ 0
+Text Notes 2950 4450 1    31   ~ 0
 If mounted:\nAddr: 0x76
 Wire Notes Line
 	3150 3600 3150 7100
@@ -983,9 +979,6 @@ Wire Wire Line
 Connection ~ 1725 4975
 Wire Wire Line
 	1725 4975 1725 5175
-Connection ~ 2225 4975
-Wire Wire Line
-	2225 4975 2225 4875
 Wire Wire Line
 	4300 4100 4550 4100
 Text Notes 4700 2775 0    50   ~ 0
@@ -1043,25 +1036,21 @@ Connection ~ 4550 6350
 Wire Wire Line
 	4550 6350 5300 6350
 Wire Wire Line
-	3900 5150 4600 5150
+	3900 5150 3925 5150
 Wire Wire Line
-	3900 5350 4600 5350
+	3900 5350 4125 5350
 Wire Notes Line
 	6850 3600 6850 7100
 Wire Wire Line
-	2625 4175 3025 4175
-Wire Wire Line
-	2625 4875 2625 4975
-Wire Wire Line
-	2225 4975 2625 4975
+	2750 4875 2750 4975
 Wire Notes Line
-	2825 4125 2825 4825
+	2950 4125 2950 4825
 Wire Notes Line
-	2825 4825 2525 4825
+	2950 4825 2650 4825
 Wire Notes Line
-	2525 4825 2525 4125
+	2650 4825 2650 4125
 Wire Notes Line
-	2525 4125 2825 4125
+	2650 4125 2950 4125
 Wire Notes Line
 	6000 550  650  550 
 Wire Notes Line
@@ -18381,20 +18370,20 @@ $EndComp
 $Comp
 L RC0201JR-070RL:RC0201JR-070RL R4
 U 1 1 5E950BB8
-P 2625 4175
-F 0 "R4" H 2975 4275 50  0000 C CNN
-F 1 "NULL" H 2975 4175 50  0000 C CNN
-F 2 "RESC0603X26N" H 3175 4225 50  0001 L CNN
-F 3 "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf" H 3175 4125 50  0001 L CNN
-F 4 "YAGEO (PHYCOMP) - RC0201JR-070RL - RES, THICK FILM, 0R, 5%, 0.05W, 0201" H 3175 4025 50  0001 L CNN "Description"
-F 5 "0.26" H 3175 3925 50  0001 L CNN "Height"
-F 6 "YAGEO (PHYCOMP)" H 3175 3825 50  0001 L CNN "Manufacturer_Name"
-F 7 "RC0201JR-070RL" H 3175 3725 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "603-RC0201JR-070RL" H 3175 3625 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-070RL" H 3175 3525 50  0001 L CNN "Mouser Price/Stock"
-F 10 "" H 3175 3425 50  0001 L CNN "RS Part Number"
-F 11 "" H 3175 3325 50  0001 L CNN "RS Price/Stock"
-	1    2625 4175
+P 2750 4175
+F 0 "R4" H 3100 4275 50  0000 C CNN
+F 1 "NULL" H 3100 4175 50  0000 C CNN
+F 2 "RESC0603X26N" H 3300 4225 50  0001 L CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf" H 3300 4125 50  0001 L CNN
+F 4 "YAGEO (PHYCOMP) - RC0201JR-070RL - RES, THICK FILM, 0R, 5%, 0.05W, 0201" H 3300 4025 50  0001 L CNN "Description"
+F 5 "0.26" H 3300 3925 50  0001 L CNN "Height"
+F 6 "YAGEO (PHYCOMP)" H 3300 3825 50  0001 L CNN "Manufacturer_Name"
+F 7 "RC0201JR-070RL" H 3300 3725 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "603-RC0201JR-070RL" H 3300 3625 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-070RL" H 3300 3525 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 3300 3425 50  0001 L CNN "RS Part Number"
+F 11 "" H 3300 3325 50  0001 L CNN "RS Price/Stock"
+	1    2750 4175
 	0    1    1    0   
 $EndComp
 $Comp
@@ -18485,9 +18474,9 @@ Wire Wire Line
 Wire Wire Line
 	6150 5150 6500 5150
 Wire Wire Line
-	2525 5725 2225 5725
+	2525 5725 2500 5725
 Wire Wire Line
-	2225 5925 2525 5925
+	2225 5925 2375 5925
 Wire Wire Line
 	2750 6125 2225 6125
 Wire Wire Line
@@ -18690,4 +18679,141 @@ Wire Wire Line
 Wire Wire Line
 	10750 3300 10750 3200
 Connection ~ 10750 3200
+$Comp
+L RC0201JR-071KL:RC0201JR-071KL R19
+U 1 1 5DD4D652
+P 3750 5000
+F 0 "R19" H 4100 4900 50  0000 C CNN
+F 1 "1k" H 4100 5075 50  0000 C CNN
+F 2 "Open_Telemetry:RESC0603X26N" H 4300 5050 50  0001 L CNN
+F 3 "https://www.digikey.se/en/datasheets/yageo/yageo-pyu-r_marking_2" H 4300 4950 50  0001 L CNN
+F 4 "YAGEO - RC0201JR-071KL - RES, THICK FILM, 1K, 5%, 0.5W, 0201, REEL" H 4300 4850 50  0001 L CNN "Description"
+F 5 "0.26" H 4300 4750 50  0001 L CNN "Height"
+F 6 "YAGEO (PHYCOMP)" H 4300 4650 50  0001 L CNN "Manufacturer_Name"
+F 7 "RC0201JR-071KL" H 4300 4550 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "603-RC0201JR-071KL" H 4300 4450 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-071KL" H 4300 4350 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 4300 4250 50  0001 L CNN "RS Part Number"
+F 11 "" H 4300 4150 50  0001 L CNN "RS Price/Stock"
+	1    3750 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RC0201JR-071KL:RC0201JR-071KL R20
+U 1 1 5DD511C5
+P 4025 5000
+F 0 "R20" H 4375 4900 50  0000 C CNN
+F 1 "1k" H 4375 5075 50  0000 C CNN
+F 2 "Open_Telemetry:RESC0603X26N" H 4575 5050 50  0001 L CNN
+F 3 "https://www.digikey.se/en/datasheets/yageo/yageo-pyu-r_marking_2" H 4575 4950 50  0001 L CNN
+F 4 "YAGEO - RC0201JR-071KL - RES, THICK FILM, 1K, 5%, 0.5W, 0201, REEL" H 4575 4850 50  0001 L CNN "Description"
+F 5 "0.26" H 4575 4750 50  0001 L CNN "Height"
+F 6 "YAGEO (PHYCOMP)" H 4575 4650 50  0001 L CNN "Manufacturer_Name"
+F 7 "RC0201JR-071KL" H 4575 4550 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "603-RC0201JR-071KL" H 4575 4450 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-071KL" H 4575 4350 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 4575 4250 50  0001 L CNN "RS Part Number"
+F 11 "" H 4575 4150 50  0001 L CNN "RS Price/Stock"
+	1    4025 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4025 5000 4125 5000
+Wire Wire Line
+	4125 5000 4125 5350
+Connection ~ 4125 5350
+Wire Wire Line
+	4125 5350 4600 5350
+Wire Wire Line
+	3750 5000 3925 5000
+Wire Wire Line
+	3925 5000 3925 5150
+Connection ~ 3925 5150
+Wire Wire Line
+	3925 5150 4600 5150
+Wire Wire Line
+	3750 4300 3750 4100
+Wire Wire Line
+	3750 4100 4025 4100
+Connection ~ 4300 4100
+Wire Wire Line
+	4025 4300 4025 4100
+Connection ~ 4025 4100
+Wire Wire Line
+	4025 4100 4300 4100
+$Comp
+L RC0201JR-0710KL:RC0201JR-0710KL R17
+U 1 1 5DD82045
+P 2225 4175
+F 0 "R17" H 2525 4275 50  0000 L CNN
+F 1 "10k" H 2500 4100 50  0000 L CNN
+F 2 "Open_Telemetry:RESC0603X26N" H 2775 4225 50  0001 L CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf" H 2775 4125 50  0001 L CNN
+F 4 "THICK FILM CHIP RESISTORS" H 2775 4025 50  0001 L CNN "Description"
+F 5 "0.26" H 2775 3925 50  0001 L CNN "Height"
+F 6 "YAGEO (PHYCOMP)" H 2775 3825 50  0001 L CNN "Manufacturer_Name"
+F 7 "RC0201JR-0710KL" H 2775 3725 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "603-RC0201JR-0710KL" H 2775 3625 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-0710KL" H 2775 3525 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 2775 3425 50  0001 L CNN "RS Part Number"
+F 11 "" H 2775 3325 50  0001 L CNN "RS Price/Stock"
+	1    2225 4175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 4175 3050 4175
+Wire Wire Line
+	1925 4175 1725 4175
+Connection ~ 1925 4175
+Wire Wire Line
+	2225 4175 1925 4175
+Wire Wire Line
+	1925 4975 1925 4875
+$Comp
+L RC0201JR-0710KL:RC0201JR-0710KL R18
+U 1 1 5DE043F4
+P 2500 4175
+F 0 "R18" H 2800 4275 50  0000 L CNN
+F 1 "10k" H 2775 4100 50  0000 L CNN
+F 2 "Open_Telemetry:RESC0603X26N" H 3050 4225 50  0001 L CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC0201_51_RoHS_L_8.pdf" H 3050 4125 50  0001 L CNN
+F 4 "THICK FILM CHIP RESISTORS" H 3050 4025 50  0001 L CNN "Description"
+F 5 "0.26" H 3050 3925 50  0001 L CNN "Height"
+F 6 "YAGEO (PHYCOMP)" H 3050 3825 50  0001 L CNN "Manufacturer_Name"
+F 7 "RC0201JR-0710KL" H 3050 3725 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "603-RC0201JR-0710KL" H 3050 3625 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=603-RC0201JR-0710KL" H 3050 3525 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 3050 3425 50  0001 L CNN "RS Part Number"
+F 11 "" H 3050 3325 50  0001 L CNN "RS Price/Stock"
+	1    2500 4175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2500 4175 2225 4175
+Connection ~ 2225 4175
+Wire Wire Line
+	1925 4975 2750 4975
+Wire Wire Line
+	2250 5525 2225 5525
+Wire Wire Line
+	2250 5525 2250 5225
+Wire Wire Line
+	2250 5225 1925 5225
+Wire Wire Line
+	1925 5225 1925 4975
+Connection ~ 1925 4975
+Wire Wire Line
+	2225 4875 2225 5150
+Wire Wire Line
+	2225 5150 2375 5150
+Wire Wire Line
+	2375 5150 2375 5925
+Connection ~ 2375 5925
+Wire Wire Line
+	2375 5925 2525 5925
+Wire Wire Line
+	2500 4875 2500 5725
+Connection ~ 2500 5725
+Wire Wire Line
+	2500 5725 2225 5725
 $EndSCHEMATC

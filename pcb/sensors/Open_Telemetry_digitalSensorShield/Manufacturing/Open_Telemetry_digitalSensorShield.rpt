@@ -1,13 +1,97 @@
-## Footprint report - date 11/17/2019 7:29:11 PM
+## Footprint report - date 11/20/2019 7:39:25 PM
 ## Created by Pcbnew version kicad (5.1.4)-1
 ## Unit = mm, Angle = deg.
 
 $BeginDESCRIPTION
 
 $BOARD
-upper_left_corner 178.114289 127.205160
-lower_right_corner 284.410003 159.713620
+upper_left_corner 134.067479 120.273500
+lower_right_corner 279.019224 165.451075
 $EndBOARD
+
+$MODULE "R20"
+reference "R20"
+value "1k"
+footprint "Open_Telemetry:RESC0603X26N"
+attribut smd
+position 259.013960 149.639020  orientation 90.00
+layer front
+$PAD "1"
+Shape Rect Layer front
+position -0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Rect Layer front
+position  0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  R20
+
+$MODULE "R19"
+reference "R19"
+value "1k"
+footprint "Open_Telemetry:RESC0603X26N"
+attribut smd
+position 259.006340 151.246840  orientation 90.00
+layer front
+$PAD "1"
+Shape Rect Layer front
+position -0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Rect Layer front
+position  0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  R19
+
+$MODULE "R18"
+reference "R18"
+value "10k"
+footprint "Open_Telemetry:RESC0603X26N"
+attribut smd
+position 259.024120 137.254340  orientation 90.00
+layer front
+$PAD "1"
+Shape Rect Layer front
+position -0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Rect Layer front
+position  0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  R18
+
+$MODULE "R17"
+reference "R17"
+value "10k"
+footprint "Open_Telemetry:RESC0603X26N"
+attribut smd
+position 259.029200 135.628380  orientation 90.00
+layer front
+$PAD "1"
+Shape Rect Layer front
+position -0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$PAD "2"
+Shape Rect Layer front
+position  0.340000  0.000000  size  0.420000  0.440000  orientation 90.00
+drill  0.000000
+shape_offset  0.000000  0.000000
+$EndPAD
+$EndMODULE  R17
 
 $MODULE "P4"
 reference "P4"
@@ -1193,7 +1277,7 @@ $EndMODULE  C4
 
 $MODULE "LED3"
 reference "LED3"
-value "Stat"
+value "System Status"
 footprint "Open_Telemetry:AVAGO_PLCC4"
 attribut smd
 position 252.340000 148.380000  orientation 180.00
