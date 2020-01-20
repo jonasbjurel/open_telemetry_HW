@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OFT001v1_BIST", "OFT001v1_BIST\OFT001v1_BIST.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Adafruit_GPS_Library-1.3.1", "..\..\..\..\..\..\libraries\Adafruit_GPS_Library\Adafruit_GPS_Library-1.3.1.vcxitems", "{905229D0-1B31-42F4-AA0D-14E4D1E08515}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ESP32_BLE_Arduino-1.0.1", "..\..\..\..\..\..\libraries\ESP32_BLE_Arduino\ESP32_BLE_Arduino-1.0.1.vcxitems", "{7230207A-3159-4849-858E-97F2B6953FEF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BLE-1.0.1", "..\..\..\..\..\..\..\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.3\libraries\BLE\BLE-1.0.1.vcxitems", "{CBCC045D-4C9E-4347-8226-9B7B7CD85AE3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BLE_uart", "..\..\..\..\..\..\My Examples\BLE_uart\BLE_uart.vcxproj", "{2E363A14-B12E-4B4A-B81B-7410293CFB65}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MPU9250-0.1.1-0.1.1", "..\..\..\..\..\..\libraries\MPU9250-0.1.1\MPU9250-0.1.1-0.1.1.vcxitems", "{C2F2AE72-B3B0-4772-A35F-F8BE4E3E3708}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EEPROM-1.0.3", "..\..\..\..\..\..\..\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.3\libraries\EEPROM\EEPROM-1.0.3.vcxitems", "{A741D7EE-7535-4366-8CE4-EA260707621E}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\..\..\..\libraries\ESP32_BLE_Arduino\ESP32_BLE_Arduino-1.0.1.vcxitems*{7230207a-3159-4849-858e-97f2b6953fef}*SharedItemsImports = 9
+		..\..\..\..\..\..\libraries\Adafruit_GPS_Library\Adafruit_GPS_Library-1.3.1.vcxitems*{905229d0-1b31-42f4-aa0d-14e4d1e08515}*SharedItemsImports = 9
+		..\..\..\..\..\..\..\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.3\libraries\EEPROM\EEPROM-1.0.3.vcxitems*{a741d7ee-7535-4366-8ce4-ea260707621e}*SharedItemsImports = 9
+		..\..\..\..\..\..\libraries\MPU9250-0.1.1\MPU9250-0.1.1-0.1.1.vcxitems*{c2f2ae72-b3b0-4772-a35f-f8be4e3e3708}*SharedItemsImports = 9
+		..\..\..\..\..\..\..\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.3\libraries\EEPROM\EEPROM-1.0.3.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		..\..\..\..\..\..\libraries\Adafruit_GPS_Library\Adafruit_GPS_Library-1.3.1.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		..\..\..\..\..\..\libraries\MPU9250-0.1.1\MPU9250-0.1.1-0.1.1.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		..\..\..\..\..\..\..\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.3\libraries\BLE\BLE-1.0.1.vcxitems*{cbcc045d-4c9e-4347-8226-9b7b7cd85ae3}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{2E363A14-B12E-4B4A-B81B-7410293CFB65}.Debug|x86.ActiveCfg = Debug|Win32
+		{2E363A14-B12E-4B4A-B81B-7410293CFB65}.Debug|x86.Build.0 = Debug|Win32
+		{2E363A14-B12E-4B4A-B81B-7410293CFB65}.Release|x86.ActiveCfg = Release|Win32
+		{2E363A14-B12E-4B4A-B81B-7410293CFB65}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E289A938-BA16-41E0-94A2-D3978E7B3FA0}
+	EndGlobalSection
+EndGlobal
