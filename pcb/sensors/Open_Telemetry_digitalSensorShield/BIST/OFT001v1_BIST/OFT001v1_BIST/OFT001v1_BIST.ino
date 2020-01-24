@@ -26,7 +26,6 @@
   *                        - BMP280 Barometic and temperature data                                    *
   *                        - MPU9250 9-axis intertial navigation sensor                               *
   *                        - L80-M39 GPS receiver                                                     *
-  *                      the prime use-case for model air-craft on-board systems.                     *
   *                    o Sample streaming of navigational data to part Kalman filtered, such as:      *
   *                        - Euler angels and Euler angles change rates                               *
   *                        - Barometic pressure and Barometic vaiometering (bar alt change rates)     *
@@ -41,7 +40,7 @@
   * ************************************************************************************************* */
 
 /* ****************************************************************************************************
-/* Libray inclutions                                                                                  *
+   Libray inclutions                                                                                  *
 You need to follow this instruction to get needed libraries included to your project                  *
 ***************************************************************************************************** */
 #include <EEPROM.h>
@@ -66,12 +65,11 @@ You need to follow this instruction to get needed libraries included to your pro
 //#include <SoftwareSerial.h> //maybe we should use Soft serial for the GPS as other more critical 
                               // task may need the few HW serials available - more likely we will use
                               // a I2C for S.Port and SmartPort?
-
 /* End Libray inclutions                                                                              *
 ***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* ESP32 Huzza Feather PIN definitions (ESP32 Wroom)                                                  *
+   ESP32 Huzza Feather PIN definitions (ESP32 Wroom)                                                  *
 ***************************************************************************************************** */
 #define CALIB_PIN  4
 #define RED_LED_PIN 13
@@ -88,7 +86,7 @@ You need to follow this instruction to get needed libraries included to your pro
 ***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* I/F and device object definitions                                                                  *
+   I/F and device object definitions                                                                  *
 ***************************************************************************************************** */
 #define BMP280_ADDR 0x77
 #define BMP280_CID 0x58
@@ -103,7 +101,89 @@ Adafruit_GPS GPS(&GPSSerial);
 ***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* BIST testphases and reult codes                                                                    *
+   Register addresses and common register contents                                                    *
+***************************************************************************************************** */
+
+#define MPU9250_INT_PIN_CFG_ADDR 0x37
+/* MPU9250_INT_PIN_CFG Register description
+Bit-wise functions [7]MSB, [0]LSB
+[7] ACTL
+    1 – The logic level for INT pin is active low.
+    0 – The logic level for INT pin is active high.
+[6] OPEN
+    1 – INT pin is configured as open drain.
+    0 – INT pin is configured as push - pull.
+[5] LATCH_INT_EN
+    1 – INT pin level held until interrupt status is cleared.
+    0 – INT pin indicates interrupt pulse’s is width 50us.
+[4] INT_ANYRD_2CLEAR
+    1 – Interrupt status is cleared if any read operation is performed.
+    0 – Interrupt status is cleared only by reading INT_STATUS register
+[3] ACTL_FSYNC
+    1 – The logic level for the FSYNC pin as an interrupt is active low.
+	0 – The logic level for the FSYNC pin as an interrupt is active high.
+[2] FSYNC_INT_MODE_EN
+    1 – This enables the FSYNC pin to be used as an interrupt. A transition to the active level described by the ACTL_FSYNC bit 
+	    will cause an interrupt. The status of the interrupt is read in the I2 C Master Status register PASS_THROUGH bit.
+	0 – This disables the FSYNC pin from causing an interrupt.
+[1] BYPASS_EN
+    1 - When asserted, the i2c_master interface pins(ES_CL and ES_DA) will go into ‘bypass mode’ when the i2c master interface is
+	    disabled.The pins will float high due to the internal pull - up if not enabled and the i2c master interface is disabled.
+[0] RESERVED
+*/
+
+#define MPU9250_INT_PIN_CFG_DRAIN_HIGH_LATCH 0x60 //0110 0000
+#define MPU9250_INT_PIN_CFG_DRAIN_LOW_LATCH 0xE0  //1110 0000
+#define MPU9250_INT_PIN_CFG_DEFAULT 0x00
+
+#define MPU9250_INT_ENABLE_ADDR 0x38
+/* MPU9250_INT_ENABLE Register description
+Bit-wise functions [7]MSB, [0]LSB
+[7] RESERVED
+[6] WOM_EN
+    1 – Enable interrupt for wake on motion to propagate to interrupt pin.
+	0 – function is disabled.
+[5] RESERVED
+[4] FIFO_OVERFLOW_EN
+    1 – Enable interrupt for fifo overflow to propagate to interrupt pin.
+	0 – function is disabled.
+[3] FSYNC_INT_EN
+    1 – Enable Fsync interrupt to propagate to interrupt pin.
+	0 – function is disabled. 
+[2] RESERVED
+[1] RESERVED
+[0] RAW_RDY_EN
+    1 – Enable Raw Sensor Data Ready interrupt to propagate to interrupt pin.
+	    The timing of the interrupt can vary depending on the setting in register 36 I2C_MST_CTRL, bit [6] WAIT_FOR_ES.
+	0 – function is disabled.
+*/
+#define MPU9250_INT_EN_DATA_READY 0x01 //00000001
+#define MPU9250_INT_DISABLE 0x00
+
+#define MPU9250_INT_STATUS 0x3A
+/* MPU9250_INT_STATUS Register description
+Bit-wise functions [7]MSB, [0]LSB
+[7] Reserved
+[6] WOM_INT
+    1 – Wake on motion interrupt occurred.
+[5] Reserved
+[4] FIFO_OVERFLOW_INT
+    1 – Fifo Overflow interrupt occurred.  Note that the oldest data is has been dropped from the fifo. 
+[3] FSYNC_INT 
+    1 – Fsync interrupt occurred. 
+[2] Reserved
+[1] Reserved
+[0] RAW_DATA_RDY_INT
+    1 – Sensor Register Raw Data sensors are updated and Ready to be read. The timing of the interrupt can vary depending on the setting in register 36
+	   I2C_MST_CTRL, bit [6] WAIT_FOR_ES. 
+*/
+#define RAW_DATA_RDY_INT_SRC_MASK 0x01 //00000001
+#define RAW_DATA_RDY(INT_STATUS) (INT_STATUS & RAW_DATA_RDY_INT_SRC_MASK)
+/* END - Register addresses and common register contents                                              *
+***************************************************************************************************** */
+
+/* ****************************************************************************************************
+   BIST testphases and reult codes                                                                    *
 ***************************************************************************************************** */ 
 //Major BIST test phases
 #define START_TEST 0
@@ -129,7 +209,10 @@ int subTestPhase = 0;
 #define BIST_FC_GPS_NO_1PSS_LOCK_FAIL 7
 #define BIST_FC_NO_EXT_ANT_DETECT_FAIL 8
 #define BIST_FC_MPU9250_NO_DETECT_FAIL 9
+#define BIST_FC_AK8963_NO_DETECT_FAIL 10
 #define BIST_FC_MPU9250_DETECT_BUT_NO_FUNCTION_FAIL 10
+#define BIST_FC_MPU9250_INTERUPT_LINE_OPEN 11
+#define BIST_FC_MPU9250_NO_INTERUPT 12
 int bistFc = BIST_FC_SUCCESS;
 char calibTextVal[10];
 uint8_t mpuInterruptReceived = 0;
@@ -138,7 +221,7 @@ uint8_t mpuInterruptReceived = 0;
 ***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* Callib button and Status led definitions                                                           *
+   Callib button and Status led definitions                                                           *
 ***************************************************************************************************** */
 //Needs to be refactores - unstructured defininitions below...
 unsigned long timeout = 0;
@@ -151,16 +234,13 @@ const int resolution = 12;
 const int RED_LED_CH = 0;
 const int BLUE_LED_CH = 1;
 const int GREEN_LED_CH = 2;
-int ledRedAmber = 0;
-int ledBlueAmber = 0;
-int ledGreenAmber = 0;
+int ledRedAmber = 41; //1% of max is safe
+int ledBlueAmber = 41;
+int ledGreenAmber = 41;
 int calibDebounce = 0;
 
-
-
-
 /* ****************************************************************************************************
-/* BMP280 Barometic and Temp definitions                                                              *
+   BMP280 Barometic and Temp definitions                                                              *
 ***************************************************************************************************** */
 //Calibration data
 
@@ -187,15 +267,14 @@ uint8_t barVarFilterIndex = 0;
 float barAltFiltVector[20] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 int barDtFiltVector[20] = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 float barVarFiltVector[20] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-
 /* End BMP280 Barometic and Temp definitions                                                          *
 ***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* MPU9250 .... definitions                                                                           *
+   MPU9250 .... definitions                                                                           *
 ***************************************************************************************************** */
 //MPU Definitions
-#define MPU_READING_INTERVALL 20
+#define MPU_READING_INTERVALL 20 //ms
 #define MX 0
 #define MY 1
 #define MZ 2
@@ -255,12 +334,11 @@ float mXFiltVector[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 float mYFiltVector[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 float mZFiltVector[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 long int mpuInterruptTimeout;
-
 /* End MPU9250 .... definitions                                                                       *
-/* ************************************************************************************************** */
+***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* L80 - M39 GPS  .... definitions                                                                    *
+   L80 - M39 GPS  .... definitions                                                                    *
 ***************************************************************************************************** */
 //Definitions
 #define GPS_NOLCK 0
@@ -292,12 +370,11 @@ char GPSSatellitesTxt[5] = "--";
 int gpsReceiveData = 0;
 uint8_t gpsUpdate;
 uint8_t gpsStatus = 0;
-
 /* END L80 - M39 GPS  .... definitions                                                                *
 ***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* BLE Server definitions                                                                             *
+   BLE Server definitions                                                                             *
 ***************************************************************************************************** */
 BLEServer* pServer = NULL;
 BLECharacteristic* pTxCharacteristic;
@@ -307,10 +384,8 @@ uint8_t txValue = 0;
 #define SERVICE_UUID           "6E400001-B5A3-F393-E0A9-E50E24DCCA9E" // UART service UUID
 #define CHARACTERISTIC_UUID_RX "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
 #define CHARACTERISTIC_UUID_TX "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
-
 /* END BLE Server  .... definitions                                                                   *
 ***************************************************************************************************** */
-
 
 //Unstructured definitions - needs refactoring
 unsigned long progressTimer;
@@ -319,17 +394,17 @@ unsigned long consoleRefreshTimeOut = 0;
 #define CONSOLE_REFRESH_SEC 1
 
 /* ****************************************************************************************************
-/* MACROS                                                                                             *
+   MACROS                                                                                             *
 ***************************************************************************************************** */
 #define SQR(X) (X *(X))
 /* END MACROS                                                                                         *
 ***************************************************************************************************** */
 
-//****************************** END DEFINITIONS AND DECLARATIONS ************************************* 
+// ****************************** END DEFINITIONS AND DECLARATIONS ************************************* 
 
 
 /* ****************************************************************************************************
-/* BLE CLASSES, FUNCTIONS AND CALLBACKS                                                               *
+   BLE CLASS OBJECTS, FUNCTIONS AND CALLBACKS                                                         *
 ***************************************************************************************************** */
 class MyServerCallbacks : public BLEServerCallbacks {
 	void onConnect(BLEServer* pServer) {
@@ -375,7 +450,7 @@ uint8_t BLEPrint(char* consoleText) {
 ***************************************************************************************************** */
 
 /* ****************************************************************************************************
-/* CONSOLE & BLE OUTPUT & FORMATTING FUNCTIONS                                                        *
+   CONSOLE & BLE OUTPUT & FORMATTING FUNCTIONS                                                        *
 ***************************************************************************************************** */
 uint8_t consolePrint(char* consoleText, int outputDev = 2) {
 	switch (outputDev) {
@@ -434,34 +509,6 @@ uint8_t consolSize(int x, int y) {
 }
 
 void trimValues(void) {
-
-	sprintf(GPSYearTxt, "%d", GPS.year);
-
-	if (GPS.month < 10)
-		sprintf(GPSMonthTxt, "0%d", GPS.month);
-	else
-		sprintf(GPSMonthTxt, "%d", GPS.month);
-
-	if (GPS.day < 10)
-		sprintf(GPSDayTxt, "0%d", GPS.day);
-	else
-		sprintf(GPSDayTxt, "%d", GPS.day);
-
-	if (GPS.hour < 10) 
-		sprintf(GPSHourTxt, "0%d", GPS.hour);
-	else
-		sprintf(GPSHourTxt, "%d", GPS.hour);
-
-	if (GPS.minute < 10)
-		sprintf(GPSMinuteTxt, "0%d", GPS.minute);
-	else
-		sprintf(GPSMinuteTxt, "%d", GPS.minute);
-
-	if (GPS.seconds < 10)
-		sprintf(GPSSecondsTxt, "0%d", GPS.seconds);
-	else
-		sprintf(GPSSecondsTxt, "%d", GPS.seconds);
-
 	switch (gpsStatus) {
 	case 0:
 		sprintf(GPSStatusTxt, "NO_LCK");
@@ -479,24 +526,18 @@ void trimValues(void) {
 		sprintf(GPSStatusTxt, "DGPS3D");
 		break;
 	}
+	sprintf(GPSYearTxt, "%d", GPS.year);
+	sprintf(GPSMonthTxt, "%02d", GPS.month);
+	sprintf(GPSDayTxt, "%02d", GPS.day);
+	sprintf(GPSHourTxt, "%02d", GPS.hour);
+	sprintf(GPSMinuteTxt, "%02d", GPS.minute);
+	sprintf(GPSSecondsTxt, "%02d", GPS.seconds);
 	sprintf(GPSLatTxt, "%f %c", GPS.latitudeDegrees, GPS.lat);
 	sprintf(GPSLonTxt, "%f %c", GPS.longitudeDegrees, GPS.lon);
-	if (GPS.speed < 10)
-		sprintf(GPSSpeedTxt, "0%.1f", GPS.speed);
-	else
-		sprintf(GPSSpeedTxt, "%.1f", GPS.speed);
-
-	if (GPS.angle < 10)
-		sprintf(GPSAngleTxt, "00%.0f", GPS.angle);
-	else if (GPS.angle < 100)
-		sprintf(GPSAngleTxt, "0%.0f", GPS.angle);
-	else 
-		sprintf(GPSAngleTxt, "%.0f", GPS.angle);
-
+	sprintf(GPSSpeedTxt, "%04.1f", GPS.speed);
+	sprintf(GPSAngleTxt, "%03.0f", GPS.angle);
 	sprintf(GPSAltitudeTxt, "%+06.1f", GPS.altitude + GPSAltCalib);
-
 	sprintf(GPSVarTxt, "%+05.1f", 0.0);
-
 	sprintf(GPSSatellitesTxt, "%2d", GPS.satellites);
 
 	sprintf(barAltTxt, "%+05.1f", barAlt);
@@ -517,11 +558,6 @@ void trimValues(void) {
 	sprintf(magXYZTxt, "%06.0f", magXYZ);
 	sprintf(magInclTxt, "%02.0f", magIncl);
 
-	//if (!(GPS.altitude < 0))
-	//	sprintf(GPSAltitudeTxt, "+%.1f", GPS.altitude);
-	//else
-	//	sprintf(GPSAltitudeTxt, "%.1f", GPS.altitude);
-
 	if (!gpsStatus) {
 		sprintf(GPSYearTxt, "--");
 		sprintf(GPSMonthTxt, "--");
@@ -540,11 +576,11 @@ void trimValues(void) {
 
 	return;
 }
-/*CONSOLE& BLE OUTPUT & FORMATTING FUNCTIONS
+/* END - CONSOLE& BLE OUTPUT & FORMATTING FUNCTIONS
 ****************************************************************************************************** */
 
 /* ***************************************************************************************************
-/* BMP280 fuctions                                                                                   *
+   BMP280 fuctions                                                                                   *
 ****************************************************************************************************** */
 //Calibrate
 void BarTempCalib(void) {
@@ -592,10 +628,11 @@ void getBarTempData(void) {
 		barVarPeek = barVar;
 	return;
 }
-
+/* END - BMP280 fuctions                                                                             *
+******************************************************************************************************* /
 
 /* ***************************************************************************************************
-/* MPU9250 fuctions                                                                                  *
+   MPU9250 fuctions                                                                                  *
 ****************************************************************************************************** */
 //Callibrate
 //  Propriatary Callibrate Mag
@@ -713,16 +750,17 @@ void getMPUdata(void) {
 	}
 }
 
-//Get MPU Interrupt
+// MPU9250 Interrupt routine
 void IRAM_ATTR gotMpuInterrupt(void) {
 	mpuInterruptReceived = 1;
+	detachInterrupt(MPU_INTERRUPT_PIN);
 	return;
 }
 /* END MPU9250 fuctions                                                                                *
 ****************************************************************************************************** */
 
 /* ***************************************************************************************************
-/* L80-M39 GPS functions                                                                               *
+   L80-M39 GPS functions                                                                               *
 ****************************************************************************************************** */
 //Get GPS data
 void getGPSdata(void) {
@@ -776,14 +814,47 @@ void getGPSdata(void) {
 /* END L80-M39 GPS functions                                                                           *
 ****************************************************************************************************** */
 
+/* ***************************************************************************************************
+   I2C functions                                                                                     *
+****************************************************************************************************** */
+int i2cWriteByte(TwoWire w, uint8_t address, uint8_t subAddress, uint8_t data) {
+	Serial.println("Writing to I2C");
+	w.beginTransmission(address);				 // Initialize the Tx buffer
+	w.write(subAddress);						 // Put slave register address in Tx buffer
+	w.write(data);								 // Put data in Tx buffer
+	int i2cErr = w.endTransmission();            // Send the Tx buffer
+	if (i2cErr) {
+		Serial.print("I2C ERROR CODE : ");
+		Serial.println(i2cErr);
+	}
+	return i2cErr;
+}
+
+uint8_t i2cReadByte(TwoWire w, uint8_t address, uint8_t subAddress) {
+	Serial.println("Reading from I2C");
+	uint8_t data = 0;							 // `data` will store the register data
+	w.beginTransmission(address);				 // Initialize the Tx buffer
+	w.write(subAddress);						 // Put slave register address in Tx buffer
+	int i2cErr = w.endTransmission(false);		 // Send the Tx buffer, but send a restart to keep connection alive
+	if (i2cErr) {
+		Serial.print("I2C ERROR CODE : ");
+		Serial.println(i2cErr);
+	}
+	w.requestFrom(address, (size_t)1);  // Read one byte from slave register address
+	if (w.available()) data = w.read();                      // Fill Rx buffer with result
+	return data;                             // Return data read from slave register
+}
+/* END - I2C functions                                                                               *
+****************************************************************************************************** */
 
 /* ***************************************************************************************************
-/* ARDUINO SETUP                                                                                     *
+   ARDUINO SETUP                                                                                     *
 ****************************************************************************************************** */
-//The setup function runs once when you press reset or power the board
+//The setup function runs once when you press reset or power on the board
 void setup() {
 	Serial.begin(115200);
 	pinMode(CALIB_PIN, INPUT);
+	pinMode(MPU_INTERRUPT_PIN, INPUT);
 
 	// Create the BLE Device
 	BLEDevice::init("UART Service");
@@ -810,23 +881,24 @@ void setup() {
 
 	pRxCharacteristic->setCallbacks(new MyCallbacks());
 
-	// Start the service
+	// Start the BLE service
 	pService->start();
 
 	// Start advertising
 	pServer->getAdvertising()->start();
 	Serial.println("Waiting for a Terminal Bluetooth client connection, notifying my presence as .....");
 
+	//Setup the LEDs
 	ledcSetup(RED_LED_CH, freq, resolution);
-	ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+	ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
 	ledcAttachPin(RED_LED_PIN, RED_LED_CH);
 	
 	ledcSetup(BLUE_LED_CH, freq, resolution);
-	ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
+	ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
 	ledcAttachPin(BLUE_LED_PIN, BLUE_LED_CH);
 
 	ledcSetup(GREEN_LED_CH, freq, resolution);
-	ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
+	ledcWrite(GREEN_LED_CH, (pow(2, resolution) - 0));
 	ledcAttachPin(GREEN_LED_PIN, GREEN_LED_CH);
 
 	I2C_0.begin(I2C_0_SDA_PIN, I2C_0_SCL_PIN, 100000);
@@ -839,14 +911,12 @@ void setup() {
 	GPSSerial.begin(115200, SERIAL_8N1, GPS_SERIAL_RXD_PIN, GPS_SERIAL_TXD_PIN);
 	while (GPSSerial.available()) Serial.read();
 }
-
 /* END ARDUINO SETUP                                                                                   *
 ****************************************************************************************************** */
 
 /* ***************************************************************************************************
-/* ARDUINO LOOP                                                                                     *
+   ARDUINO LOOP                                                                                      *
 ****************************************************************************************************** */
-
 // the loop function runs over and over again forever
 void loop() {
 	switch (testPhase) {
@@ -868,6 +938,7 @@ void loop() {
 				consolePrintln("");
 				consolePrintln("Self test FAILED - Calibration button not working - FAIL");
 				timeout = 0;
+				bistFc = BIST_FC_CALIB_BUTTON_FAIL;
 				testPhase = FAIL_TEST;
 			}
 			else {
@@ -879,6 +950,9 @@ void loop() {
 		else {
 			consolePrintln("");
 			consolePrintln("Calibration button push detected - SUCCESS");
+			ledRedAmber = 0;
+			ledBlueAmber = 0;
+			ledGreenAmber = 0;
 			timeout = 0;
 			calibDebounce = 1;
 			testPhase++;
@@ -943,7 +1017,6 @@ void loop() {
 				delay(100);
 			}
 			break;
-
 		case 2:
 			if (!ledGreenAmber) {
 				consolePrintln("Continuing with GREEN, press the calibration button when satisfied with the amber");
@@ -971,7 +1044,6 @@ void loop() {
 				delay(100);
 			}
 			break;
-
 		case 3:
 			ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
 			ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
@@ -987,18 +1059,19 @@ void loop() {
 				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
 				break;
 			case 2:
+				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
 				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
 				break;
 			}
 			delay(ledTestDelay);
-			ledTestDelay = ledTestDelay * 0.9;
+			ledTestDelay = ledTestDelay * 0.8;
 			if (ledTestDelay < 2) {
 				ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
 				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
 				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
 				delay(1000);
 				ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
-				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
+				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
 				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - 0));
 				testPhase++;
 				subTestPhase = 0;
@@ -1011,6 +1084,7 @@ void loop() {
 	case BMP280:
 		if (!bmp.begin(BMP280_ADDR, BMP280_CID)) {
 			consolePrintln("Self test FAILED - BMP280 Barometic sensor NOT found - FAIL");
+			bistFc = BIST_FC_BPM280_NO_DETECT_FAIL;
 			testPhase = FAIL_TEST;
 		}
 		else {
@@ -1039,38 +1113,67 @@ void loop() {
 			}
 			else { 
 				consolePrintln("MPU9250 6 axis inertial sensor NOT found -  FAIL");
+				bistFc = BIST_FC_MPU9250_NO_DETECT_FAIL;
 				testPhase = FAIL_TEST;
 			}
 			break;
-
 		case 1:
 			if (mpu.isConnectedAK8963()) {
 				consolePrintln("AK8963 3 axis magnetometer found - SUCCESS");
 				subTestPhase++;
+				//testPhase++;
+				//subTestPhase = 0;
 			}
 			else {
 				consolePrintln("AK8963 3 axis magnetometer NOT found - FAIL");
+				bistFc = BIST_FC_AK8963_NO_DETECT_FAIL;
 				testPhase = FAIL_TEST;
 			}
 			break;
-
 		case 2:
-			consolePrintln("Checking MPU9250 Interrupt line...");
-			attachInterrupt(MPU_INTERRUPT_PIN, gotMpuInterrupt, FALLING);
+			consolePrintln("Checking MPU9250 Interrupt line LOW without MPU9250 interrupts enabled - to detact a broken interrupt line (OFT has a pull-up)...");
+			//attachInterrupt(MPU_INTERRUPT_PIN, gotMpuInterrupt, GPIO_INTR_LOW_LEVEL);
 			mpuInterruptTimeout = millis() + 1000;
 			subTestPhase++;
 			break;
-
 		case 3:
 			if (mpuInterruptReceived) {
-				consolePrintln("MPU9250 Interrupt received - SUCCESS");
 				detachInterrupt(MPU_INTERRUPT_PIN);
+				consolePrintln("Spurious MPU9250 Interrupt received while it shouldnt have/was not programed to generate interupts - FAIL");
+				bistFc = BIST_FC_MPU9250_INTERUPT_LINE_OPEN;
+				testPhase = FAIL_TEST;
+			}
+			else {
+				if (millis() > mpuInterruptTimeout) {
+					consolePrintln("No spurious MPU9250 Interrupt received - SUCCESS");
+					consolePrintln("Checking MPU9250 Interrupt line rising edge with MPU9250 programmed to generate Interrupts(RISING EDGE) when data is available...");
+					mpuInterruptReceived = 0;
+					detachInterrupt(MPU_INTERRUPT_PIN);
+					mpu.write(MPU9250_INT_PIN_CFG_ADDR, MPU9250_INT_PIN_CFG_DEFAULT);
+					delay(100);
+					mpu.write(MPU9250_INT_ENABLE_ADDR, MPU9250_INT_EN_DATA_READY);
+					delay(100);
+					attachInterrupt(MPU_INTERRUPT_PIN, gotMpuInterrupt, GPIO_INTR_POSEDGE);
+					mpu.read(MPU9250_ADDR, MPU9250_INT_STATUS);
+					mpuInterruptTimeout = millis() + 1000;
+					subTestPhase++;
+				}
+			}
+			break;
+		case 4:
+			if (mpuInterruptReceived) {
+				detachInterrupt(MPU_INTERRUPT_PIN);
+				consolePrintln("MPU9250 Interrupt received as it should - SUCCESS");
+				mpu.write(MPU9250_INT_ENABLE_ADDR, MPU9250_INT_DISABLE);
 				testPhase++;
 				subTestPhase = 0;
 			}
 			else {
 				if (millis() > mpuInterruptTimeout) {
-					consolePrintln("MPU9250 Interrupt NOT received - FAIL");
+					detachInterrupt(MPU_INTERRUPT_PIN);
+					consolePrintln("No MPU9250 Interrupt received - FAIL");
+					mpu.write(MPU9250_INT_ENABLE_ADDR, MPU9250_INT_DISABLE);
+					bistFc = BIST_FC_MPU9250_NO_INTERUPT;
 					testPhase = FAIL_TEST;
 				}
 			}
@@ -1078,14 +1181,13 @@ void loop() {
 		}
 		break;
 
-	//BIST Testing the L8-M39 GPS receiver
+	//BIST Testing the L80-M39 GPS receiver
 	case L80M39:
 		switch (subTestPhase) {
 		case 0:
 			consolePrintln("Checking GPS Module L80-M39");
 			subTestPhase++;
 			break;
-
 		case 1:
 			// uncomment this line to turn on RMC (recommended minimum) and GGA (fix data) including altitude
 			//GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_ALLDATA);
@@ -1110,6 +1212,7 @@ void loop() {
 				}
 				if (millis() > timeout && gpsReceiveData) {
 					consolePrintln("Self test FAILED - L80-M39 GPS module found but NOT functional - FAIL");
+					bistFc = BIST_FC_L80M39_DETECT_BUT_NO_FUNCTION_FAIL;
 					testPhase = FAIL_TEST;
 					subTestPhase = 0;
 					break;
@@ -1117,6 +1220,7 @@ void loop() {
 			}
 			if (!gpsReceiveData && (millis() > timeout)) {
 				consolePrintln("Self test FAILED - L80-M39 GPS module NOT found - FAILED");
+				bistFc = BIST_FC_L80M39_NO_DETECT_FAIL;
 				testPhase = FAIL_TEST;
 				subTestPhase = 0;
 				break;
@@ -1127,12 +1231,18 @@ void loop() {
 
 	//BIST Testing Successful
 	case SUCCESS_TEST:
+		ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
+		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
+		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
 		GPS.read();
 		if (GPS.newNMEAreceived())
 			GPS.parse(GPS.lastNMEA());
-		if (GPS.fix && (GPSAltCalib = GPS.altitude)) {
+		if ((GPS.fix && (GPSAltCalib = GPS.altitude)) || (!digitalRead(CALIB_PIN))) {
 			consolePrintln("Satelites aquired, Calibrating the system....");
 			BarTempCalib();
+			ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+			ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
+			ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
 			mpu.calibrateAccelGyro();
 			magCalib();
 
@@ -1143,7 +1253,7 @@ void loop() {
 		}
 		else {
 			if (!subTestPhase) {
-				consolePrint("Aquiring satellite data for calibration...");
+				consolePrint("Aquiring satellite data for calibration, press the Calib button if you do not want to wait for GPS lock...");
 				subTestPhase++;
 			}
 			else {
@@ -1157,6 +1267,9 @@ void loop() {
 
 	//BIST Testing - Streaming data from all sensors to console and BlueTooth
 	case STREAM_SENSORDATA_TEST:
+		ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
+		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
+		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
 		// GPS NMEA acuicition and parsing...
 		getBarTempData(); 
 		getGPSdata();
@@ -1219,8 +1332,13 @@ void loop() {
 	//BIST Testing failed
 	//TODO: instrumenting Fault codes
 	case FAIL_TEST:
-		consolePrint("Self test FAILED - SPINNING.....");
+		char errCodeTxt[3];
+		sprintf(errCodeTxt, "Fault code : %d", bistFc);
+		consolePrintln(errCodeTxt);
+		consolePrintln("Self test FAILED - SPINNING.....");
 		ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
+		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - 0));
 		for (;;) {}
 		break;
 
@@ -1242,5 +1360,4 @@ void loop() {
 		Serial.println("BLE device found - trying to connect...");
 		oldDeviceConnected = deviceConnected;
 	}
-	//Serial.println("looping");
 }

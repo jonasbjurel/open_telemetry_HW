@@ -56,6 +56,15 @@ class MPU9250_
 
 public:
 
+	void write(uint8_t subaddr, uint8_t data) {
+		writeByte(MPU9250_ADDRESS, subaddr, data);
+		return;
+	}
+
+	uint8_t read(uint8_t subaddr, uint8_t data) {
+		return readByte(MPU9250_ADDRESS, subaddr);
+	}
+
     MPU9250_() : aRes(getAres()), gRes(getGres()), mRes(getMres()) {}
 
     void setup(WireType& w = Wire)
