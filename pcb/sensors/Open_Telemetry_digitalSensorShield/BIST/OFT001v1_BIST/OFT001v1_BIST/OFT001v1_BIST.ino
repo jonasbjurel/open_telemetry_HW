@@ -260,7 +260,6 @@ char tempTxt[10] = "+--.-";
 //Helper variables
 unsigned long barVarDt = 20;
 unsigned long prevTime = 0;
-float barVarPeek;
 float dBarVar;
 int dTTot;
 uint8_t barVarFilterIndex = 0;
@@ -347,6 +346,9 @@ long int mpuInterruptTimeout;
 #define GPS3D_ACC 3
 #define DGPS3D_ACC 4
 
+//Interrupt timer
+hw_timer_t* gpsTimer = NULL;
+
 //GPS Callibration data
 float GPSAltCalib;
 
@@ -368,7 +370,6 @@ char GPSSatellitesTxt[5] = "--";
 
 //Helper variables
 int gpsReceiveData = 0;
-uint8_t gpsUpdate;
 uint8_t gpsStatus = 0;
 /* END L80 - M39 GPS  .... definitions                                                                *
 ***************************************************************************************************** */
@@ -536,13 +537,12 @@ void trimValues(void) {
 	sprintf(GPSLonTxt, "%f %c", GPS.longitudeDegrees, GPS.lon);
 	sprintf(GPSSpeedTxt, "%04.1f", GPS.speed);
 	sprintf(GPSAngleTxt, "%03.0f", GPS.angle);
-	sprintf(GPSAltitudeTxt, "%+06.1f", GPS.altitude + GPSAltCalib);
+	sprintf(GPSAltitudeTxt, "%+06.1f", GPS.altitude - GPSAltCalib);
 	sprintf(GPSVarTxt, "%+05.1f", 0.0);
 	sprintf(GPSSatellitesTxt, "%2d", GPS.satellites);
 
 	sprintf(barAltTxt, "%+05.1f", barAlt);
-	sprintf(barVarTxt, "%+05.2f", barVarPeek);
-	barVarPeek = 0;
+	sprintf(barVarTxt, "%+05.2f", barVar);
 	sprintf(tempTxt, "%+05.1f", temp);
 	sprintf(barPresTxt, "%05.1f", barPres);
 
@@ -623,9 +623,6 @@ void getBarTempData(void) {
 		barVar = barVar + barVarFiltVector[i];
 	}
 	barVar = barVar / (float)20;
-
-	//if (abs(barVar) > abs(barVarPeek)) //Un-comment if periodic peek values wanted
-		barVarPeek = barVar;
 	return;
 }
 /* END - BMP280 fuctions                                                                             *
@@ -637,7 +634,8 @@ void getBarTempData(void) {
 //Callibrate
 //  Propriatary Callibrate Mag
 void magCalib(void) {
-	//Ofset callibration, TODO implement X, Y, Z gain callibration if needed? 
+	//Ofset callibration, TODO implement X, Y, Z gain callibration if needed?
+	consolePrintln("Starting standard magnometer callibration - rotate the device in all three axises (roll, pitch and yaw) during comming 30 seconds");
 	mpu.calibrateMag();
 	consolePrintln("Starting propriatary magnometer callibration - rotate the device in all three axises (roll, pitch and yaw) during comming 30 seconds");
 	long int calibtimer;
@@ -746,7 +744,6 @@ void getMPUdata(void) {
 		if (magY > 0)
 			magHdg = 360 - magHdg;
 		magHdgRate = 1000 * (magHdg - prevMagHdg) / dT;
-		//Serial.println(magHdg);
 	}
 }
 
@@ -764,52 +761,41 @@ void IRAM_ATTR gotMpuInterrupt(void) {
 ****************************************************************************************************** */
 //Get GPS data
 void getGPSdata(void) {
-	GPS.read();
 	if (GPS.newNMEAreceived()) {
-		//consolePrintln("New NMEA received", 0);
-
-		// a tricky thing here is if we print the NMEA sentence, or data
-		// we end up not listening and catching other sentences!
-		// so be very wary if using OUTPUT_ALLDATA and trying to print out data
-		//Serial.println(GPS.lastNMEA()); // this also sets the newNMEAreceived() flag to false
-		//Serial.println(GPS.lastNMEA());
 		if (GPS.parse(GPS.lastNMEA())) {// this also sets the newNMEAreceived() flag to false
-			gpsUpdate = 1;
 			//consolePrintln("New NMEA message validated", 0);
-		}
-		else {
-			//consolePrintln("New NMEA message invalidated", 0);
-			gpsUpdate = 0;
-		}
-	}
-	else {
-		//consolePrint("No New NMEA received", 0);
-	}
 
 	//update GPS data or invalidate if no fix and more than 2 seconds old....
-	if (!GPS.fix) {
-		gpsStatus = 0; //"NO_LCK";
-	}
-	else if (GPS.fixquality) {
-		switch (GPS.fixquality) {
-		case 1:
-			if (GPS.fixquality_3d != 3) {
-				gpsStatus = 1; //"GPS2D ";
+			if (!GPS.fix) {
+				gpsStatus = 0; //"NO_LCK";
 			}
-			else {
-				gpsStatus = 2; //"GPS3D ";
+			else if (GPS.fixquality) {
+				switch (GPS.fixquality) {
+				case 1:
+					if (GPS.fixquality_3d != 3) {
+						gpsStatus = 1; //"GPS2D ";
+					}
+					else {
+						gpsStatus = 2; //"GPS3D ";
+					}
+					break;
+				case 2:
+					if (GPS.fixquality_3d != 3) {
+						gpsStatus = 3; //"DGPS2D";
+					}
+					else {
+						gpsStatus = 4; //"DGPS3D";
+					}
+					break;
+				}
 			}
-			break;
-		case 2:
-			if (GPS.fixquality_3d != 3) {
-				gpsStatus = 3; //"DGPS2D";
-			}
-			else {
-				gpsStatus = 4; //"DGPS3D";
-			}
-			break;
 		}
 	}
+}
+
+//GPS Read timmer interrupt
+void IRAM_ATTR gpsRead(void) {
+	GPS.read();
 }
 /* END L80-M39 GPS functions                                                                           *
 ****************************************************************************************************** */
@@ -910,6 +896,12 @@ void setup() {
 	GPSSerial.flush(); // wait for last transmitted data to be sent 
 	GPSSerial.begin(115200, SERIAL_8N1, GPS_SERIAL_RXD_PIN, GPS_SERIAL_TXD_PIN);
 	while (GPSSerial.available()) Serial.read();
+
+	//Setting up GPS timer interrupt
+	gpsTimer = timerBegin(0, ESP.getCpuFreqMHz(), true); //80MHz CPU freq
+	timerAttachInterrupt(gpsTimer, &gpsRead, true);
+	timerAlarmWrite(gpsTimer, 50, true); //50 us/character for 115200 baud
+	timerAlarmEnable(gpsTimer);
 }
 /* END ARDUINO SETUP                                                                                   *
 ****************************************************************************************************** */
@@ -923,6 +915,9 @@ void loop() {
 	//BIST First introductionary test phase
 	case START_TEST:
 		consolePrintln("Selftest test for OpenFlightTelemetry OFT001v1 board");
+		Serial.print("Xtensa architecture ESP32 CPU running @: ");
+		Serial.print(ESP.getCpuFreqMHz());
+		Serial.println("MHz");
 		consolePrint("press  calibration button to continue .");
 		timeout++;
 		delay(1000);
@@ -1121,8 +1116,6 @@ void loop() {
 			if (mpu.isConnectedAK8963()) {
 				consolePrintln("AK8963 3 axis magnetometer found - SUCCESS");
 				subTestPhase++;
-				//testPhase++;
-				//subTestPhase = 0;
 			}
 			else {
 				consolePrintln("AK8963 3 axis magnetometer NOT found - FAIL");
@@ -1189,20 +1182,14 @@ void loop() {
 			subTestPhase++;
 			break;
 		case 1:
-			// uncomment this line to turn on RMC (recommended minimum) and GGA (fix data) including altitude
-			//GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_ALLDATA);
-			GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
-			// Set the update rate
-			GPS.sendCommand(PMTK_SET_NMEA_UPDATE_1HZ);
+			GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_ALLDATA);
+			GPS.sendCommand(PMTK_API_SET_FIX_CTL_5HZ);
 			GPS.sendCommand(PMTK_Q_RELEASE);
 			subTestPhase++;
 			timeout = millis() + 2000;
 		case 2:
-			GPS.read();
 			if (GPS.newNMEAreceived()) {
-				//Serial.println("New NMEA Arrived");
 				gpsReceiveData = 1;
-				//Serial.print(GPS.lastNMEA());
 				if (strncmp("$PMTK705", GPS.lastNMEA(), strlen("$PMTK705")) == 0) {
 					consolePrintln("L80-M39 GPS module found - SUCCESS");
 					testPhase++;
@@ -1234,7 +1221,6 @@ void loop() {
 		ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
 		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
 		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
-		GPS.read();
 		if (GPS.newNMEAreceived())
 			GPS.parse(GPS.lastNMEA());
 		if ((GPS.fix && (GPSAltCalib = GPS.altitude)) || (!digitalRead(CALIB_PIN))) {
@@ -1245,7 +1231,6 @@ void loop() {
 			ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
 			mpu.calibrateAccelGyro();
 			magCalib();
-
 			consolePrintln("Calibration done, streaming data...");
 			timeout = 0;
 			subTestPhase = 0;
@@ -1275,7 +1260,6 @@ void loop() {
 		getGPSdata();
 		getMPUdata();
 
-		//TODO: Consider below into a coroutine
 		if (consoleRefreshTimeOut < millis() + 1) {
 			consoleClear();
 			consolePrint("\33[?3h", 1); //Set console to 132 columns
