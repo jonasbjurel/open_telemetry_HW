@@ -22,7 +22,7 @@
   *                     Following features are provided:                                              * 
   *                     o Discovery and callibration of all board functions such as                   *
   *                        - Buttons                                                                  *
-  *                        - LED ambers                                                               *
+  *                        - LED Luminances                                                               *
   *                        - BMP280 Barometic and temperature data                                    *
   *                        - MPU9250 9-axis intertial navigation sensor                               *
   *                        - L80-M39 GPS receiver                                                     *
@@ -189,9 +189,9 @@ Bit-wise functions [7]MSB, [0]LSB
 #define START_TEST 0
 #define CALIB_BUTTON_TEST 1
 #define STATUS_LED_TEST 2
-#define BMP280 3
-#define MPU9250 4
-#define L80M39 5
+#define BMP280_TEST 3
+#define MPU9250_TEST 4
+#define L80M39_TEST 5
 #define SUCCESS_TEST 253
 #define STREAM_SENSORDATA_TEST 254
 #define FAIL_TEST 255
@@ -234,9 +234,9 @@ const int resolution = 12;
 const int RED_LED_CH = 0;
 const int BLUE_LED_CH = 1;
 const int GREEN_LED_CH = 2;
-int ledRedAmber = 41; //1% of max is safe
-int ledBlueAmber = 41;
-int ledGreenAmber = 41;
+int ledRedLuminance = 41; //1% of max is safe
+int ledBlueLuminance = 41;
+int ledGreenLuminance = 41;
 int calibDebounce = 0;
 
 /* ****************************************************************************************************
@@ -945,9 +945,9 @@ void loop() {
 		else {
 			consolePrintln("");
 			consolePrintln("Calibration button push detected - SUCCESS");
-			ledRedAmber = 0;
-			ledBlueAmber = 0;
-			ledGreenAmber = 0;
+			ledRedLuminance = 0;
+			ledBlueLuminance = 0;
+			ledGreenLuminance = 0;
 			timeout = 0;
 			calibDebounce = 1;
 			testPhase++;
@@ -966,12 +966,12 @@ void loop() {
 
 		switch (ledColorCalib) {
 		case 0:
-			if (!ledRedAmber)
-				consolePrintln("Calibrating status LEDs, starting with RED, press the calibration button when satisfied with the amber");
+			if (!ledRedLuminance)
+				consolePrintln("Calibrating status LEDs, starting with RED, press the calibration button when satisfied with the Luminance");
 
-			if (!digitalRead(CALIB_PIN) || (ledRedAmber >= pow(2, resolution))) {
+			if (!digitalRead(CALIB_PIN) || (ledRedLuminance >= pow(2, resolution))) {
 				consolePrint("RED led is calibrated to: ");
-				gcvt((100 * ledRedAmber / pow(2, resolution)), 2, calibTextVal);
+				gcvt((100 * ledRedLuminance / pow(2, resolution)), 2, calibTextVal);
 				consolePrint(calibTextVal);
 				consolePrintln(" %");
 				ledColorCalib++;
@@ -979,19 +979,19 @@ void loop() {
 				delay(1000);
 			}
 			else {
-				ledRedAmber++;
-				ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+				ledRedLuminance++;
+				ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedLuminance));
 				delay(100);
 			}
 			break;
 
 		case 1:
-			if (!ledBlueAmber) {
-				consolePrintln("Continuing with BLUE, press the calibration button when satisfied with the amber");
+			if (!ledBlueLuminance) {
+				consolePrintln("Continuing with BLUE, press the calibration button when satisfied with the Luminance");
 			}
-			if (!digitalRead(CALIB_PIN) || (ledBlueAmber >= pow(2, resolution))) {
+			if (!digitalRead(CALIB_PIN) || (ledBlueLuminance >= pow(2, resolution))) {
 				consolePrint("BLUE led is calibrated to: ");
-				gcvt((100 * ledBlueAmber / pow(2, resolution)), 2, calibTextVal);
+				gcvt((100 * ledBlueLuminance / pow(2, resolution)), 2, calibTextVal);
 				consolePrint(calibTextVal);
 				consolePrintln(" %");
 				ledColorCalib++;
@@ -1000,25 +1000,25 @@ void loop() {
 				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
 			}
 			else {
-				ledBlueAmber++;
-				if (ledBlueAmber & 2) {
+				ledBlueLuminance++;
+				if (ledBlueLuminance & 2) {
 					ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
-					ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
+					ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueLuminance));
 				}
 				else {
 					ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
-					ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+					ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedLuminance));
 				}
 				delay(100);
 			}
 			break;
 		case 2:
-			if (!ledGreenAmber) {
-				consolePrintln("Continuing with GREEN, press the calibration button when satisfied with the amber");
+			if (!ledGreenLuminance) {
+				consolePrintln("Continuing with GREEN, press the calibration button when satisfied with the Luminance");
 			}
-			if (!digitalRead(CALIB_PIN) || (ledGreenAmber >= pow(2, resolution))) {
+			if (!digitalRead(CALIB_PIN) || (ledGreenLuminance >= pow(2, resolution))) {
 				consolePrint("GREEN led is calibrated to: ");
-				gcvt((100 * ledGreenAmber / pow(2, resolution)), 2, calibTextVal);
+				gcvt((100 * ledGreenLuminance / pow(2, resolution)), 2, calibTextVal);
 				consolePrint(calibTextVal);
 				consolePrintln(" %");
 				ledColorCalib++;
@@ -1027,14 +1027,14 @@ void loop() {
 				ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
 			}
 			else {
-				ledGreenAmber++;
-				if (ledGreenAmber & 2) {
+				ledGreenLuminance++;
+				if (ledGreenLuminance & 2) {
 					ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
-					ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
+					ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenLuminance));
 				}
 				else {
 					ledcWrite(GREEN_LED_CH, (pow(2, resolution) - 0));
-					ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+					ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedLuminance));
 				}
 				delay(100);
 			}
@@ -1047,26 +1047,26 @@ void loop() {
 			switch (ledTestCnt) {
 			case 0:
 				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
-				ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+				ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedLuminance));
 				break;
 			case 1:
 				ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
-				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
+				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueLuminance));
 				break;
 			case 2:
 				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
-				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
+				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenLuminance));
 				break;
 			}
 			delay(ledTestDelay);
 			ledTestDelay = ledTestDelay * 0.8;
 			if (ledTestDelay < 2) {
-				ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
-				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
-				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
+				ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedLuminance));
+				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueLuminance));
+				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenLuminance));
 				delay(1000);
 				ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
-				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
+				ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueLuminance));
 				ledcWrite(GREEN_LED_CH, (pow(2, resolution) - 0));
 				testPhase++;
 				subTestPhase = 0;
@@ -1076,7 +1076,7 @@ void loop() {
 		break;
 
 	//BIST Testing the BMP280 barometic and temperature sensor
-	case BMP280:
+	case BMP280_TEST:
 		if (!bmp.begin(BMP280_ADDR, BMP280_CID)) {
 			consolePrintln("Self test FAILED - BMP280 Barometic sensor NOT found - FAIL");
 			bistFc = BIST_FC_BPM280_NO_DETECT_FAIL;
@@ -1095,7 +1095,7 @@ void loop() {
 		break;
 
 	//BIST Testing the MPU9250 inertial sensor
-	case MPU9250:
+	case MPU9250_TEST:
 		switch (subTestPhase) {
 		case 0:
 			mpu.setup(I2C_1);
@@ -1175,7 +1175,7 @@ void loop() {
 		break;
 
 	//BIST Testing the L80-M39 GPS receiver
-	case L80M39:
+	case L80M39_TEST:
 		switch (subTestPhase) {
 		case 0:
 			consolePrintln("Checking GPS Module L80-M39");
@@ -1220,15 +1220,15 @@ void loop() {
 	case SUCCESS_TEST:
 		ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
 		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
-		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
+		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenLuminance));
 		if (GPS.newNMEAreceived())
 			GPS.parse(GPS.lastNMEA());
 		if ((GPS.fix && (GPSAltCalib = GPS.altitude)) || (!digitalRead(CALIB_PIN))) {
 			consolePrintln("Satelites aquired, Calibrating the system....");
 			BarTempCalib();
-			ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
-			ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueAmber));
-			ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
+			ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedLuminance));
+			ledcWrite(BLUE_LED_CH, (pow(2, resolution) - ledBlueLuminance));
+			ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenLuminance));
 			mpu.calibrateAccelGyro();
 			magCalib();
 			consolePrintln("Calibration done, streaming data...");
@@ -1254,7 +1254,7 @@ void loop() {
 	case STREAM_SENSORDATA_TEST:
 		ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
 		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
-		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenAmber));
+		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenLuminance));
 		// GPS NMEA acuicition and parsing...
 		getBarTempData(); 
 		getGPSdata();
@@ -1320,7 +1320,7 @@ void loop() {
 		sprintf(errCodeTxt, "Fault code : %d", bistFc);
 		consolePrintln(errCodeTxt);
 		consolePrintln("Self test FAILED - SPINNING.....");
-		ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedAmber));
+		ledcWrite(RED_LED_CH, (pow(2, resolution) - ledRedLuminance));
 		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
 		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - 0));
 		for (;;) {}
