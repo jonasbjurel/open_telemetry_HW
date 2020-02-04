@@ -390,11 +390,17 @@ uint8_t txValue = 0;
 /* END BLE Server  .... definitions                                                                   *
 ***************************************************************************************************** */
 
-//Unstructured definitions - needs refactoring
+/* ****************************************************************************************************
+   Streaming definitions                                                                              *
+***************************************************************************************************** */
 unsigned long progressTimer;
 #define PROGRESS_TIMEOUT 1000
 unsigned long consoleRefreshTimeOut = 0;
 #define CONSOLE_REFRESH_SEC 1
+unsigned long consoleCleanTimeout = 0;
+#define CONSOLE_CLEAN_TIME_SEC 30
+/* END Streaming definitions                                                                   *
+***************************************************************************************************** */
 
 /* ****************************************************************************************************
    MACROS                                                                                             *
@@ -1274,6 +1280,10 @@ void loop() {
 		getGPSdata();
 		getMPUdata();
 
+		if (consoleCleanTimeout < millis()) {
+			consoleCleanTimeout = millis() + (CONSOLE_CLEAN_TIME_SEC * 1000);
+			consoleClear();
+		}
 		if (consoleRefreshTimeOut < millis() + 1) {
 			//consoleClear(); TODO: Need to clear console every now and then
 			consolePrint("\33[?3h", 1); //Set console to 132 columns
