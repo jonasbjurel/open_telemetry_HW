@@ -158,7 +158,7 @@ class Adafruit_GPS : public Print{
 
   float latitudeDegrees;    ///< Latitude in decimal degrees
   float longitudeDegrees;   ///< Longitude in decimal degrees
-  float geoidheight;        /<<//< Diff between geoid height and WGS84 height
+  float geoidheight;        ///< Diff between geoid height and WGS84 height
   float altitude;           ///< Altitude in meters above MSL
   float speed;              ///< Current speed over ground in knots
   float angle;              ///< Course in degrees from true north
