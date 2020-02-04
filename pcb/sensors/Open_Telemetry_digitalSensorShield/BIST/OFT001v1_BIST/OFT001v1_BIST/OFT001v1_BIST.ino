@@ -52,7 +52,7 @@ You need to follow this instruction to get needed libraries included to your pro
 #include <Wire.h>
 #include <SPI.h>
 #include <Adafruit_BMP280.h>
-#include "lib/MPU9250-0.1.1/MPU9250.h"
+#include <MPU9250.h>
 #include <Adafruit_GPS.h>
 #include <BLEDevice.h>
 #include <BLEServer.h>
@@ -371,6 +371,8 @@ char GPSSatellitesTxt[5] = "--";
 //Helper variables
 int gpsReceiveData = 0;
 uint8_t gpsStatus = 0;
+long unsigned resendGPSCommand = 0;
+
 /* END L80 - M39 GPS  .... definitions                                                                *
 ***************************************************************************************************** */
 
@@ -762,29 +764,30 @@ void IRAM_ATTR gotMpuInterrupt(void) {
 //Get GPS data
 void getGPSdata(void) {
 	if (GPS.newNMEAreceived()) {
-		if (GPS.parse(GPS.lastNMEA())) {// this also sets the newNMEAreceived() flag to false
+		//Serial.print("New NMEA message received: ");
+		//Serial.println(GPS.lastNMEA());
+		if (GPS.parse(GPS.lastNMEA())) {// this sets the newNMEAreceived() flag to false
 			//consolePrintln("New NMEA message validated", 0);
-
 	//update GPS data or invalidate if no fix and more than 2 seconds old....
 			if (!GPS.fix) {
-				gpsStatus = 0; //"NO_LCK";
+				gpsStatus = 0; //"NO_LCK"
 			}
 			else if (GPS.fixquality) {
 				switch (GPS.fixquality) {
 				case 1:
 					if (GPS.fixquality_3d != 3) {
-						gpsStatus = 1; //"GPS2D ";
+						gpsStatus = 1; //"GPS2D"
 					}
 					else {
-						gpsStatus = 2; //"GPS3D ";
+						gpsStatus = 2; //"GPS3D"
 					}
 					break;
 				case 2:
 					if (GPS.fixquality_3d != 3) {
-						gpsStatus = 3; //"DGPS2D";
+						gpsStatus = 3; //"DGPS2D"
 					}
 					else {
-						gpsStatus = 4; //"DGPS3D";
+						gpsStatus = 4; //"DGPS3D"
 					}
 					break;
 				}
@@ -963,7 +966,6 @@ void loop() {
 		if (calibDebounce && digitalRead(CALIB_PIN)) {
 			calibDebounce = 0;
 		}
-
 		switch (ledColorCalib) {
 		case 0:
 			if (!ledRedLuminance)
@@ -984,7 +986,6 @@ void loop() {
 				delay(100);
 			}
 			break;
-
 		case 1:
 			if (!ledBlueLuminance) {
 				consolePrintln("Continuing with BLUE, press the calibration button when satisfied with the Luminance");
@@ -1182,13 +1183,25 @@ void loop() {
 			subTestPhase++;
 			break;
 		case 1:
+			GPS.newNMEAreceived();
+			GPS.lastNMEA();
 			GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_ALLDATA);
-			GPS.sendCommand(PMTK_API_SET_FIX_CTL_5HZ);
-			GPS.sendCommand(PMTK_Q_RELEASE);
+			delay(100);
+			GPS.sendCommand(PMTK_API_SET_FIX_CTL_1HZ);
+			delay(100);
+			resendGPSCommand = millis() + 100;
+			timeout = millis() + 5000;
 			subTestPhase++;
-			timeout = millis() + 2000;
+
 		case 2:
+			if (millis() > resendGPSCommand) { //TODO: Some times the commands seems not to be received, worrying needs further troubleshooting with the scope - do we we need to send them periodically?
+				consolePrintln("(Re)sending Version request command...");
+				GPS.sendCommand(PMTK_Q_RELEASE);
+				resendGPSCommand = millis() + 100;
+			}
 			if (GPS.newNMEAreceived()) {
+				//Serial.print("GPS data received");
+				//Serial.println(GPS.lastNMEA());
 				gpsReceiveData = 1;
 				if (strncmp("$PMTK705", GPS.lastNMEA(), strlen("$PMTK705")) == 0) {
 					consolePrintln("L80-M39 GPS module found - SUCCESS");
@@ -1232,13 +1245,14 @@ void loop() {
 			mpu.calibrateAccelGyro();
 			magCalib();
 			consolePrintln("Calibration done, streaming data...");
+			consoleClear();
 			timeout = 0;
 			subTestPhase = 0;
 			testPhase++;
 		}
 		else {
 			if (!subTestPhase) {
-				consolePrint("Aquiring satellite data for calibration, press the Calib button if you do not want to wait for GPS lock...");
+				consolePrint("Aquiring satellite data for calibration, press the Calib button if you do not want to wait for GPS lock... ");
 				subTestPhase++;
 			}
 			else {
@@ -1255,13 +1269,13 @@ void loop() {
 		ledcWrite(RED_LED_CH, (pow(2, resolution) - 0));
 		ledcWrite(BLUE_LED_CH, (pow(2, resolution) - 0));
 		ledcWrite(GREEN_LED_CH, (pow(2, resolution) - ledGreenLuminance));
-		// GPS NMEA acuicition and parsing...
+		// GPS NMEA aquicition and parsing...
 		getBarTempData(); 
 		getGPSdata();
 		getMPUdata();
 
 		if (consoleRefreshTimeOut < millis() + 1) {
-			consoleClear();
+			//consoleClear(); TODO: Need to clear console every now and then
 			consolePrint("\33[?3h", 1); //Set console to 132 columns
 			consoleRefreshTimeOut = millis() + (CONSOLE_REFRESH_SEC * 1000);
 			trimValues();

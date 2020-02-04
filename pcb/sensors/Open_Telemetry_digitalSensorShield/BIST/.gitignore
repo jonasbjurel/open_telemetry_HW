@@ -1,0 +1,10 @@
+**/__vm
+**/Debug
+**/.vs
+**/tmp
+*.o
+*.bin
+*.log
+*.exe
+*.tmp
+

@@ -17,7 +17,7 @@
 #include <Adafruit_GPS.h>
 
 // what's the name of the hardware serial port?
-#define GPSSerial Serial2
+#define GPSSerial Serial1
 
 // Connect to the GPS on the hardware port
 Adafruit_GPS GPS(&GPSSerial);
@@ -40,8 +40,6 @@ void setup()
 
   // 9600 NMEA is the default baud rate for Adafruit MTK GPS's- some use 4800
   GPS.begin(9600);
-  GPSSerial.begin(9600, SERIAL_8N1, 39, 25);
-
   // uncomment this line to turn on RMC (recommended minimum) and GGA (fix data) including altitude
   GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
   // uncomment this line to turn on only the "minimum recommended" data
@@ -65,17 +63,18 @@ void setup()
 void loop() // run over and over again
 {
   // read data from the GPS in the 'main loop'
-  GPS.read();
+  char c = GPS.read();
   // if you want to debug, this is a good time to do it!
+  if (GPSECHO)
+    if (c) Serial.print(c);
   // if a sentence is received, we can check the checksum, parse it...
   if (GPS.newNMEAreceived()) {
-	  // a tricky thing here is if we print the NMEA sentence, or data
-	  // we end up not listening and catching other sentences!
-	  // so be very wary if using OUTPUT_ALLDATA and trying to print out data
-	  //Serial.println(GPS.lastNMEA()); // this also sets the newNMEAreceived() flag to false
-	  if (GPS.parse(GPS.lastNMEA()))// this also sets the newNMEAreceived() flag to false
-		  gpsUpdate = 1;
-	  else gpsUpdate = 0;
+    // a tricky thing here is if we print the NMEA sentence, or data
+    // we end up not listening and catching other sentences!
+    // so be very wary if using OUTPUT_ALLDATA and trying to print out data
+    Serial.println(GPS.lastNMEA()); // this also sets the newNMEAreceived() flag to false
+    if (!GPS.parse(GPS.lastNMEA())) // this also sets the newNMEAreceived() flag to false
+      return; // we can fail to parse a sentence in which case we should just wait for another
   }
   // if millis() or timer wraps around, we'll just reset it
   if (timer > millis()) timer = millis();
