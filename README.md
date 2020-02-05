@@ -6,12 +6,15 @@
 
 **Licenses:**
 
-The official OpenFly Telemetry project(s) are all open source. The licensing may vary from GPL 2, GPL 3, Apache, or Creative Commons. As with many other hardware projects – OpenFly Telemetry comes with the Creative Commons - CC BY 2.0 license.
+The official OpenFly Telemetry project(s) are all open source. The licensing may vary from GPL 2, GPL 3, Apache, or Creative Commons. As with many other hardware projects â€“ OpenFly Telemetry comes with the Creative Commons - CC BY 2.0 license.
 
 
 **Disclaimers:**
 
-The use of any HW, SW or instructions from the OpenFly Telemetry open source project, or any references to other art - is at your own risk. No warranties, or legal obligations shall be assumed from the creators – in any way. Flying model planes, drones or other remotely controlled vehicles always impose danger to the surroundings – make all necessary precautions to make sure that no one is in danger even in case the control of your model is lost for whatever reason.
+The use of any HW, SW or instructions from the OpenFly Telemetry open source project, or any references to other art - is at your own risk. No warranties, or legal obligations shall be assumed from the creators â€“ in any way. Flying model planes, drones or other remotely controlled vehicles always impose danger to the surroundings â€“ make all necessary precautions to make sure that no one is in danger even in case the control of your model is lost for whatever reason.
+
+# Latest news
+OFT001v1P1A* with sample BIST SW have declared it's first release candidate February 04 - 2020. First prototype full release is expected during February 2020. See the Wiki for mor information:
 
 # OpenFly Telemetry overview
 OpenFly Telemetry is an open source project aiming to provide telemetry and navigation capabilities for model airplanes and drones through open source hardware and software. It uses various on-board sensor capabilities such as GPS, Accelerometers, Gyroscopes, Magnetometers, Pitot tubes, temperature sensors, battery voltage and current sensors, RPM sensors, etc. to provide the operator or algorithms with data for manual or automated corrective actions. The algorithms are some time autonomous and resides in the model, are sometimes on ground with the receiver or nearby connected devices or are sometimes even in distant clouds.
